@@ -12,13 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('admin/indexs');
+    return view('admin/index');
 });
 Route::get('/dashboard', function(){
     return view('admin/dashboard');
 });
-Route::get('/category', function(){ return view('admin/graphs'); });
-Route::get('/products', function(){});
+Route::get('/category', function(){ return view('admin/categoryAdd'); });
+Route::get('/products', function(){ return view('admin/productsAdd'); });
 Route::get('/customers', function(){});
 Route::get('/profile', function(){ return view('admin/profile'); });
 Route::get('/calendar', function(){ return view('admin/calendar'); });
+Route::get('/inbox', function(){ return view('admin/inbox'); });

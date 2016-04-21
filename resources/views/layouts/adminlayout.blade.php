@@ -95,7 +95,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               <h1> <a class="navbar-brand" href="dashbard">thePIPS</a></h1>         
+               <h1> <a style="background-color: #6fd954" class="navbar-brand" href="dashbard">thePIPS</a></h1>         
 			   </div>
 			 <div class=" border-bottom">
         	<div class="full-left">
@@ -167,7 +167,7 @@
                 <ul class="nav" id="side-menu">
 				
                     <li>
-                        <a href="index.html" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Dashboards</span> </a>
+                        <a href="dashbard" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Dashboards</span> </a>
                     </li>
                    
 					 <li>
@@ -176,34 +176,29 @@
                      <li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label">Categorys</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="404.html" class=" hvr-bounce-to-right"> <i class="fa fa-info-circle nav_icon"></i>View Categorys</a></li>
-                            <li><a href="faq.html" class=" hvr-bounce-to-right"><i class="fa fa-question-circle nav_icon"></i>Add Category</a></li>
-                            <li><a href="blank.html" class=" hvr-bounce-to-right"><i class="fa fa-file-o nav_icon"></i>Edit Category</a></li>
+                            <li><a href="category" class=" hvr-bounce-to-right"> <i class="fa fa-info-circle nav_icon"></i>View Categorys</a></li>
+                            <li><a href="category" class=" hvr-bounce-to-right"><i class="fa fa-question-circle nav_icon"></i>Add Category</a></li>
+                            <li><a href="category" class=" hvr-bounce-to-right"><i class="fa fa-file-o nav_icon"></i>Edit Category</a></li>
                        </ul>
                     </li>
                      <li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label">Products</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="404.html" class=" hvr-bounce-to-right"> <i class="fa fa-info-circle nav_icon"></i>View Products</a></li>
-                            <li><a href="faq.html" class=" hvr-bounce-to-right"><i class="fa fa-question-circle nav_icon"></i>Add Products</a></li>
-                            <li><a href="blank.html" class=" hvr-bounce-to-right"><i class="fa fa-file-o nav_icon"></i>Edit Products</a></li>
+                            <li><a href="products" class=" hvr-bounce-to-right"> <i class="fa fa-info-circle nav_icon"></i>View Products</a></li>
+                            <li><a href="products" class=" hvr-bounce-to-right"><i class="fa fa-question-circle nav_icon"></i>Add Products</a></li>
+                            <li><a href="products" class=" hvr-bounce-to-right"><i class="fa fa-file-o nav_icon"></i>Edit Products</a></li>
                        </ul>
                     </li>
                    
                     <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label">Customers</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="404.html" class=" hvr-bounce-to-right"> <i class="fa fa-info-circle nav_icon"></i>View Customers</a></li>
-                            <li><a href="faq.html" class=" hvr-bounce-to-right"><i class="fa fa-question-circle nav_icon"></i>Add Customers</a></li>
-                            <li><a href="blank.html" class=" hvr-bounce-to-right"><i class="fa fa-file-o nav_icon"></i>Edit Customers</a></li>
-                       </ul>
+                        <a href="inbox.html" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Customers</span> </a>
                     </li>
                    
                     <li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-cog nav_icon"></i> <span class="nav-label">Settings</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="signin.html" class=" hvr-bounce-to-right"><i class="fa fa-sign-in nav_icon"></i>Signin</a></li>
-                            <li><a href="signup.html" class=" hvr-bounce-to-right"><i class="fa fa-sign-in nav_icon"></i>Singup</a></li>
+                            <li><a href="signin" class=" hvr-bounce-to-right"><i class="fa fa-sign-in nav_icon"></i>Signin</a></li>
+                            <li><a href="signup" class=" hvr-bounce-to-right"><i class="fa fa-sign-in nav_icon"></i>Singup</a></li>
                         </ul>
                     </li>
                 </ul>
