@@ -148,7 +148,7 @@
 		              </ul>
 		            </li>
 					<li class="dropdown">
-		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">Admin<i class="caret"></i></span><img src="" alt="admin"></a>
+		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">Admin<i class="caret"></i></span><img src="images/" alt="admin"></a>
 		              <ul class="dropdown-menu " role="menu">
 		                <li><a href="profile"><i class="fa fa-user"></i>Edit Profile</a></li>
 		                <li><a href="inbox"><i class="fa fa-envelope"></i>Inbox</a></li>
