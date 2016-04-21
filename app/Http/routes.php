@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('admin/index');
+    return view('admin/blank');
 });
+Route::get('/dashbard', function(){});
+Route::get('/category', function(){});
+Route::get('/products', function(){});
+Route::get('/customers', function(){});
