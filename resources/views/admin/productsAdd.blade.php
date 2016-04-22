@@ -4,7 +4,7 @@
 <!--banner-->	
 		   <div class="banner">
 		    	<h2>
-				<a href="index.html">Home</a>
+				<a href="dashboard">Home</a>
 				<i class="fa fa-angle-right"></i>
 				<span>Validation</span>
 				</h2>
