@@ -1,1 +1,9 @@
 C:\Users\phiri\Documents\Visual Studio 2015\Projects\PersonnalAssistant\PersonnalAssistant\bin\Debug\PersonnalAssistant.exe.config
+D:\School\BIF\Year-3_Sem-1\dotNET\project\PersonnalAssistant\PersonnalAssistant\bin\Debug\PersonnalAssistant.exe.config
+D:\School\BIF\Year-3_Sem-1\dotNET\project\PersonnalAssistant\PersonnalAssistant\bin\Debug\PersonnalAssistant.exe
+D:\School\BIF\Year-3_Sem-1\dotNET\project\PersonnalAssistant\PersonnalAssistant\bin\Debug\PersonnalAssistant.pdb
+D:\School\BIF\Year-3_Sem-1\dotNET\project\PersonnalAssistant\PersonnalAssistant\obj\Debug\PersonnalAssistant.Form1.resources
+D:\School\BIF\Year-3_Sem-1\dotNET\project\PersonnalAssistant\PersonnalAssistant\obj\Debug\PersonnalAssistant.Properties.Resources.resources
+D:\School\BIF\Year-3_Sem-1\dotNET\project\PersonnalAssistant\PersonnalAssistant\obj\Debug\PersonnalAssistant.csproj.GenerateResource.Cache
+D:\School\BIF\Year-3_Sem-1\dotNET\project\PersonnalAssistant\PersonnalAssistant\obj\Debug\PersonnalAssistant.exe
+D:\School\BIF\Year-3_Sem-1\dotNET\project\PersonnalAssistant\PersonnalAssistant\obj\Debug\PersonnalAssistant.pdb
