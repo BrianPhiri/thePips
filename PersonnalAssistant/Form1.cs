@@ -54,10 +54,10 @@ namespace PersonnalAssistant
         private void sre_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             string command = e.Result.Text;
-
+            NewsUpdate news = new NewsUpdate();
             if(command == "hey")
             {
-                say("I am working");
+                news.news();
             }
 
         }

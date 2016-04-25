@@ -7,3 +7,4 @@ D:\School\BIF\Year-3_Sem-1\dotNET\project\PersonnalAssistant\PersonnalAssistant\
 D:\School\BIF\Year-3_Sem-1\dotNET\project\PersonnalAssistant\PersonnalAssistant\obj\Debug\PersonnalAssistant.csproj.GenerateResource.Cache
 D:\School\BIF\Year-3_Sem-1\dotNET\project\PersonnalAssistant\PersonnalAssistant\obj\Debug\PersonnalAssistant.exe
 D:\School\BIF\Year-3_Sem-1\dotNET\project\PersonnalAssistant\PersonnalAssistant\obj\Debug\PersonnalAssistant.pdb
+D:\School\BIF\Year-3_Sem-1\dotNET\project\PersonnalAssistant\PersonnalAssistant\obj\Debug\PersonnalAssistant.csprojResolveAssemblyReference.cache
