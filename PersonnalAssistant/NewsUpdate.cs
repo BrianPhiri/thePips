@@ -16,16 +16,16 @@ namespace PersonnalAssistant
 
             WebClient wc = new WebClient();
             String html = wc.DownloadString("http://www.nation.co.ke/");
-            MatchCollection m1 = Regex.Matches(html, @"</h1><p>\s(.+?)\s</p><figure>", RegexOptions.Singleline);
+            MatchCollection m1 = Regex.Matches(html, @"<p>(.+?)</p>", RegexOptions.Singleline);
 
+            say("For the News");
             foreach(Match m in m1)
             {
                 
                 string headline = m.Groups[1].Value;
                 headlines.Add(headline);
 
-                //say(headline);
-               Console.WriteLine(headline);
+                say(headline);
             }
            
         }

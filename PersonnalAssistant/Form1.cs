@@ -18,9 +18,10 @@ namespace PersonnalAssistant
         SpeechSynthesizer spk = new SpeechSynthesizer();
         Choices list = new Choices();
         public Form1()
-        {
-            letsTalk();
+        { 
             introduction();
+            letsTalk();
+            
             InitializeComponent();
         }
 
