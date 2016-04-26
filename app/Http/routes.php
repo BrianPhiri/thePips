@@ -25,3 +25,6 @@ Route::get('/calendar', function(){ return view('admin/calendar'); });
 Route::get('/inbox', function(){ return view('admin/inbox'); });
 
 Route::get('/test', 'CategoriesController@index');
+Route::get('/home',function(){
+  return view('homepage/index');
+});
