@@ -9,6 +9,7 @@ use App\Categories;
 class CategoriesController extends Controller
 {
     public function index(){
-        return categories::All();
+        // return categories::All();
+        return view('admin/category');
     }
 }

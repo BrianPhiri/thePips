@@ -9,6 +9,7 @@ use App\Products;
 class ProductsController extends Controller
 {
     public function index(){
-        return Products::All();
+        // return Products::All();
+        return view('admin/products');
     }
 }

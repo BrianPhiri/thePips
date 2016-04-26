@@ -36,11 +36,15 @@
               <div class="col-md-12 form-group2 group-mail">
               <label class="control-label">Category</label>
             <select>
-            	<option value="">Category</option>
-            	<option value="">Category1</option>
-            	<option value="">Category2</option>
-            	<option value="">Category3</option>
-            	<option value="">Category4</option>
+                    <option>Beds</option>
+					<option>Desks</option>
+					<option>Drawers</option>
+					<option>Seats</option>
+                    <option>Sets</option>
+                    <option>Shelves</option>
+                    <option> Sofa Sets</option>
+                    <option>Storage</option>
+					<option>Tables</option>
             </select>
             </div>
              <div class="clearfix"> </div>

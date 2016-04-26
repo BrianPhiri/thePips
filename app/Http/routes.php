@@ -24,4 +24,4 @@ Route::get('/profile', function(){ return view('admin/profile'); });
 Route::get('/calendar', function(){ return view('admin/calendar'); });
 Route::get('/inbox', function(){ return view('admin/inbox'); });
 
-Route::get('/test', 'CategoriesController@index');
+Route::get('/test', 'MailController@index');
