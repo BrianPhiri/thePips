@@ -17,21 +17,11 @@
   body {
     padding-right: 25px;
     padding-left: 25px;
+    position: relative;
   }
   img{
     width: 100%;
     height: 500px;
-  }
-
-
-
-  /*
-  * Base structure
-  */
-
-  /* Move down content because we have a fixed navbar that is 50px tall */
-  body {
-    padding-top: 50px;
   }
   </style>
 
@@ -49,5 +39,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $('body').scrollspy({ target: '#navbar-example' })
+  </script>
 </body>
 </html>

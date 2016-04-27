@@ -22,7 +22,7 @@
         <li><a href="#">Register</a></li>
         <li><a href="#">Shop Cart <i class="fa fa-shopping-cart fa-fw" aria-hidden="true"></i></a></li>
         <li><a href="#">About Us</a></li>
-        <li><a href="#">Categories</a></li>
+        <li><a href="#category">Categories</a></li>
         <!-- <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -99,7 +99,7 @@
 <!-- END ARRIVALS SECTION -->
 <!-- CATEGORIES SECTION -->
 <h1 style="text-align: center;">Categories</h1>
-<div class="container col-lg-3 col-md-3 col-sm-6">
+<div id="category" class="container col-lg-3 col-md-3 col-sm-6">
   <div style="background-color: #F5F5F4">
     <h1 style="text-align: center;">Categories</h1>
 
