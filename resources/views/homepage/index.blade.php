@@ -159,6 +159,8 @@
 
 </div>
 <br>
+<br>
+<br>
 <!-- END CATEGORIES SECTION -->
 <!-- ABOUT US SECTION  -->
 <h1 style="text-align: center; padding-top: 50px;">About Us</h1>
