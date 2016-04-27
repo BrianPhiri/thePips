@@ -21,7 +21,7 @@
         <li><a href="#">Sign In <i class="fa fa-sign-in fa-fw" aria-hidden="true"></i></a></li>
         <li><a href="#">Register</a></li>
         <li><a href="#">Shop Cart <i class="fa fa-shopping-cart fa-fw" aria-hidden="true"></i></a></li>
-        <li><a href="#">About Us</a></li>
+        <li><a href="#aboutus">About Us</a></li>
         <li><a href="#category">Categories</a></li>
         <!-- <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -158,5 +158,26 @@
   </div>
 
 </div>
+<br>
 <!-- END CATEGORIES SECTION -->
+<!-- ABOUT US SECTION  -->
+
+  <div id="aboutus" class="well well-lg" background= "#C0C0C0" >
+    <div class ="row">
+      <h1 style="text-align: center; padding-top: 50px;">About Us</h1>
+       <p>
+         We are a company that deals in House Hold furniture. 
+        </P>
+        <p>
+        Our products range from beds to seats and chairs all through wardrobes and cupboards just to list a few.    
+        </p>
+         </p>
+         <p>
+           thePips
+           P.O.Box 23148, Madaraka.
+           Nairobi
+         </p>
+    </div>
+  </div>
+
 @endsection()
