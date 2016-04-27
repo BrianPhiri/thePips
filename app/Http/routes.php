@@ -17,14 +17,16 @@ Route::get('/', function () {
 Route::get('/dashboard', function(){
     return view('admin/dashboard');
 });
-Route::get('/category', function(){ return view('CategoriesController@index'); });
-Route::get('/products', function(){ return view('ProductsController@index'); });
+Route::get('/category', 'CategoriesController@index');
+Route::get('/category/create', 'CategoriesController@create');
+Route::post('/category', 'CategoriesController@store');
+Route::get('/products', 'ProductsController@index');
 Route::get('/customers', function(){});
-Route::get('/profile', function(){ return view('admin/profile'); });
-Route::get('/calendar', function(){ return view('admin/calendar'); });
-Route::get('/inbox', function(){ return view('admin/inbox'); });
+// Route::get('/profile', function(){ return view('admin/profile'); });
+// Route::get('/calendar', function(){ return view('admin/calendar'); });
+// Route::get('/inbox', function(){ return view('admin/inbox'); });
 
-Route::get('/test', 'CategoriesController@index');
+// Route::get('/test', function(){ return view('admin/categoryAdd'); });
 Route::get('/home',function(){
   return view('homepage/index');
 });
