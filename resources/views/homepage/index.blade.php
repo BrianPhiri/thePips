@@ -23,18 +23,18 @@
         <li><a href="#">Shop Cart <i class="fa fa-shopping-cart fa-fw" aria-hidden="true"></i></a></li>
         <li><a href="#">About Us</a></li>
         <!-- <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li> -->
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Separated link</a></li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </li> -->
+  </ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
 </nav>
 <!-- NAVBAR END -->
 <!-- PAGE HEADER -->
@@ -98,55 +98,59 @@
 <!-- END ARRIVALS SECTION -->
 <!-- CATEGORIES SECTION -->
 <h1 style="text-align: center;">Categories</h1>
-<div class="row">
-  <div class="col-lg-3 col-md-3 col-sm-6" style="background-color: #F5F5F4">
+<div class="container col-lg-3 col-md-3 col-sm-6">
+  <div style="background-color: #F5F5F4">
     <h1 style="text-align: center;">Categories</h1>
+
+          <h4 class="panel-title">
+            <a class="btn btn-info btn-block" data-toggle="collapse" href="#collapse1" style="text-align: left;">Couch</a>
+          </h4>
+
+          <ul id="collapse1" class="collapse">
+            <li >One</li>
+            <li >Two</li>
+            <li >Three</li>
+          </ul>
     <ul class="nav nav-pills nav-stacked">
-      <li role="presentation" class="active"><a href="#">thePips</a></li>
-      <li role="presentation"><a href="#">thePips</a></li>
-      <li role="presentation"><a href="#">thePips</a></li>
-      <li role="presentation"><a href="#">thePips</a></li>
       <li role="presentation"><a href="#">thePips</a></li>
     </ul>
   </div>
-  <div class="col-lg-3 col-md-3 col-sm-6">
-    <img src="images/desk/desk_2.jpg" alt="thePips" class="img-thumbnail">
-  </div>
-  <div class="col-lg-3 col-md-3 col-sm-6">
-    <img src="images/desk/desk_2.jpg" alt="thePips" class="img-thumbnail">
-  </div>
-  <div class="col-lg-3 col-md-3 col-sm-6">
-    <img src="images/desk/desk_2.jpg" alt="thePips" class="img-thumbnail">
-  </div>
 </div>
-<div class="row">
-  <div class="col-lg-3 col-md-3 col-sm-6">
-    ....
+<div class="container col-lg-9 col-md-9 col-sm-6">
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-6">
+      <img src="images/desk/desk_2.jpg" alt="thePips" class="img-thumbnail">
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6">
+      <img src="images/desk/desk_2.jpg" alt="thePips" class="img-thumbnail">
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6">
+      <img src="images/desk/desk_2.jpg" alt="thePips" class="img-thumbnail">
+    </div>
   </div>
-  <div class="col-lg-3 col-md-3 col-sm-6">
-    <img src="images/desk/desk_2.jpg" alt="thePips" class="img-thumbnail">
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-6">
+      <img src="images/desk/desk_2.jpg" alt="thePips" class="img-thumbnail">
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6">
+      <img src="images/desk/desk_2.jpg" alt="thePips" class="img-thumbnail">
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6">
+      <img src="images/desk/desk_2.jpg" alt="thePips" class="img-thumbnail">
+    </div>
   </div>
-  <div class="col-lg-3 col-md-3 col-sm-6">
-    <img src="images/desk/desk_2.jpg" alt="thePips" class="img-thumbnail">
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-6">
+      <img src="images/desk/desk_2.jpg" alt="thePips" class="img-thumbnail">
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6">
+      <img src="images/desk/desk_2.jpg" alt="thePips" class="img-thumbnail">
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6">
+      <img src="images/desk/desk_2.jpg" alt="thePips" class="img-thumbnail">
+    </div>
   </div>
-  <div class="col-lg-3 col-md-3 col-sm-6">
-    <img src="images/desk/desk_2.jpg" alt="thePips" class="img-thumbnail">
-  </div>
-</div>
-<div class="row">
-  <div class="col-lg-3 col-md-3 col-sm-6">
-    ....
-  </div>
-  <div class="col-lg-3 col-md-3 col-sm-6">
-    <img src="images/desk/desk_2.jpg" alt="thePips" class="img-thumbnail">
-  </div>
-  <div class="col-lg-3 col-md-3 col-sm-6">
-    <img src="images/desk/desk_2.jpg" alt="thePips" class="img-thumbnail">
-  </div>
-  <div class="col-lg-3 col-md-3 col-sm-6">
-    <img src="images/desk/desk_2.jpg" alt="thePips" class="img-thumbnail">
-  </div>
-</div>
 
+</div>
 <!-- END CATEGORIES SECTION -->
 @endsection()

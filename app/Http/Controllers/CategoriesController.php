@@ -6,6 +6,7 @@ use Request;
 
 use App\Http\Requests;
 use App\Categories;
+use Redirect;
 class CategoriesController extends Controller
 {
     public function index(){
@@ -22,6 +23,6 @@ class CategoriesController extends Controller
       $category->category_name = $input['categoryname'];
       $category->category_description = $input['categorydescription'];
       $category->save();
-      return view('admin/category');
+      return Redirect::intended('category');
     }
 }
