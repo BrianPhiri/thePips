@@ -17,7 +17,7 @@
  	<!---->
 
 			{!! Form::open(['url' => 'category']) !!}
-			      <div class="vali-form">
+			    <div class="vali-form">
 			      <div class="col-md-6 form-group1">
 							{!! Form::label('catname', 'Category Name') !!}
 							{!! Form::text('categoryname', null, ['placeholder' => 'Category Name','required' => '']) !!}
