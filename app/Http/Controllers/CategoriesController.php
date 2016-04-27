@@ -12,9 +12,11 @@ class CategoriesController extends Controller
       $categories = categories::All();
       return view('admin/category', compact('categories'));
     }
+
     public function create(){
       return view('admin/categoryAdd');
     }
+    
     public function store(){
       $input = Request::all();
 
