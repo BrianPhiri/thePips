@@ -15,7 +15,8 @@
   <link rel="stylesheet" href="css/font-awesome.css" media="screen" title="no title" charset="utf-8">
   <style media="screen">
   body {
-    /*padding-top: 70px;*/
+    padding-right: 25px;
+    padding-left: 25px;
   }
   img{
     width: 100%;
