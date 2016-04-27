@@ -2839,4 +2839,16 @@ ul.dropdown-menu.dropdown-menu-right {
 .top-content label {
     font-size: 1.6em;
 }
+.footer1{
+
+    float: center;
+    width: 242px;
+    font-family: 'SourceSansProRegular', Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    height: 235px;
+    padding-right: 20px;
+
+}
 }

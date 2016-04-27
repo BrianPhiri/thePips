@@ -156,22 +156,32 @@
 <br>
 <!-- END CATEGORIES SECTION -->
 <!-- ABOUT US SECTION  -->
-
+<h1 style="text-align: center; padding-top: 50px;">About Us</h1>
   <div id="aboutus" class="well well-lg" background= "#C0C0C0" >
     <div class ="row">
-      <h1 style="text-align: center; padding-top: 50px;">About Us</h1>
-       <p>
-         We are a company that deals in House Hold furniture. 
-        </P>
-        <p>
-        Our products range from beds to seats and chairs all through wardrobes and cupboards just to list a few.    
-        </p>
-         </p>
-         <p>
-           thePips
-           P.O.Box 23148, Madaraka.
-           Nairobi
-         </p>
+      
+       <div class = "footercontainer">
+         <div class = "footer1">
+           <br>
+              thePips 
+            <br>
+            <br>
+              P.O.Box 1234, Madaraka 
+            <br>
+               Nairobi 
+            <br>
+            <br>
+              Telephone Number: 0712345678 
+            <br>
+                
+            <br>
+         </div>
+         
+         <div class = "footer2">
+           
+         </div>
+         
+       </div>
     </div>
   </div>
 
