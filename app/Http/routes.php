@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('admin/index');
 });
+Route::get('/dashboard', function(){
+    return view('admin/dashboard');
+});
+Route::get('/category', 'CategoriesController@index');
+Route::get('/category/create', 'CategoriesController@create');
+Route::post('/category', 'CategoriesController@store');
+Route::get('/products', 'ProductsController@index');
+Route::get('/customers', function(){});
+// Route::get('/profile', function(){ return view('admin/profile'); });
+// Route::get('/calendar', function(){ return view('admin/calendar'); });
+// Route::get('/inbox', function(){ return view('admin/inbox'); });
+
+// Route::get('/test', function(){ return view('admin/categoryAdd'); });
+Route::get('/home',function(){
+  return view('homepage/index');
+});
