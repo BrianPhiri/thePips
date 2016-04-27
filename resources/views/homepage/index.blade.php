@@ -22,6 +22,7 @@
         <li><a href="#">Register</a></li>
         <li><a href="#">Shop Cart <i class="fa fa-shopping-cart fa-fw" aria-hidden="true"></i></a></li>
         <li><a href="#">About Us</a></li>
+        <li><a href="#">Categories</a></li>
         <!-- <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
         <ul class="dropdown-menu">
