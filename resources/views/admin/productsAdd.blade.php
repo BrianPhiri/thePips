@@ -16,7 +16,7 @@
  		<div class="validation-form">
  	<!---->
 
-			{!! Form::open(['url' => 'product']) !!}
+			{!! Form::open(['url' => 'products']) !!}
          	<div class="vali-form">
          	 <div class="col-md-6 form-group1">
               <label class="control-label">Image Upload</label>
@@ -27,7 +27,7 @@
 						<!--  -->
 						 <div class="col-md-12 form-group2">
 							 {!! Form::label('catname', 'Category') !!}
-							 {!! Form::select('', array(
+							 {!! Form::select('category', array(
 									 'Cats' ,
 									 'Dogs',
 							 )) !!}
@@ -37,7 +37,7 @@
 					 <!--  -->
 						<div class="col-md-12 form-group2">
 							{!! Form::label('subcatname', 'Sub-Category') !!}
-							{!! Form::select('', array(
+							{!! Form::select('subcategory', array(
 									'Cats' ,
 									'Dogs',
 							)) !!}
