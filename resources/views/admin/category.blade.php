@@ -7,7 +7,7 @@
 	    <span>Category</span>
     </h2>
 </div>
-<div class="container">
+<div class="content-top">
     <table class="table table-hover">
         <thead>
             <tr>
