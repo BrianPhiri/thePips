@@ -14,5 +14,8 @@ class ProductsController extends Controller
     public function create(){
       return view('admin/productsAdd');
     }
-    public function store(){}
+    public function store(){
+      $input = Request::all();
+      return $input;
+    }
 }

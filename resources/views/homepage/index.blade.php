@@ -102,18 +102,23 @@
 <div id="category" class="container col-lg-3 col-md-3 col-sm-6">
   <div style="background-color: #F5F5F4">
     <h1 style="text-align: center;">Categories</h1>
-
-          <h4 class="panel-title">
-            <a class="btn btn-info btn-block" data-toggle="collapse" href="#collapse1" style="text-align: left;">Couch</a>
-          </h4>
-
-          <ul id="collapse1" class="collapse">
-            <li >One</li>
-            <li >Two</li>
-            <li >Three</li>
-          </ul>
     <ul class="nav nav-pills nav-stacked">
-      <li role="presentation"><a href="#">thePips</a></li>
+      <li role="presentation"><a data-toggle="collapse" href="#collapseExample1">thePips <span class="glyphicon glyphicon-chevron-down" aria-hidden="true" style="float: right;"></span></a></li>
+      <ul id="collapseExample1" class="collapse list-group">
+        <li class="list-group-item">Hello World</li>
+      </ul>
+      <li role="presentation"><a data-toggle="collapse" href="#collapseExample2">thePips <span class="glyphicon glyphicon-chevron-down" aria-hidden="true" style="float: right;"></span></a></li>
+      <ul id="collapseExample2" class="collapse list-group">
+        <li class="list-group-item">Hello World</li>
+      </ul>
+      <li role="presentation"><a data-toggle="collapse" href="#collapseExample3">thePips <span class="glyphicon glyphicon-chevron-down" aria-hidden="true" style="float: right;"></span></a></li>
+      <ul id="collapseExample3" class="collapse list-group">
+        <li class="list-group-item">Hello World</li>
+      </ul>
+      <li role="presentation"><a data-toggle="collapse" href="#collapseExample4">thePips <span class="glyphicon glyphicon-chevron-down" aria-hidden="true" style="float: right;"></span></a></li>
+      <ul id="collapseExample4" class="collapse list-group">
+        <li class="list-group-item">Hello World</li>
+      </ul>
     </ul>
   </div>
 </div>
