@@ -17,6 +17,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='http://fonts.googleapis.com/css?family=Montserrat|Raleway:400,200,300,500,600,700,800,900,100' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/etalage.css" type="text/css">
 <!-- start menu -->
 <link href="{{ URL::asset('css/megamenu.css') }}" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="js/megamenu.js"></script>
@@ -24,6 +25,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="{{ asset('js/menu_jquery.js') }}"></script>
 <script src="{{ asset('js/simpleCart.min.js') }}"> </script>
   <script src="{{ asset('js/responsiveslides.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.etalage.min.js')}}"></script>
+  <script>
+  			jQuery(document).ready(function($){
+
+  				$('#etalage').etalage({
+  					thumb_image_width: 300,
+  					thumb_image_height: 400,
+  					source_image_width: 900,
+  					source_image_height: 1200,
+  					show_hint: true,
+  					click_callback: function(image_anchor, instance_id){
+  						alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+  					}
+  				});
+
+  			});
+  		</script>
 <script>
     // You can also use "$(window).load(function() {"
     $(function () {
