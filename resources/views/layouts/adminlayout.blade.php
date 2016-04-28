@@ -174,7 +174,7 @@
                         <a href="inbox" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Inbox</span> </a>
                     </li>
                      <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label">Categorys</span><span class="fa arrow"></span></a>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label">Categories</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li><a href="category" class=" hvr-bounce-to-right"> <i class="fa fa-info-circle nav_icon"></i>View Categories</a></li>
                             <li><a href="category/create" class=" hvr-bounce-to-right"><i class="fa fa-question-circle nav_icon"></i>Add Category</a></li>
