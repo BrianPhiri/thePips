@@ -32,7 +32,7 @@
 <div class="header_top">
 	 <div class="container">
 		 <div class="logo">
-		 	<a href="/home"><img src="images/logo.png" alt=""/></a>
+		 	<a href="index.html"><img src="images/logo.png" alt=""/></a>
 		 </div>
 		 <div class="header_right">
 			 <div class="login">
@@ -57,7 +57,7 @@
 		 <div class="menu_sec">
 		 <!-- start header menu -->
 		 <ul class="megamenu skyblue">
-			 <li class="active grid"><a class="color1" href="/home">Home</a></li>
+			 <li class="active grid"><a class="color1" href="index.html">Home</a></li>
 			 <li class="grid"><a class="color2" href="#">furniture</a>
 				<div class="megapanel">
 					<div class="row">
@@ -543,7 +543,7 @@
 <div class="single-sec">
 	 <div class="container">
 		 <ol class="breadcrumb">
-			 <li><a href="/home">Home</a></li>
+			 <li><a href="index.html">Home</a></li>
 			 <li class="active">Products</li>
 		 </ol>
 		 <!-- start content -->
