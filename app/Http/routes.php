@@ -33,3 +33,16 @@ Route::get('/customers', function(){});
 Route::get('/home',function(){
   return view('homepage/index');
 });
+Route::get('/account',function(){
+  return view('homepage/account');
+});Route::get('/cart',function(){
+  return view('homepage/cart');
+});Route::get('/login',function(){
+  return view('homepage/login');
+});Route::get('/products',function(){
+  return view('homepage/products');
+});Route::get('/single',function(){
+  return view('homepage/single');
+});Route::get('/contact',function(){
+  return view('homepage/contact');
+});

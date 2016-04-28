@@ -15,14 +15,14 @@
 			<div class="top_left">
 				<ul>
 					<li class="top_link">Email:<a href="mailto@example.com"> info(at)Mobilya.com</a></li>|
-					<li class="top_link"><a href="login.html">My Account</a></li>|					
+					<li class="top_link"><a href="login.html">My Account</a></li>|
 				</ul>
 				<div class="social">
 					<ul>
 						<li><a href="#"><i class="facebook"></i></a></li>
 						<li><a href="#"><i class="twitter"></i></a></li>
-						<li><a href="#"><i class="dribble"></i></a></li>	
-						<li><a href="#"><i class="google"></i></a></li>										
+						<li><a href="#"><i class="dribble"></i></a></li>
+						<li><a href="#"><i class="google"></i></a></li>
 					</ul>
 				</div>
 			</div>
@@ -33,32 +33,32 @@
 <div class="header_top">
 	 <div class="container">
 		 <div class="logo">
-		 	<a href="index.html"><img src="images/logo.png" alt=""/></a>			 
+		 	<a href="/home"><img src="images/logo.png" alt=""/></a>
 		 </div>
-		 <div class="header_right">	
+		 <div class="header_right">
 			 <div class="login">
 				 <a href="login.html">LOGIN</a>
 			 </div>
 			 <div class="cart box_1">
 				<a href="cart.html">
 					<h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="images/bag.png" alt=""></h3>
-				</a>	
+				</a>
 				<p><a href="javascript:;" class="simpleCart_empty">Empty cart</a></p>
 				<div class="clearfix"> </div>
-			 </div>				 
+			 </div>
 		 </div>
-		  <div class="clearfix"></div>	
+		  <div class="clearfix"></div>
 	 </div>
 </div>
 <!--cart-->
-	 
+
 <!------>
 <div class="mega_nav">
 	 <div class="container">
 		 <div class="menu_sec">
 		 <!-- start header menu -->
 		 <ul class="megamenu skyblue">
-			 <li class="active grid"><a class="color1" href="index.html">Home</a></li>
+			 <li class="active grid"><a class="color1" href="/home">Home</a></li>
 			 <li class="grid"><a class="color2" href="#">furniture</a>
 				<div class="megapanel">
 					<div class="row">
@@ -70,10 +70,10 @@
 									<li><a href="products.html">Fabric Sofas</a></li>
 									<li><a href="products.html">Leather Sofas</a></li>
 									<li><a href="products.html">L-shaped Sofas</a></li>
-									<li><a href="products.html">Love Seats</a></li>									
+									<li><a href="products.html">Love Seats</a></li>
 									<li><a href="products.html">Wooden Sofas</a></li>
-								</ul>	
-							</div>							
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -85,8 +85,8 @@
 									<li><a href="products.html">Wooden Tables</a></li>
 									<li><a href="products.html">Study Tables</a></li>
 									<li><a href="products.html">Bar & Unit Stools</a></li>
-								</ul>	
-							</div>							
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -98,8 +98,8 @@
 									<li><a href="products.html">Bunk Bed</a></li>
 									<li><a href="products.html">King Size Bed</a></li>
 									<li><a href="products.html">Metal Bed</a></li>
-								</ul>	
-							</div>												
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -111,8 +111,8 @@
 									<li><a href="products.html">Mettal Chair</a></li>
 									<li><a href="products.html">Folding Chair</a></li>
 									<li><a href="products.html">Bean Bags</a></li>
-								</ul>	
-							</div>						
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -124,7 +124,7 @@
 									<li><a href="products.html">Wardrobes</a></li>
 									<li><a href="products.html">Shoe Racks</a></li>
 									<li><a href="products.html">Console Tables</a></li>
-								</ul>	
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -148,10 +148,10 @@
 									<li><a href="products.html">Fabric Sofas</a></li>
 									<li><a href="products.html">Leather Sofas</a></li>
 									<li><a href="products.html">L-shaped Sofas</a></li>
-									<li><a href="products.html">Love Seats</a></li>									
+									<li><a href="products.html">Love Seats</a></li>
 									<li><a href="products.html">Wooden Sofas</a></li>
-								</ul>	
-							</div>							
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -163,8 +163,8 @@
 									<li><a href="products.html">Wooden Tables</a></li>
 									<li><a href="products.html">Study Tables</a></li>
 									<li><a href="products.html">Bar & Unit Stools</a></li>
-								</ul>	
-							</div>							
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -176,8 +176,8 @@
 									<li><a href="products.html">Bunk Bed</a></li>
 									<li><a href="products.html">King Size Bed</a></li>
 									<li><a href="products.html">Metal Bed</a></li>
-								</ul>	
-							</div>												
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -189,8 +189,8 @@
 									<li><a href="products.html">Mettal Chair</a></li>
 									<li><a href="products.html">Folding Chair</a></li>
 									<li><a href="products.html">Bean Bags</a></li>
-								</ul>	
-							</div>						
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -202,7 +202,7 @@
 									<li><a href="products.html">Wardrobes</a></li>
 									<li><a href="products.html">Shoe Racks</a></li>
 									<li><a href="products.html">Console Tables</a></li>
-								</ul>	
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -214,7 +214,7 @@
 						<div class="col1"></div>
 					</div>
     				</div>
-				</li>				
+				</li>
 				<li><a class="color5" href="#">kitchen & dinning</a>
 				<div class="megapanel">
 					<div class="row">
@@ -226,10 +226,10 @@
 									<li><a href="products.html">Fabric Sofas</a></li>
 									<li><a href="products.html">Leather Sofas</a></li>
 									<li><a href="products.html">L-shaped Sofas</a></li>
-									<li><a href="products.html">Love Seats</a></li>									
+									<li><a href="products.html">Love Seats</a></li>
 									<li><a href="products.html">Wooden Sofas</a></li>
-								</ul>	
-							</div>							
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -241,8 +241,8 @@
 									<li><a href="products.html">Wooden Tables</a></li>
 									<li><a href="products.html">Study Tables</a></li>
 									<li><a href="products.html">Bar & Unit Stools</a></li>
-								</ul>	
-							</div>							
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -254,8 +254,8 @@
 									<li><a href="products.html">Bunk Bed</a></li>
 									<li><a href="products.html">King Size Bed</a></li>
 									<li><a href="products.html">Metal Bed</a></li>
-								</ul>	
-							</div>												
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -267,8 +267,8 @@
 									<li><a href="products.html">Mettal Chair</a></li>
 									<li><a href="products.html">Folding Chair</a></li>
 									<li><a href="products.html">Bean Bags</a></li>
-								</ul>	
-							</div>						
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -280,7 +280,7 @@
 									<li><a href="products.html">Wardrobes</a></li>
 									<li><a href="products.html">Shoe Racks</a></li>
 									<li><a href="products.html">Console Tables</a></li>
-								</ul>	
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -304,10 +304,10 @@
 									<li><a href="products.html">Fabric Sofas</a></li>
 									<li><a href="products.html">Leather Sofas</a></li>
 									<li><a href="products.html">L-shaped Sofas</a></li>
-									<li><a href="products.html">Love Seats</a></li>									
+									<li><a href="products.html">Love Seats</a></li>
 									<li><a href="products.html">Wooden Sofas</a></li>
-								</ul>	
-							</div>							
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -319,8 +319,8 @@
 									<li><a href="products.html">Wooden Tables</a></li>
 									<li><a href="products.html">Study Tables</a></li>
 									<li><a href="products.html">Bar & Unit Stools</a></li>
-								</ul>	
-							</div>							
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -332,8 +332,8 @@
 									<li><a href="products.html">Bunk Bed</a></li>
 									<li><a href="products.html">King Size Bed</a></li>
 									<li><a href="products.html">Metal Bed</a></li>
-								</ul>	
-							</div>												
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -345,8 +345,8 @@
 									<li><a href="products.html">Mettal Chair</a></li>
 									<li><a href="products.html">Folding Chair</a></li>
 									<li><a href="products.html">Bean Bags</a></li>
-								</ul>	
-							</div>						
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -358,7 +358,7 @@
 									<li><a href="products.html">Wardrobes</a></li>
 									<li><a href="products.html">Shoe Racks</a></li>
 									<li><a href="products.html">Console Tables</a></li>
-								</ul>	
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -370,8 +370,8 @@
 						<div class="col1"></div>
 					</div>
     				</div>
-				</li>				
-			
+				</li>
+
 				<li><a class="color7" href="#">decor</a>
 				<div class="megapanel">
 					<div class="row">
@@ -383,10 +383,10 @@
 									<li><a href="products.html">Fabric Sofas</a></li>
 									<li><a href="products.html">Leather Sofas</a></li>
 									<li><a href="products.html">L-shaped Sofas</a></li>
-									<li><a href="products.html">Love Seats</a></li>									
+									<li><a href="products.html">Love Seats</a></li>
 									<li><a href="products.html">Wooden Sofas</a></li>
-								</ul>	
-							</div>							
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -398,8 +398,8 @@
 									<li><a href="products.html">Wooden Tables</a></li>
 									<li><a href="products.html">Study Tables</a></li>
 									<li><a href="products.html">Bar & Unit Stools</a></li>
-								</ul>	
-							</div>							
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -411,8 +411,8 @@
 									<li><a href="products.html">Bunk Bed</a></li>
 									<li><a href="products.html">King Size Bed</a></li>
 									<li><a href="products.html">Metal Bed</a></li>
-								</ul>	
-							</div>												
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -424,8 +424,8 @@
 									<li><a href="products.html">Mettal Chair</a></li>
 									<li><a href="products.html">Folding Chair</a></li>
 									<li><a href="products.html">Bean Bags</a></li>
-								</ul>	
-							</div>						
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -437,7 +437,7 @@
 									<li><a href="products.html">Wardrobes</a></li>
 									<li><a href="products.html">Shoe Racks</a></li>
 									<li><a href="products.html">Console Tables</a></li>
-								</ul>	
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -449,8 +449,8 @@
 						<div class="col1"></div>
 					</div>
     				</div>
-				</li>				
-			
+				</li>
+
 				<li><a class="color8" href="#">kids</a>
 				<div class="megapanel">
 					<div class="row">
@@ -462,10 +462,10 @@
 									<li><a href="products.html">Fabric Sofas</a></li>
 									<li><a href="products.html">Leather Sofas</a></li>
 									<li><a href="products.html">L-shaped Sofas</a></li>
-									<li><a href="products.html">Love Seats</a></li>									
+									<li><a href="products.html">Love Seats</a></li>
 									<li><a href="products.html">Wooden Sofas</a></li>
-								</ul>	
-							</div>							
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -477,8 +477,8 @@
 									<li><a href="products.html">Wooden Tables</a></li>
 									<li><a href="products.html">Study Tables</a></li>
 									<li><a href="products.html">Bar & Unit Stools</a></li>
-								</ul>	
-							</div>							
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -490,8 +490,8 @@
 									<li><a href="products.html">Bunk Bed</a></li>
 									<li><a href="products.html">King Size Bed</a></li>
 									<li><a href="products.html">Metal Bed</a></li>
-								</ul>	
-							</div>												
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -503,8 +503,8 @@
 									<li><a href="products.html">Mettal Chair</a></li>
 									<li><a href="products.html">Folding Chair</a></li>
 									<li><a href="products.html">Bean Bags</a></li>
-								</ul>	
-							</div>						
+								</ul>
+							</div>
 						</div>
 						<div class="col1">
 							<div class="h_nav">
@@ -516,7 +516,7 @@
 									<li><a href="products.html">Wardrobes</a></li>
 									<li><a href="products.html">Shoe Racks</a></li>
 									<li><a href="products.html">Console Tables</a></li>
-								</ul>	
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -528,8 +528,8 @@
 						<div class="col1"></div>
 					</div>
     				</div>
-				</li>				
-			   </ul> 
+				</li>
+			   </ul>
 			   <div class="search">
 				 <form>
 					<input type="text" value="" placeholder="Search...">
@@ -544,21 +544,21 @@
 <div class="login_sec">
 	 <div class="container">
 		 <ol class="breadcrumb">
-		  <li><a href="index.html">Home</a></li>
+		  <li><a href="/home">Home</a></li>
 		  <li class="active">Login</li>
 		 </ol>
 		 <h2>Login</h2>
-		 <div class="col-md-6 log">			 
+		 <div class="col-md-6 log">
 				 <p>Welcome, please enter the folling to continue.</p>
 				 <p>If you have previously Login with us, <span>click here</span></p>
 				 <form>
-					 <h5>User Name:</h5>	
+					 <h5>User Name:</h5>
 					 <input type="text" value="">
 					 <h5>Password:</h5>
-					 <input type="password" value="">					
+					 <input type="password" value="">
 					 <input type="submit" value="Login">
 					  <a href="#">Forgot Password ?</a>
-				 </form>				 
+				 </form>
 		 </div>
 		  <div class="col-md-6 login-right">
 			  	<h3>NEW REGISTRATION</h3>
@@ -580,7 +580,7 @@
 					 <li><a href="#">Our Sites</a></li>
 					 <li><a href="#">In The News</a></li>
 					 <li><a href="#">Team</a></li>
-					 <li><a href="#">Carrers</a></li>					 
+					 <li><a href="#">Carrers</a></li>
 				 </ul>
 			 </div>
 			 <div class="col-md-3 ftr-grid">
@@ -591,7 +591,7 @@
 					 <li><a href="#">Cancellation</a></li>
 					 <li><a href="#">Returns</a></li>
 					 <li><a href="#">Bulk Orders</a></li>
-					 <li><a href="#">Buying Guides</a></li>					 
+					 <li><a href="#">Buying Guides</a></li>
 				 </ul>
 			 </div>
 			 <div class="col-md-3 ftr-grid">
@@ -601,7 +601,7 @@
 					 <li><a href="#">Personal Information</a></li>
 					 <li><a href="#">Addresses</a></li>
 					 <li><a href="#">Discount</a></li>
-					 <li><a href="#">Track your order</a></li>					 					 
+					 <li><a href="#">Track your order</a></li>
 				 </ul>
 			 </div>
 			 <div class="col-md-3 ftr-grid">
@@ -612,7 +612,7 @@
 					 <li><a href="#">> Decor</a></li>
 					 <li><a href="#">> Kichen & Dinning</a></li>
 					 <li><a href="#">> Bed & Bath</a></li>
-					 <li><a href="#">...More</a></li>					 
+					 <li><a href="#">...More</a></li>
 				 </ul>
 			 </div>
 			 <div class="clearfix"></div>
@@ -649,20 +649,20 @@
 				 <li><a href="#">|</a></li>
 				 <li><a href="#">Spain</a></li>
 				 <li><a href="#">|</a></li>
-				 <li><a href="#">Northern Ireland</a></li>	
-				 <li><a href="#">|</a></li>				 
+				 <li><a href="#">Northern Ireland</a></li>
+				 <li><a href="#">|</a></li>
 				 <li><a href="#">Mohali</a></li>
 				 <li><a href="#">|</a></li>
 				 <li><a href="#">Gurgaon</a></li>
 				 <li><a href="#">|</a></li>
 				 <li><a href="#">Panchkula</a></li>
-				 <li><a href="#">|</a></li>				 
-				 <li><a href="#">Ambala</a></li>	
+				 <li><a href="#">|</a></li>
+				 <li><a href="#">Ambala</a></li>
 			 </ul>
-		 </div>		 
+		 </div>
 		 <div class="copywrite">
 			 <p>Copyright © 2015 Furnyish Store All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-		 </div>			 
+		 </div>
 		 </div>
 	 </div>
 </div>
