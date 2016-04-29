@@ -7,7 +7,11 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
+<<<<<<< HEAD
         "google/apiclient": "^2.0.0@RC"
+=======
+        "laravelcollective/html": "^5.2"
+>>>>>>> 52e1b2e8ac287334aef84bd982a4e9dfec9ef37f
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
