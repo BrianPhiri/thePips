@@ -27,11 +27,13 @@ Route::get('cart', function () {
 Route::get('/dashboard', function(){
     return view('admin/dashboard');
 });
+
 Route::get('/category', 'CategoriesController@index');
 Route::get('/category/create', 'CategoriesController@create');
 Route::post('/category', 'CategoriesController@store');
 Route::get('/products', 'ProductsController@index');
 Route::get('products/create', 'ProductsController@create');
+Route::get('/subcategory', 'ProductsController@subcategory');
 Route::post('/products', 'ProductsController@store');
 
 Route::get('/customers', function(){});
@@ -49,7 +51,7 @@ Route::get('/account',function(){
   return view('homepage/cart');
 });Route::get('/login',function(){
   return view('homepage/login');
-});Route::get('/products',function(){
+});Route::get('/catalogs',function(){
   return view('homepage/products');
 });Route::get('/single',function(){
   return view('homepage/single');

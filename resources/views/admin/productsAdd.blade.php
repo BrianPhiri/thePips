@@ -27,20 +27,21 @@
 						<!--  -->
 						 <div class="col-md-12 form-group2">
 							 {!! Form::label('catname', 'Category') !!}
-							 {!! Form::select('category', array(
-									 'Cats' ,
-									 'Dogs',
-							 )) !!}
+							 <select name="category" id="category" class="form-control">
+							 		@foreach($categories as $category)
+						        <option value="{{$category->category_id}}">{{$category->category_name}}</option>
+									@endforeach
+						    </select>
+
 					 </div>
 					 <!--  -->
 					 <div class="clearfix"> </div>
 					 <!--  -->
 						<div class="col-md-12 form-group2">
 							{!! Form::label('subcatname', 'Sub-Category') !!}
-							{!! Form::select('subcategory', array(
-									'Cats' ,
-									'Dogs',
-							)) !!}
+							<select name="subcategory" id="subcategory" class="form-control">
+									 <option value=""></option>
+							 </select>
 					</div>
 					<!--  -->
             <div class="clearfix"> </div>
@@ -59,12 +60,25 @@
 						 <div class="clearfix"> </div>
 
             <div class="col-md-12 form-group">
-              {!! Form::submit('Add category', ['class' => 'btn btn-primary']) !!}
+              {!! Form::submit('Add Product', ['class' => 'btn btn-primary']) !!}
               <button type="reset" class="btn btn-default">Reset</button>
             </div>
           <div class="clearfix"> </div>
 				{!! Form::close() !!}
 
  	<!---->
+<script>
+		$('#category').on('change', function(e){
+			console.log(e);
+			var category_number = e.target.value;
+			$.get('/subcategory?category_number='+ category_number, function(data){
+				// console.log(data);
+				$('#subcategory').empty();
+				$.each(data, function(){
+					$('#subcategory').append('<options value="'+subcatObj.id +'">'+subcatObj.name+'</option>');
+				});
+			});
+		});
+</script>
 
 @endsection
