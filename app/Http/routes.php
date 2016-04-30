@@ -14,15 +14,6 @@
 Route::get('/', function () {
     return view('homepage/index');
 });
-Route::get('account', function () {
-    return view('homepage/account');
-});
-Route::get('productsList', function () {
-    return view('homepage/products');
-});
-Route::get('cart', function () {
-    return view('homepage/cart');
-});
 // admin
 Route::get('/dashboard', function(){
     return view('admin/dashboard');
