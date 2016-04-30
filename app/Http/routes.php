@@ -33,10 +33,7 @@ Route::get('/category/create', 'CategoriesController@create');
 Route::post('/category', 'CategoriesController@store');
 Route::get('/products', 'ProductsController@index');
 Route::get('products/create', 'ProductsController@create');
-Route::get('/subcategory', function(){
-  $cat_id = Inpute::get('category_number');
-  return $cat_id;
-});
+Route::get('/subcategory', 'ProductsController@subcategory');
 Route::post('/products', 'ProductsController@store');
 
 Route::get('/customers', function(){});

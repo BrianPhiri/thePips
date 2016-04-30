@@ -40,9 +40,7 @@
 						<div class="col-md-12 form-group2">
 							{!! Form::label('subcatname', 'Sub-Category') !!}
 							<select name="subcategory" id="subcategory" class="form-control">
-								 @foreach($categories as $category)
-									 <option value="{{$category->category_id}}">{{$category->category_name}}</option>
-								 @endforeach
+									 <option value=""></option>
 							 </select>
 					</div>
 					<!--  -->
@@ -74,7 +72,11 @@
 			console.log(e);
 			var category_number = e.target.value;
 			$.get('/subcategory?category_number='+ category_number, function(data){
-				console.log(data);
+				// console.log(data);
+				$('#subcategory').empty();
+				$.each(data, function(){
+					$('#subcategory').append('<options value="'+subcatObj.id +'">'+subcatObj.name+'</option>');
+				});
 			});
 		});
 </script>
