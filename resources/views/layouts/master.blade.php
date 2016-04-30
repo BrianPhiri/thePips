@@ -57,6 +57,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </head>
 <body>
+  <div class="top_bg">
+  	<div class="container">
+  		<div class="header_top-sec">
+  			<div class="top_right">
+  				<ul>
+  					<li><a href="#">help</a></li>|
+  					<li><a href="/contact">Contact</a></li>|
+  					<li><a href="/login">Track Order</a></li>
+  				</ul>
+  			</div>
+  			<div class="top_left">
+  				<ul>
+  					<li class="top_link">Email:<a href="mailto@example.com">info(at)Mobilya.com</a></li>|
+  					<li class="top_link"><a href="/login">My Account</a></li>|
+  				</ul>
+  				<div class="social">
+  					<ul>
+  						<li><a href="#"><i class="facebook"></i></a></li>
+  						<li><a href="#"><i class="twitter"></i></a></li>
+  						<li><a href="#"><i class="dribble"></i></a></li>
+  						<li><a href="#"><i class="google"></i></a></li>
+  					</ul>
+  				</div>
+  			</div>
+  				<div class="clearfix"> </div>
+  		</div>
+  	</div>
+  </div>
   @yield('content')
   <!---->
 </body>

@@ -2,34 +2,6 @@
 @section('content')
 <!-- header -->
 <!-- header -->
-<div class="top_bg">
-	<div class="container">
-		<div class="header_top-sec">
-			<div class="top_right">
-				<ul>
-					<li><a href="#">help</a></li>|
-					<li><a href="/contact">Contact</a></li>|
-					<li><a href="/login">Track Order</a></li>
-				</ul>
-			</div>
-			<div class="top_left">
-				<ul>
-					<li class="top_link">Email:<a href="mailto@example.com"> info(at)Mobilya.com</a></li>|
-					<li class="top_link"><a href="/login">My Account</a></li>|
-				</ul>
-				<div class="social">
-					<ul>
-						<li><a href="#"><i class="facebook"></i></a></li>
-						<li><a href="#"><i class="twitter"></i></a></li>
-						<li><a href="#"><i class="dribble"></i></a></li>
-						<li><a href="#"><i class="google"></i></a></li>
-					</ul>
-				</div>
-			</div>
-				<div class="clearfix"> </div>
-		</div>
-	</div>
-</div>
 <div class="header_top">
 	 <div class="container">
 		 <div class="logo">
@@ -40,7 +12,7 @@
 				 <a href="/login">LOGIN</a>
 			 </div>
 			 <div class="cart box_1">
-				<a href="cart.html">
+				<a href="/cart">
 					<h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="images/bag.png" alt=""></h3>
 				</a>
 				<p><a href="javascript:;" class="simpleCart_empty">Empty cart</a></p>
@@ -563,7 +535,7 @@
 		  <div class="col-md-6 login-right">
 			  	<h3>NEW REGISTRATION</h3>
 				<p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
-				<a class="acount-btn" href="account.html">Create an Account</a>
+				<a class="acount-btn" href="/account">Create an Account</a>
 		 </div>
 		 <div class="clearfix"></div>
 	 </div>
@@ -597,7 +569,7 @@
 			 <div class="col-md-3 ftr-grid">
 				 <h4>Your account</h4>
 				 <ul>
-					 <li><a href="account.html">Your Account</a></li>
+					 <li><a href="/account">Your Account</a></li>
 					 <li><a href="#">Personal Information</a></li>
 					 <li><a href="#">Addresses</a></li>
 					 <li><a href="#">Discount</a></li>
