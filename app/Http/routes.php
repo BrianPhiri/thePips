@@ -41,9 +41,6 @@ Route::get('/customers', function(){});
 // Route::get('/calendar', function(){ return view('admin/calendar'); });
 // Route::get('/inbox', function(){ return view('admin/inbox'); });
 
-<<<<<<< HEAD
-Route::get('/test', 'MailController@index');
-=======
 // Route::get('/test', function(){ return view('admin/categoryAdd'); });
 Route::get('/home',function(){
   return view('homepage/index');
@@ -61,4 +58,3 @@ Route::get('/account',function(){
 });Route::get('/contact',function(){
   return view('homepage/contact');
 });
->>>>>>> 52e1b2e8ac287334aef84bd982a4e9dfec9ef37f
