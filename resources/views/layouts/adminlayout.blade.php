@@ -41,7 +41,7 @@
 <!----->
 
 <!--pie-chart--->
-<script src="js/pie-chart.js" type="text/javascript"></script>
+<script src="{{ asset('js/pie-chart.js') }}" type="text/javascript"></script>
  <script type="text/javascript">
 
         $(document).ready(function () {
@@ -80,7 +80,7 @@
 
     </script>
 <!--skycons-icons-->
-<script src="js/skycons.js"></script>
+<script src="{{ asset('js/skycons.js') }}"></script>
 <!--//skycons-icons-->
 </head>
 <body>
@@ -167,26 +167,24 @@
                 <ul class="nav" id="side-menu">
 
                     <li>
-                        <a href="dashboard" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Dashboards</span> </a>
+                        <a href="{{ URL::asset('admin') }}" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Dashboards</span> </a>
                     </li>
 
 					 <li>
-                        <a href="inbox" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Inbox</span> </a>
+                        <a href="{{ URL::asset('inbox') }}" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Inbox</span> </a>
                     </li>
                      <li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label">Categories</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="category" class=" hvr-bounce-to-right"> <i class="fa fa-info-circle nav_icon"></i>View Categories</a></li>
-                            <li><a href="category/create" class=" hvr-bounce-to-right"><i class="fa fa-question-circle nav_icon"></i>Add Category</a></li>
-                            <li><a href="category" class=" hvr-bounce-to-right"><i class="fa fa-file-o nav_icon"></i>Edit Category</a></li>
+                            <li><a href="{{ URL::asset('category') }}" class=" hvr-bounce-to-right"> <i class="fa fa-info-circle nav_icon"></i>View Categories</a></li>
+                            <li><a href="{{ URL::asset('category/create') }}" class=" hvr-bounce-to-right"><i class="fa fa-question-circle nav_icon"></i>Add Category</a></li>
                        </ul>
                     </li>
                      <li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label">Products</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="products" class=" hvr-bounce-to-right"> <i class="fa fa-info-circle nav_icon"></i>View Products</a></li>
-                            <li><a href="products/create" class=" hvr-bounce-to-right"><i class="fa fa-question-circle nav_icon"></i>Add Products</a></li>
-                            <li><a href="products" class=" hvr-bounce-to-right"><i class="fa fa-file-o nav_icon"></i>Edit Products</a></li>
+                            <li><a href="{{ URL::asset('products') }}" class=" hvr-bounce-to-right"> <i class="fa fa-info-circle nav_icon"></i>View Products</a></li>
+                            <li><a href="{{ URL::asset('products/create') }}" class=" hvr-bounce-to-right"><i class="fa fa-question-circle nav_icon"></i>Add Products</a></li>
                        </ul>
                     </li>
 
@@ -221,9 +219,9 @@
      </div>
 <!---->
 <!--scrolling js-->
-	<script src="js/jquery.nicescroll.js"></script>
-	<script src="js/scripts.js"></script>
+	<script src="{{ asset('js/jquery.nicescroll.js') }}"></script>
+	<script src="{{ asset('js/scripts.js') }}"></script>
 	<!--//scrolling js-->
-	<script src="js/bootstrap.min.js"> </script>
+	<script src="{{ asset('js/bootstrap.min.js') }}"> </script>
 </body>
 </html>

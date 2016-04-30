@@ -40,7 +40,7 @@
 						<div class="col-md-12 form-group2">
 							{!! Form::label('subcatname', 'Sub-Category') !!}
 							<select name="subcategory" id="subcategory" class="form-control">
-									 <option value=""></option>
+								<option value="">Select Category</option>
 							 </select>
 					</div>
 					<!--  -->
@@ -55,7 +55,12 @@
                <p class=" hint-block">Price values from 1-***</p>
             </div>
              <div class="clearfix"> </div>
-             
+						 <div class="clearfix"> </div>
+             <div class="col-md-6 form-group1">
+ 							{!! Form::label('productDes', 'Product Description') !!}
+ 							{!! Form::textarea('productdescription', null, ['placeholder' => 'please write down a brife summary of the product','required' => '']) !!}
+             </div>
+						 <div class="clearfix"> </div>
              <div class="clearfix"> </div>
 			 <div class="clearfix"> </div>
 
@@ -71,12 +76,14 @@
 		$('#category').on('change', function(e){
 			console.log(e);
 			var category_number = e.target.value;
-			$.get('/subcategory?category_number='+ category_number, function(data){
+			$.get("{{ URL::asset('/subcategory?category_number=') }}"+ category_number, function(data){
 				// console.log(data);
 				$('#subcategory').empty();
-				$.each(data, function(){
-					$('#subcategory').append('<options value="'+subcatObj.id +'">'+subcatObj.name+'</option>');
+				 var appenddata = "";
+				$.each(data, function(index, subcatObj){
+					appenddata += "<option value = '"  +subcatObj.sub_category_id + " '>" +subcatObj.name+ " </option>";
 				});
+				$('#subcategory').html(appenddata);
 			});
 		});
 </script>

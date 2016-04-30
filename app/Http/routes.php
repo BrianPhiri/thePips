@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('homepage/index');
 });
 // admin
-Route::get('/dashboard', function(){
+Route::get('/admin', function(){
     return view('admin/dashboard');
 });
 

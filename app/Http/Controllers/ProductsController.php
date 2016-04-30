@@ -31,6 +31,13 @@ class ProductsController extends Controller
     }
     public function store(){
       $input = Request::all();
-      return $input;
+      $product = new Products;
+      $product->product_name = $input['productname'];
+      $product->sub_category_id = $input['subcategory'];
+      $product->product_price = $input['productprice'];
+      $product->product_description = $input['productdescription'];
+      $product->save();
+      
+      return Redirect::intended('products');
     }
 }

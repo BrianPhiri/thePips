@@ -7,4 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Products extends Model
 {
     static $products = 'products';
+    public $timestamps = false;
 }
