@@ -7,14 +7,14 @@
 			<div class="top_right">
 				<ul>
 					<li><a href="#">help</a></li>|
-					<li><a href="contact.html">Contact</a></li>|
-					<li><a href="login.html">Track Order</a></li>
+					<li><a href="/contact">Contact</a></li>|
+					<li><a href="/login">Track Order</a></li>
 				</ul>
 			</div>
 			<div class="top_left">
 				<ul>
 					<li class="top_link">Email: <a href="mailto@example.com">info(at)Mobilya.com</a></li>|
-					<li class="top_link"><a href="login.html">My Account</a></li>|
+					<li class="top_link"><a href="/login">My Account</a></li>|
 				</ul>
 				<div class="social">
 					<ul>
@@ -36,7 +36,7 @@
 		 </div>
 		 <div class="header_right">
 			 <div class="login">
-				 <a href="login.html">LOGIN</a>
+				 <a href="/login">LOGIN</a>
 			 </div>
 			 <div class="cart box_1">
 				<a href="cart.html">
@@ -949,7 +949,7 @@
 				 <h4>About Us</h4>
 				 <ul>
 					 <li><a href="#">Who We Are</a></li>
-					 <li><a href="contact.html">Contact Us</a></li>
+					 <li><a href="/contact">Contact Us</a></li>
 					 <li><a href="#">Our Sites</a></li>
 					 <li><a href="#">In The News</a></li>
 					 <li><a href="#">Team</a></li>
