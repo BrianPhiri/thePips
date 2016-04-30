@@ -24,10 +24,4 @@
     </table>
 </div>
 
-<<<<<<< HEAD
-<!-- Add table -->
-
 @endsection
-=======
-@endsection
->>>>>>> 52e1b2e8ac287334aef84bd982a4e9dfec9ef37f
