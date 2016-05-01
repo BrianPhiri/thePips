@@ -7,23 +7,34 @@ use Request;
 use App\Http\Requests;
 use App\Categories;
 use Redirect;
+
 class CategoriesController extends Controller
 {
     public function index(){
       $categories = categories::All();
-      return view('admin/category', compact('categories'));
+      return view('admin.categories.category', compact('categories'));
     }
 
     public function create(){
-      return view('admin/categoryAdd');
+      return view('admin.categories.categoryAdd');
     }
-    
+
     public function store(){
       $input = Request::all();
+      categories::create($input);
+      return Redirect::intended('category');
 
-      $category = new categories;
-      $category->category_name = $input['categoryname'];
-      $category->category_description = $input['categorydescription'];
+    }
+    public function edit($category_id){
+      $category = categories::findOrFail($category_id);
+      return view('admin.categories.edit', compact('category'));
+    }
+
+    public function update($category_id){
+      $input = Request::all();
+      $category = categories::findOrFail($category_id);
+      $category->category_name = $input['category_name'];
+      $category->category_description = $input['category_description'];
       $category->save();
       return Redirect::intended('category');
     }

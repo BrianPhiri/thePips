@@ -211,7 +211,7 @@
 
 		<!---->
 <div class="copy">
-            <p> &copy; {!! date('Y-m-d') !!} E-commerce by <a href="http://w3layouts.com/" target="_blank">thePIPS</a> </p>
+            <p> &copy; {!! date('Y-m-d') !!} E-commerce by <a href="" target="_blank">thePIPS</a> </p>
 	    </div>
 		</div>
 		<div class="clearfix"> </div>

@@ -15,24 +15,17 @@ Route::get('/', function () {
     return view('homepage/index');
 });
 // admin
-Route::get('/admin', function(){
-    return view('admin/dashboard');
-});
-
-Route::get('/category', 'CategoriesController@index');
-Route::get('/category/create', 'CategoriesController@create');
-Route::post('/category', 'CategoriesController@store');
-Route::get('/products', 'ProductsController@index');
-Route::get('products/create', 'ProductsController@create');
+Route::get('/admin', 'AdminController@index');
+Route::get('/summary', 'AdminController@summary');
 Route::get('/subcategory', 'ProductsController@subcategory');
-Route::post('/products', 'ProductsController@store');
 
+Route::resource('category', 'CategoriesController');
+Route::resource('product', 'ProductsController');
+
+Route::get('/test', function(){ return view('admin.validation');});
 Route::get('/customers', function(){});
-// Route::get('/profile', function(){ return view('admin/profile'); });
-// Route::get('/calendar', function(){ return view('admin/calendar'); });
-// Route::get('/inbox', function(){ return view('admin/inbox'); });
+Route::get('/error', function(){ return view('admin/brian'); });
 
-// Route::get('/test', function(){ return view('admin/categoryAdd'); });
 Route::get('/home',function(){
   return view('homepage/index');
 });
@@ -42,7 +35,7 @@ Route::get('/account',function(){
   return view('homepage/cart');
 });Route::get('/login',function(){
   return view('homepage/login');
-});Route::get('/catalogs',function(){
+});Route::get('/products',function(){
   return view('homepage/products');
 });Route::get('/single',function(){
   return view('homepage/single');

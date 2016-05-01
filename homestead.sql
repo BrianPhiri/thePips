@@ -20,7 +20,7 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `category`;
 CREATE TABLE `category` (
-  `category_id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `category_name` varchar(25) NOT NULL,
   `category_description` text NOT NULL,
   PRIMARY KEY (`category_id`),
@@ -84,7 +84,7 @@ CREATE TABLE `orders` (
 -- ----------------------------
 DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
-  `product_id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `product_name` varchar(25) NOT NULL,
   `sub_category_id` int(11) NOT NULL,
   `product_price` decimal(10,2) DEFAULT '0.00',
