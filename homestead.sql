@@ -23,7 +23,7 @@ CREATE TABLE `category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category_name` varchar(25) NOT NULL,
   `category_description` text NOT NULL,
-  PRIMARY KEY (`category_id`),
+  PRIMARY KEY (`id`),
   UNIQUE KEY `category_name` (`category_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -62,7 +62,7 @@ CREATE TABLE `order_items` (
   KEY `order_id` (`order_id`),
   KEY `product_id` (`product_id`),
   CONSTRAINT `order_items_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`),
-  CONSTRAINT `order_items_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`)
+  CONSTRAINT `order_items_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
@@ -95,7 +95,7 @@ CREATE TABLE `products` (
   `product_qty` int(6) DEFAULT '0',
   `product_availability` bit(1) NOT NULL DEFAULT b'1',
   `date_added` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`product_id`),
+  PRIMARY KEY (`id`),
   KEY `products_ibfk_1` (`sub_category_id`),
   CONSTRAINT `products_ibfk_1` FOREIGN KEY (`sub_category_id`) REFERENCES `sub_category` (`sub_category_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -113,7 +113,7 @@ CREATE TABLE `shop_cart` (
   PRIMARY KEY (`cart_id`),
   KEY `product_id` (`product_id`),
   KEY `customer_id` (`customer_id`),
-  CONSTRAINT `shop_cart_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`),
+  CONSTRAINT `shop_cart_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
   CONSTRAINT `shop_cart_ibfk_2` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`customer_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -126,8 +126,8 @@ CREATE TABLE `sub_category` (
   `category_id` int(11) NOT NULL,
   `name` varchar(45) NOT NULL,
   PRIMARY KEY (`sub_category_id`),
-  KEY `category_id` (`category_id`),
-  CONSTRAINT `sub_category_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`category_id`)
+  KEY `category_id` (`id`),
+  CONSTRAINT `sub_category_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
