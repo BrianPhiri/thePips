@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Request;
 
+use Illuminate\Pagination\LengthAwarePaginator;
 use App\Http\Requests;
 use App\Categories;
 use Redirect;
@@ -11,7 +12,7 @@ use Redirect;
 class CategoriesController extends Controller
 {
     public function index(){
-      $categories = categories::All();
+      $categories = categories::paginate(15);
       return view('admin.categories.category', compact('categories'));
     }
 
@@ -37,5 +38,9 @@ class CategoriesController extends Controller
       $category->description = $input['description'];
       $category->save();
       return Redirect::intended('category');
+    }
+
+    public function destroy($category_id){
+      return $category_id."deleted";
     }
 }

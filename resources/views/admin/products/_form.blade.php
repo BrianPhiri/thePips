@@ -57,7 +57,7 @@
 		$('#category').on('change', function(e){
 			console.log(e);
 			var category_number = e.target.value;
-			$.get("{{ URL::asset('/subcategory?category_number=') }}"+ category_number, function(data){
+			$.get("{{ URL::asset('/subcategories?category_number=') }}"+ category_number, function(data){
 				 console.log(data);
 				$('#subcategory').empty();
 				 var appenddata = "";

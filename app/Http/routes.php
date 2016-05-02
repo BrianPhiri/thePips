@@ -17,10 +17,11 @@ Route::get('/', function () {
 // admin
 Route::get('/admin', 'AdminController@index');
 Route::get('/summary', 'AdminController@summary');
-Route::get('/subcategory', 'ProductsController@subcategory');
+Route::get('/subcategories', 'ProductsController@subcategory');
 
 Route::resource('category', 'CategoriesController');
 Route::resource('product', 'ProductsController');
+Route::resource('subcategory', 'SubcategoryController');
 
 Route::get('/test', function(){ return view('admin.validation');});
 Route::get('/customers', function(){});

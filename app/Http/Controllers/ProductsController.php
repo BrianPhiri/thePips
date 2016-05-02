@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Request;
 use Response;
 
+use Illuminate\Pagination\LengthAwarePaginator;
 use App\Http\Requests;
 use App\Products;
 use App\Categories;
@@ -16,7 +17,7 @@ use Storage;
 class ProductsController extends Controller
 {
     public function index(){
-        $products = Products::All();
+        $products = Products::paginate(15);
         return view('admin.products.products', compact('products'));
     }
     public function subcategory(){
@@ -56,7 +57,7 @@ class ProductsController extends Controller
       return Redirect::intended('product');
     }
 
-
+    // TODO: Add image uplod function
     // for image uploads.
 
 }

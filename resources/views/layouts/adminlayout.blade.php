@@ -180,6 +180,13 @@
                             <li><a href="{{ URL::asset('category/create') }}" class=" hvr-bounce-to-right"><i class="fa fa-question-circle nav_icon"></i>Add Category</a></li>
                        </ul>
                     </li>
+										<li>
+											 <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label">Sub-Categories</span><span class="fa arrow"></span></a>
+											 <ul class="nav nav-second-level">
+													 <li><a href="{{ URL::asset('subcategory') }}" class=" hvr-bounce-to-right"> <i class="fa fa-info-circle nav_icon"></i>List Sub-Categories</a></li>
+													 <li><a href="{{ URL::asset('subcategory/create') }}" class=" hvr-bounce-to-right"><i class="fa fa-question-circle nav_icon"></i>Add A Sub-Category</a></li>
+											</ul>
+									 </li>
                      <li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label">Products</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
