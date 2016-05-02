@@ -16,7 +16,7 @@
  		<div class="validation-form">
  	<!---->
 
-			{!! Form::model($category, ['method' => 'PATCH', 'url' => 'category/'. $category->category_id ]) !!}
+			{!! Form::model($category, ['method' => 'PATCH', 'url' => 'category/'. $category->id ]) !!}
 			    @include('admin.categories._form', ['submitButtonText' => 'Update Category'])
 			{!! Form::close() !!}
 

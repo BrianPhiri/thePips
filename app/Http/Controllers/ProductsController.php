@@ -11,6 +11,8 @@ use App\Categories;
 use App\Subcategories;
 use Redirect;
 use Illuminate\Support\Facades\Input;
+use Storage;
+
 class ProductsController extends Controller
 {
     public function index(){
@@ -34,7 +36,6 @@ class ProductsController extends Controller
     public function store(){
       $input = Request::all();
       Products::create($input);
-
       return Redirect::intended('product');
     }
 
@@ -47,11 +48,15 @@ class ProductsController extends Controller
     public function update($product_id){
       $input = Request::all();
       $product = Products::findOrFail($product_id);
-      $product->product_name = $input['product_name'];
-      $product->sub_category_id = $input['sub_category_id'];
-      $product->product_price = $input['product_price'];
-      $product->product_description = $input['product_description'];
+      $product->name = $input['name'];
+      $product->sub_category_id = $input['sub-category_id'];
+      $product->price = $input['price'];
+      $product->description = $input['description'];
       $product->save();
       return Redirect::intended('product');
     }
+
+
+    // for image uploads.
+
 }

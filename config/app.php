@@ -2,6 +2,8 @@
 
 return [
 
+    'fileDestinationPath' => 'uploads',
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment

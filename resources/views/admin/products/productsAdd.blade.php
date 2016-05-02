@@ -4,9 +4,9 @@
 <!--banner-->
 		   <div class="banner">
 		    	<h2>
-				<a href="dashboard">Home</a>
+				<a href="admin">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Validation</span>
+				<span>Products</span>
 				</h2>
 		    </div>
 		<!--//banner-->

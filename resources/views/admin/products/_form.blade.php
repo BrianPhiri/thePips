@@ -2,15 +2,16 @@
  <div class="col-md-6 form-group1">
     <label class="control-label">Image Upload</label>
     <img src="..." alt="..." class="img-thumbnail">
-    {!! Form::file('image'); !!}
+    {!! Form::file('file'); !!}
   </div>
   <div class="clearfix"> </div>
   <!--  -->
    <div class="col-md-12 form-group2">
      {!! Form::label('catname', 'Category') !!}
      <select name="category" id="category" class="form-control">
+          <option>Select Category</option>
         @foreach($categories as $category)
-          <option value="{{ $category->id}}">{{$category->category_name}}</option>
+          <option value="{{ $category->id}}">{{$category->name}}</option>
         @endforeach
       </select>
 
@@ -20,26 +21,26 @@
  <!--  -->
   <div class="col-md-12 form-group2">
     {!! Form::label('subcatname', 'Sub-Category') !!}
-    <select name="sub_category_id" id="subcategory" class="form-control">
-      <option value="">Select Category</option>
+    <select name="sub-category_id" id="subcategory" class="form-control">
+      <option value=""></option>
      </select>
 </div>
 <!--  -->
   <div class="clearfix"> </div>
   <div class="col-md-6 form-group1">
     {!! Form::label('catname', 'Product Name') !!}
-    {!! Form::text('product_name', null, ['placeholder' => 'Product Name','required' => '']) !!}
+    {!! Form::text('name', null, ['placeholder' => 'Product Name','required' => '']) !!}
   </div>
   <div class="col-md-12 form-group1">
     {!! Form::label('prodprice', 'Product Price') !!}
-    {!! Form::text('product_price', null, ['placeholder' => 'Product Price','required' => '']) !!}
+    {!! Form::text('price', null, ['placeholder' => 'Product Price','required' => '']) !!}
      <p class=" hint-block">Price values from 1-***</p>
   </div>
    <div class="clearfix"> </div>
    <div class="clearfix"> </div>
    <div class="col-md-6 form-group1">
     {!! Form::label('productDes', 'Product Description') !!}
-    {!! Form::textarea('product_description', null, ['placeholder' => 'please write down a brife summary of the product','required' => '']) !!}
+    {!! Form::textarea('description', null, ['placeholder' => 'please write down a brife summary of the product','required' => '']) !!}
    </div>
    <div class="clearfix"> </div>
    <div class="clearfix"> </div>
@@ -61,7 +62,7 @@
 				$('#subcategory').empty();
 				 var appenddata = "";
 				$.each(data, function(index, subcatObj){
-					appenddata += "<option value = '"  +subcatObj.sub_category_id + " '>" +subcatObj.name+ " </option>";
+					appenddata += "<option value = '"  +subcatObj.id + " '>" +subcatObj.name+ " </option>";
 				});
 				$('#subcategory').html(appenddata);
 			});

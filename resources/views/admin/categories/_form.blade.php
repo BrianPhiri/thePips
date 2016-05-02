@@ -1,14 +1,14 @@
 <div class="vali-form">
   <div class="col-md-6 form-group1">
     {!! Form::label('catname', 'Category Name') !!}
-    {!! Form::text('category_name', null, ['placeholder' => 'Category Name','required' => '']) !!}
+    {!! Form::text('name', null, ['placeholder' => 'Category Name','required' => '']) !!}
   </div>
   <div class="clearfix"> </div>
   </div>
     <div class="clearfix"> </div>
   <div class="col-md-12 form-group1 ">
     {!! Form::label('catdes', 'Category Description') !!}
-    {!! Form::textarea('category_description', null, ['placeholder' => 'Category Description...','required' => '']) !!}
+    {!! Form::textarea('description', null, ['placeholder' => 'Category Description...','required' => '']) !!}
   </div>
   <div class="clearfix"> </div>
 </div>

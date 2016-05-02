@@ -8,10 +8,6 @@ class Products extends Model
 {
     static $products = 'products';
     protected $fillable = [
-      'product_name',
-      'sub_category_id',
-      'product_price',
-      'product_description'
+      'name', 'sub_category_id','price', 'description'
     ];
-    public $timestamps = false;
 }

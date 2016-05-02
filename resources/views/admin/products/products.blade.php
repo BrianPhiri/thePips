@@ -24,7 +24,7 @@
         <tbody>
             @foreach( $products as  $product)
             <tr>
-                <td>{{ $product->product_name }}</td><td style="word-break: break-all; word-wrap:break-word;">{{ $product->product_description }}</td><td><a href="product/{{$product->id }}/edit" class="btn btn-warning">Edit</a></td>
+                <td>{{ $product->name }}</td><td style="word-break: break-all; word-wrap:break-word;">{{ $product->description }}</td><td><a href="product/{{$product->id }}/edit" class="btn btn-warning">Edit</a></td>
             </tr>
             @endforeach
         </tbody>

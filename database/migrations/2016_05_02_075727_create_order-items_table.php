@@ -16,7 +16,7 @@ class CreateOrderItemsTable extends Migration
             $table->increments('id');
             $table->integer('product_id')->unsigned();
             $table->integer('quantity');
-            $table->decimal('sale-price', 10,2);
+            $table->decimal('sale_price', 10,2);
             $table->timestamps();
         });
         Schema::table('order-items', function (Blueprint $table) {

@@ -33,8 +33,8 @@ class CategoriesController extends Controller
     public function update($category_id){
       $input = Request::all();
       $category = categories::findOrFail($category_id);
-      $category->category_name = $input['category_name'];
-      $category->category_description = $input['category_description'];
+      $category->name = $input['name'];
+      $category->description = $input['description'];
       $category->save();
       return Redirect::intended('category');
     }

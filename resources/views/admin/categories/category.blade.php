@@ -24,7 +24,7 @@
         <tbody>
             @foreach( $categories as  $category)
             <tr>
-                <td>{{ $category->category_name }}</td><td>{{ $category->category_description }}</td><td><a href="category/{{$category->id }}/edit" class="btn btn-warning">Edit</a></td>
+                <td>{{ $category->name }}</td><td>{{ $category->description }}</td><td><a href="category/{{$category->id }}/edit" class="btn btn-warning">Edit</a></td>
             </tr>
             @endforeach
         </tbody>

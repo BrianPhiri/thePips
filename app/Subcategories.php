@@ -6,6 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Subcategories extends Model
 {
-  public $table = 'sub_category';
-  public $timestamps = false;
+  public $table = 'subcategories';
 }
