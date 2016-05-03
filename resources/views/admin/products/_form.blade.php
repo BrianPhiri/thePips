@@ -20,8 +20,8 @@
  <div class="clearfix"> </div>
  <!--  -->
   <div class="col-md-12 form-group2">
-    {!! Form::label('subcatname', 'Sub-Category') !!}
-    <select name="sub-category_id" id="subcategory" class="form-control">
+    {!! Form::label('subcatname', 'Subcategory') !!}
+    <select name="sub_category_id" id="subcategory" class="form-control">
       <option value=""></option>
      </select>
 </div>

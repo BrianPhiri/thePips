@@ -50,7 +50,7 @@ class ProductsController extends Controller
       $input = Request::all();
       $product = Products::findOrFail($product_id);
       $product->name = $input['name'];
-      $product->sub_category_id = $input['sub-category_id'];
+      $product->sub_category_id = $input['sub_category_id'];
       $product->price = $input['price'];
       $product->description = $input['description'];
       $product->save();
