@@ -22,7 +22,7 @@ class CreateCustomersTable extends Migration
             $table->string('email', 60)->unique();
             $table->string('password', 60);
             $table->enum('gender', ['Male', 'Female']);
-            $table->integer('activation-status')->default(0);
+            $table->integer('activation_status')->default(0);
             $table->timestamps();
         });
     }

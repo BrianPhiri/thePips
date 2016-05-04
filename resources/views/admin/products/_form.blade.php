@@ -40,7 +40,7 @@
    <div class="clearfix"> </div>
    <div class="col-md-6 form-group1">
     {!! Form::label('productDes', 'Product Description') !!}
-    {!! Form::textarea('description', null, ['placeholder' => 'please write down a brife summary of the product','required' => '']) !!}
+    {!! Form::textarea('description', null, ['placeholder' => 'please write down a brief summary of the product','required' => '']) !!}
    </div>
    <div class="clearfix"> </div>
    <div class="clearfix"> </div>
