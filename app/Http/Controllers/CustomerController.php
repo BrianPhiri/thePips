@@ -13,8 +13,8 @@ class CustomerController extends Controller
    	$customers = Customers::All();
    	return view('admin.customers.customer', compact('customers'));
    }
-   public function users (){
-   	$users = Customers::All();
-   	return view('admin.customers.user', compact('users'));
+   public function show ($id){
+   	$user = Customers::findOrFail($id);
+   	return view('admin.customers.user', compact('user'));
    }
 }

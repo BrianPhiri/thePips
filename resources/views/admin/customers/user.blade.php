@@ -1,7 +1,7 @@
 @extends('layouts.adminlayout')
 @section('content')
 
- 	<!--banner-->	
+ 	<!--banner-->
 		    <div class="banner">
 		    	<h2>
 				<a href="index.html">Home</a>
@@ -23,13 +23,11 @@
 				<h6>The Pips</h6>
 				<table>
 					<tr>
-						<td>Name</td>  
+						<td>Name</td>
 						<td>:</td>
-						@foreach($users as $user)
 						<td>
 							{{ $user->surname }}, {{ $user->othernames }}
 						</td>
-						@endforeach
 					</tr>
 					<tr>
 						<td>Email</td>
@@ -73,13 +71,10 @@
                 <button type="button" href="#" class="btn bg-red">Save changes</button>
            <div class="clearfix"></div>
 			</div>
-			 
-			
+
+
 		</div>
 	</div>
 	<!--//gallery-->
 		<!---->
 @endsection
-
-
-
