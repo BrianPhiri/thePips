@@ -17,7 +17,7 @@
 			<h3><i class="fa fa-user"></i>Profile</h3>
 			<div class="profile-bottom-top">
 			<div class="col-md-4 profile-bottom-img">
-				<img src="images/thePIPS_LOGO.png" alt="">
+				<img src="{{ URL::asset('images/thePIPS_LOGO.png')}}" alt="">
 			</div>
 			<div class="col-md-8 profile-text">
 				<h6>The Pips</h6>
