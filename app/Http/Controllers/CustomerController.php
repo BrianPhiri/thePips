@@ -17,4 +17,7 @@ class CustomerController extends Controller
    	$user = Customers::findOrFail($id);
    	return view('admin.customers.user', compact('user'));
    }
+
+   public function update(){}
+   public function destroy(){}
 }
