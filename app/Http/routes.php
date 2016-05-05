@@ -25,6 +25,7 @@ Route::resource('subcategory', 'SubcategoryController');
 
 Route::get('/test', function(){ return view('admin.validation');});
 Route::get('/customers', 'CustomerController@index');
+Route::get('/test', function(){ return view('admin.customers.user'); });
 Route::get('/error', function(){ return view('admin/brian'); });
 
 Route::get('/home',function(){
