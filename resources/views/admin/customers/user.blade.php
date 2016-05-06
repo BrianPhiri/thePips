@@ -22,14 +22,13 @@
 			<div class="col-md-8 profile-text">
 				<h6>The Pips</h6>
 				<table>
+				@foreach($users as $user)
 					<tr>
 						<td>Name</td>  
 						<td>:</td>
-						@foreach($users as $user)
 						<td>
 							{{ $user->surname }}, {{ $user->othernames }}
 						</td>
-						@endforeach
 					</tr>
 					<tr>
 						<td>Email</td>
@@ -51,6 +50,7 @@
 						<td>:</td>
 						<td>{{ $user->gender}}</td>
 					</tr>
+					@endforeach
 				</table>
 			</div>
 			<div class="clearfix"></div>
