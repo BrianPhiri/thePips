@@ -55,7 +55,7 @@
 			<hr>
 			</div>
 			<div class="profile-bottom-bottom">
-				<table class="table table-hover">
+				<table id="myOrderTable" class="table table-hover">
 					<thead>
 						<tr>
 							<td>Order id</td><td>Product</td><td>Quantity</td>
@@ -77,6 +77,13 @@
 			</div>
 		</div>
 	</div>
-	<!--//gallery-->
-		<!---->
+	<script type="text/javascript">
+	$(document).ready(function(){
+	    $('#myOrderTable').DataTable({
+				searching: false,
+				select: true,
+				ordering: true
+			});
+	});
+	</script>
 @endsection

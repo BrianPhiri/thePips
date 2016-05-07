@@ -14,10 +14,10 @@
 <!---->
 	<div class="clearfix"> </div>
 	<div class="content-top">
-    <table class="table table-hover">
+    <table id="myTable" class="table table-hover">
         <thead>
             <tr>
-                <td><b>Product</b> Number</td><td><b>Name</b></td><td><b>Description</b></td><td><b>Action</b></td>
+                <td><b>Product</b> Number</td><td><b>Name</b></td><td><b>Description</b></td><td><b>Action</b></td><td></td><td></td>
             </tr>
         </thead>
 				<hr>
@@ -61,6 +61,6 @@
 
 <!---->
 </div>
-
 </div>
+
 @endsection
