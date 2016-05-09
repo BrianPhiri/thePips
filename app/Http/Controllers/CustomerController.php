@@ -13,4 +13,11 @@ class CustomerController extends Controller
    	$customers = Customers::All();
    	return view('admin.customers.customer', compact('customers'));
    }
+   public function show ($id){
+   	$user = Customers::findOrFail($id);
+   	return view('admin.customers.user', compact('user'));
+   }
+
+   public function update(){}
+   public function destroy(){}
 }

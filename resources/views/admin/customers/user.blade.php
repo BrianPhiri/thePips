@@ -1,12 +1,12 @@
 @extends('layouts.adminlayout')
 @section('content')
 
- 	<!--banner-->	
+ 	<!--banner-->
 		    <div class="banner">
 		    	<h2>
 				<a href="index.html">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Profile</span>
+				<span>Customer</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -17,63 +17,73 @@
 			<h3><i class="fa fa-user"></i>Profile</h3>
 			<div class="profile-bottom-top">
 			<div class="col-md-4 profile-bottom-img">
-				<img src="images/thePIPS_LOGO.png" alt="">
+				<img src="{{ URL::asset('images/thePIPS_LOGO.png')}}" alt="">
 			</div>
 			<div class="col-md-8 profile-text">
 				<h6>The Pips</h6>
 				<table>
-					<tr><td>Department of Information</td>  
-					<td>:</td>  
-					<td>Web Designer</td></tr>
 					<tr>
-					<td>Email</td>
-					<td> :</td>
-					<td><a href="http://info@gmail.com">info@lorem.com</a></td>
+						<td>Name</td>
+						<td>:</td>
+						<td>
+							{{ $user->surname }}, {{ $user->othernames }}
+						</td>
 					</tr>
 					<tr>
-					<td>Role</td>
-					<td> :</td>
-					<td>System Admin</td>
+						<td>Email</td>
+						<td> :</td>
+						<td>{{ $user->email }}</td>
 					</tr>
 					<tr>
-					<td>Country </td>
-					<td>:</td>
-					<td>Kenya</td>
+						<td>Address</td>
+						<td> :</td>
+						<td>{{ $user->address }}</td>
+					</tr>
+					<tr>
+						<td>Town </td>
+						<td>:</td>
+						<td>{{$user->town}}</td>
+					</tr>
+					<tr>
+						<td>Gender </td>
+						<td>:</td>
+						<td>{{ $user->gender}}</td>
 					</tr>
 				</table>
 			</div>
 			<div class="clearfix"></div>
+			<hr>
 			</div>
 			<div class="profile-bottom-bottom">
-			<div class="col-md-4 profile-fo">
-				<h4>23,5k</h4>
-				<p>Followers</p>
-				<a href="#" class="pro"><i class="fa fa-plus-circle"></i>Follow</a>
-			</div>
-			<div class="col-md-4 profile-fo">
-				<h4>348</h4>
-				<p>Following</p>
-				<a href="#" class="pro1"><i class="fa fa-user"></i>View Profile</a>
-			</div>
-			<div class="col-md-4 profile-fo">
-				<h4>23,5k</h4>
-				<p>Snippets</p>
-				<a href="#"><i class="fa fa-cog"></i>Options</a>
-			</div>
+				<table id="myOrderTable" class="table table-hover">
+					<thead>
+						<tr>
+							<td>Order id</td><td>Product</td><td>Quantity</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>3002</td><td>Table</td><td>2</td>
+						</tr>
+						<tr>
+							<td>3002</td><td>Table</td><td>2</td>
+						</tr>
+						<tr>
+							<td>3002</td><td>Table</td><td>2</td>
+						</tr>
+					</tbody>
+				</table>
 			<div class="clearfix"></div>
 			</div>
-			<div class="profile-btn">
-
-                <button type="button" href="#" class="btn bg-red">Save changes</button>
-           <div class="clearfix"></div>
-			</div>
-			 
-			
 		</div>
 	</div>
-	<!--//gallery-->
-		<!---->
+	<script type="text/javascript">
+	$(document).ready(function(){
+	    $('#myOrderTable').DataTable({
+				searching: false,
+				select: true,
+				ordering: true
+			});
+	});
+	</script>
 @endsection
-
-
-

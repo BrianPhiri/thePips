@@ -12,18 +12,20 @@
 	<div class="validation-form">
 		<div class="clearfix"> </div>
 		<div class="content-top">
-			<table class="table table-hover">
+			<table id="myTable" class="table table-hover table-stripped">
 				<thead>
 					<tr>
-						<td>Name</td> <td>E-mail Address</td> <td>Gender</td><td>Activation Status</td>
+						<td>Name</td> <td>E-mail Address</td><td>Actions</td><td></td>
 					</tr>
 				</thead>
 				<tbody>
-					@foreach($customers as $customer)
-						<td>{{ $customer->surname }}, {{ $customer->othernames }}</td><td>{{ $customer->email }}</td><td>{{$customer->gender}}</td><td>{{ $customer->activation_status }}</td>
-					@endforeach
+						@foreach($customers as $customer)
+							<tr>
+								<td>{{ $customer->surname }}, {{ $customer->othernames }}</td><td>{{ $customer->email }}</td><td><a class="btn btn-warning" href="customers/{{ $customer->id }}">View</a><td>
+							</tr>
+							@endforeach
 				</tbody>
-			</table>	
+			</table>
 		</div>
 	</div>
 </div>
