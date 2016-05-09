@@ -63,14 +63,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   			<div class="top_right">
   				<ul>
   					<li><a href="#">help</a></li>|
-  					<li><a href="/contact">Contact</a></li>|
-  					<li><a href="/login">Track Order</a></li>
+  					<li><a href="contact">Contact</a></li>|
+  					<li><a href="login">Track Order</a></li>
   				</ul>
   			</div>
   			<div class="top_left">
   				<ul>
   					<li class="top_link">Email:<a href="mailto@example.com">info(at)Mobilya.com</a></li>|
-  					<li class="top_link"><a href="/login">My Account</a></li>|
+  					<li class="top_link"><a href="login">My Account</a></li>|
   				</ul>
   				<div class="social">
   					<ul>

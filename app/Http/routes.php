@@ -33,14 +33,28 @@ Route::get('/home',function(){
 });
 Route::get('/account',function(){
   return view('homepage/account');
-});Route::get('/cart',function(){
+});
+
+Route::get('/cart',function(){
   return view('homepage/cart');
-});Route::get('/login',function(){
+});
+
+Route::get('/login',function(){
   return view('homepage/login');
-});Route::get('/products',function(){
+});
+
+Route::get('/products',function(){
   return view('homepage/products');
-});Route::get('/single',function(){
+});
+
+Route::get('/single',function(){
   return view('homepage/single');
-});Route::get('/contact',function(){
+});
+
+Route::get('/contact',function(){
   return view('homepage/contact');
+});
+
+Route::get('/proto',function(){
+  return view('homepage/prototype');
 });
