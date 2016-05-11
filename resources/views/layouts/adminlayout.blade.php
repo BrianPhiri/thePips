@@ -19,6 +19,9 @@
 <link href="{{ URL::asset('css/custom.css') }}" rel="stylesheet">
 <script src="{{ asset('js/custom.js') }}"></script>
 <script src="{{ asset('js/screenfull.js') }}"></script>
+<!-- datatable cdn -->
+<link rel="stylesheet" href="http://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css" media="screen" title="no title" charset="utf-8">
+<script type="text/javascript" src="http://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
 		<script>
 		$(function () {
 			$('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
@@ -230,5 +233,14 @@
 	<script src="{{ asset('js/scripts.js') }}"></script>
 	<!--//scrolling js-->
 	<script src="{{ asset('js/bootstrap.min.js') }}"> </script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+	    $('#myTable').DataTable({
+				searching: true,
+				select: true,
+				ordering: false
+			});
+	});
+	</script>
 </body>
 </html>

@@ -4,14 +4,14 @@
 <div class="header_top">
 	 <div class="container">
 		 <div class="logo">
-		 	<a href="/home"><img src="images/logo.png" alt=""/></a>
+		 	<a href="home"><img src="images/logo.png" alt=""/></a>
 		 </div>
 		 <div class="header_right">
 			 <div class="login">
-				 <a href="/login">LOGIN</a>
+				 <a href="login">LOGIN</a>
 			 </div>
 			 <div class="cart box_1">
-				<a href="/cart">
+				<a href="cart">
 					<h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="images/bag.png" alt=""></h3>
 				</a>
 				<p><a href="javascript:;" class="simpleCart_empty">Empty cart</a></p>
@@ -29,7 +29,7 @@
 		 <div class="menu_sec">
 		 <!-- start header menu -->
 		 <ul class="megamenu skyblue">
-			 <li class="active grid"><a class="color1" href="/home">Home</a></li>
+			 <li class="active grid"><a class="color1" href="home">Home</a></li>
 			 <li class="grid"><a class="color2" href="#">furniture</a>
 				<div class="megapanel">
 					<div class="row">
@@ -37,12 +37,12 @@
 							<div class="h_nav">
 								<h4>Sofas</h4>
 								<ul>
-									<li><a href="/products">All Sofas</a></li>
-									<li><a href="/products">Fabric Sofas</a></li>
-									<li><a href="/products">Leather Sofas</a></li>
-									<li><a href="/products">L-shaped Sofas</a></li>
-									<li><a href="/products">Love Seats</a></li>
-									<li><a href="/products">Wooden Sofas</a></li>
+									<li><a href="products">All Sofas</a></li>
+									<li><a href="products">Fabric Sofas</a></li>
+									<li><a href="products">Leather Sofas</a></li>
+									<li><a href="products">L-shaped Sofas</a></li>
+									<li><a href="products">Love Seats</a></li>
+									<li><a href="products">Wooden Sofas</a></li>
 								</ul>
 							</div>
 						</div>
@@ -50,12 +50,12 @@
 							<div class="h_nav">
 								<h4>Tables</h4>
 								<ul>
-									<li><a href="/products">Coffee Tables</a></li>
-									<li><a href="/products">Dinning Tables</a></li>
-									<li><a href="/products">Study Tables</a></li>
-									<li><a href="/products">Wooden Tables</a></li>
-									<li><a href="/products">Study Tables</a></li>
-									<li><a href="/products">Bar & Unit Stools</a></li>
+									<li><a href="products">Coffee Tables</a></li>
+									<li><a href="products">Dinning Tables</a></li>
+									<li><a href="products">Study Tables</a></li>
+									<li><a href="products">Wooden Tables</a></li>
+									<li><a href="products">Study Tables</a></li>
+									<li><a href="products">Bar & Unit Stools</a></li>
 								</ul>
 							</div>
 						</div>
@@ -63,12 +63,12 @@
 							<div class="h_nav">
 								<h4>Beds</h4>
 								<ul>
-									<li><a href="/products">Single Bed</a></li>
-									<li><a href="/products">Poster Bed</a></li>
-									<li><a href="/products">Sofa Cum Bed</a></li>
-									<li><a href="/products">Bunk Bed</a></li>
-									<li><a href="/products">King Size Bed</a></li>
-									<li><a href="/products">Metal Bed</a></li>
+									<li><a href="products">Single Bed</a></li>
+									<li><a href="products">Poster Bed</a></li>
+									<li><a href="products">Sofa Cum Bed</a></li>
+									<li><a href="products">Bunk Bed</a></li>
+									<li><a href="products">King Size Bed</a></li>
+									<li><a href="products">Metal Bed</a></li>
 								</ul>
 							</div>
 						</div>
@@ -76,12 +76,12 @@
 							<div class="h_nav">
 								<h4>Seating</h4>
 								<ul>
-									<li><a href="/products">Wing Chair</a></li>
-									<li><a href="/products">Accent Chair</a></li>
-									<li><a href="/products">Arm Chair</a></li>
-									<li><a href="/products">Mettal Chair</a></li>
-									<li><a href="/products">Folding Chair</a></li>
-									<li><a href="/products">Bean Bags</a></li>
+									<li><a href="products">Wing Chair</a></li>
+									<li><a href="products">Accent Chair</a></li>
+									<li><a href="products">Arm Chair</a></li>
+									<li><a href="products">Mettal Chair</a></li>
+									<li><a href="products">Folding Chair</a></li>
+									<li><a href="products">Bean Bags</a></li>
 								</ul>
 							</div>
 						</div>
@@ -89,12 +89,12 @@
 							<div class="h_nav">
 								<h4>Solid Woods</h4>
 								<ul>
-									<li><a href="/products">Side Tables</a></li>
-									<li><a href="/products">T.v Units</a></li>
-									<li><a href="/products">Dressing Tables</a></li>
-									<li><a href="/products">Wardrobes</a></li>
-									<li><a href="/products">Shoe Racks</a></li>
-									<li><a href="/products">Console Tables</a></li>
+									<li><a href="products">Side Tables</a></li>
+									<li><a href="products">T.v Units</a></li>
+									<li><a href="products">Dressing Tables</a></li>
+									<li><a href="products">Wardrobes</a></li>
+									<li><a href="products">Shoe Racks</a></li>
+									<li><a href="products">Console Tables</a></li>
 								</ul>
 							</div>
 						</div>
@@ -115,12 +115,12 @@
 							<div class="h_nav">
 								<h4>Sofas</h4>
 								<ul>
-									<li><a href="/products">All Sofas</a></li>
-									<li><a href="/products">Fabric Sofas</a></li>
-									<li><a href="/products">Leather Sofas</a></li>
-									<li><a href="/products">L-shaped Sofas</a></li>
-									<li><a href="/products">Love Seats</a></li>
-									<li><a href="/products">Wooden Sofas</a></li>
+									<li><a href="products">All Sofas</a></li>
+									<li><a href="products">Fabric Sofas</a></li>
+									<li><a href="products">Leather Sofas</a></li>
+									<li><a href="products">L-shaped Sofas</a></li>
+									<li><a href="products">Love Seats</a></li>
+									<li><a href="products">Wooden Sofas</a></li>
 								</ul>
 							</div>
 						</div>
@@ -128,12 +128,12 @@
 							<div class="h_nav">
 								<h4>Tables</h4>
 								<ul>
-									<li><a href="/products">Coffee Tables</a></li>
-									<li><a href="/products">Dinning Tables</a></li>
-									<li><a href="/products">Study Tables</a></li>
-									<li><a href="/products">Wooden Tables</a></li>
-									<li><a href="/products">Study Tables</a></li>
-									<li><a href="/products">Bar & Unit Stools</a></li>
+									<li><a href="products">Coffee Tables</a></li>
+									<li><a href="products">Dinning Tables</a></li>
+									<li><a href="products">Study Tables</a></li>
+									<li><a href="products">Wooden Tables</a></li>
+									<li><a href="products">Study Tables</a></li>
+									<li><a href="products">Bar & Unit Stools</a></li>
 								</ul>
 							</div>
 						</div>
@@ -141,12 +141,12 @@
 							<div class="h_nav">
 								<h4>Beds</h4>
 								<ul>
-									<li><a href="/products">Single Bed</a></li>
-									<li><a href="/products">Poster Bed</a></li>
-									<li><a href="/products">Sofa Cum Bed</a></li>
-									<li><a href="/products">Bunk Bed</a></li>
-									<li><a href="/products">King Size Bed</a></li>
-									<li><a href="/products">Metal Bed</a></li>
+									<li><a href="products">Single Bed</a></li>
+									<li><a href="products">Poster Bed</a></li>
+									<li><a href="products">Sofa Cum Bed</a></li>
+									<li><a href="products">Bunk Bed</a></li>
+									<li><a href="products">King Size Bed</a></li>
+									<li><a href="products">Metal Bed</a></li>
 								</ul>
 							</div>
 						</div>
@@ -154,12 +154,12 @@
 							<div class="h_nav">
 								<h4>Seating</h4>
 								<ul>
-									<li><a href="/products">Wing Chair</a></li>
-									<li><a href="/products">Accent Chair</a></li>
-									<li><a href="/products">Arm Chair</a></li>
-									<li><a href="/products">Mettal Chair</a></li>
-									<li><a href="/products">Folding Chair</a></li>
-									<li><a href="/products">Bean Bags</a></li>
+									<li><a href="products">Wing Chair</a></li>
+									<li><a href="products">Accent Chair</a></li>
+									<li><a href="products">Arm Chair</a></li>
+									<li><a href="products">Mettal Chair</a></li>
+									<li><a href="products">Folding Chair</a></li>
+									<li><a href="products">Bean Bags</a></li>
 								</ul>
 							</div>
 						</div>
@@ -167,12 +167,12 @@
 							<div class="h_nav">
 								<h4>Solid Woods</h4>
 								<ul>
-									<li><a href="/products">Side Tables</a></li>
-									<li><a href="/products">T.v Units</a></li>
-									<li><a href="/products">Dressing Tables</a></li>
-									<li><a href="/products">Wardrobes</a></li>
-									<li><a href="/products">Shoe Racks</a></li>
-									<li><a href="/products">Console Tables</a></li>
+									<li><a href="products">Side Tables</a></li>
+									<li><a href="products">T.v Units</a></li>
+									<li><a href="products">Dressing Tables</a></li>
+									<li><a href="products">Wardrobes</a></li>
+									<li><a href="products">Shoe Racks</a></li>
+									<li><a href="products">Console Tables</a></li>
 								</ul>
 							</div>
 						</div>
@@ -193,12 +193,12 @@
 							<div class="h_nav">
 								<h4>Sofas</h4>
 								<ul>
-									<li><a href="/products">All Sofas</a></li>
-									<li><a href="/products">Fabric Sofas</a></li>
-									<li><a href="/products">Leather Sofas</a></li>
-									<li><a href="/products">L-shaped Sofas</a></li>
-									<li><a href="/products">Love Seats</a></li>
-									<li><a href="/products">Wooden Sofas</a></li>
+									<li><a href="products">All Sofas</a></li>
+									<li><a href="products">Fabric Sofas</a></li>
+									<li><a href="products">Leather Sofas</a></li>
+									<li><a href="products">L-shaped Sofas</a></li>
+									<li><a href="products">Love Seats</a></li>
+									<li><a href="products">Wooden Sofas</a></li>
 								</ul>
 							</div>
 						</div>
@@ -206,12 +206,12 @@
 							<div class="h_nav">
 								<h4>Tables</h4>
 								<ul>
-									<li><a href="/products">Coffee Tables</a></li>
-									<li><a href="/products">Dinning Tables</a></li>
-									<li><a href="/products">Study Tables</a></li>
-									<li><a href="/products">Wooden Tables</a></li>
-									<li><a href="/products">Study Tables</a></li>
-									<li><a href="/products">Bar & Unit Stools</a></li>
+									<li><a href="products">Coffee Tables</a></li>
+									<li><a href="products">Dinning Tables</a></li>
+									<li><a href="products">Study Tables</a></li>
+									<li><a href="products">Wooden Tables</a></li>
+									<li><a href="products">Study Tables</a></li>
+									<li><a href="products">Bar & Unit Stools</a></li>
 								</ul>
 							</div>
 						</div>
@@ -219,12 +219,12 @@
 							<div class="h_nav">
 								<h4>Beds</h4>
 								<ul>
-									<li><a href="/products">Single Bed</a></li>
-									<li><a href="/products">Poster Bed</a></li>
-									<li><a href="/products">Sofa Cum Bed</a></li>
-									<li><a href="/products">Bunk Bed</a></li>
-									<li><a href="/products">King Size Bed</a></li>
-									<li><a href="/products">Metal Bed</a></li>
+									<li><a href="products">Single Bed</a></li>
+									<li><a href="products">Poster Bed</a></li>
+									<li><a href="products">Sofa Cum Bed</a></li>
+									<li><a href="products">Bunk Bed</a></li>
+									<li><a href="products">King Size Bed</a></li>
+									<li><a href="products">Metal Bed</a></li>
 								</ul>
 							</div>
 						</div>
@@ -232,12 +232,12 @@
 							<div class="h_nav">
 								<h4>Seating</h4>
 								<ul>
-									<li><a href="/products">Wing Chair</a></li>
-									<li><a href="/products">Accent Chair</a></li>
-									<li><a href="/products">Arm Chair</a></li>
-									<li><a href="/products">Mettal Chair</a></li>
-									<li><a href="/products">Folding Chair</a></li>
-									<li><a href="/products">Bean Bags</a></li>
+									<li><a href="products">Wing Chair</a></li>
+									<li><a href="products">Accent Chair</a></li>
+									<li><a href="products">Arm Chair</a></li>
+									<li><a href="products">Mettal Chair</a></li>
+									<li><a href="products">Folding Chair</a></li>
+									<li><a href="products">Bean Bags</a></li>
 								</ul>
 							</div>
 						</div>
@@ -245,12 +245,12 @@
 							<div class="h_nav">
 								<h4>Solid Woods</h4>
 								<ul>
-									<li><a href="/products">Side Tables</a></li>
-									<li><a href="/products">T.v Units</a></li>
-									<li><a href="/products">Dressing Tables</a></li>
-									<li><a href="/products">Wardrobes</a></li>
-									<li><a href="/products">Shoe Racks</a></li>
-									<li><a href="/products">Console Tables</a></li>
+									<li><a href="products">Side Tables</a></li>
+									<li><a href="products">T.v Units</a></li>
+									<li><a href="products">Dressing Tables</a></li>
+									<li><a href="products">Wardrobes</a></li>
+									<li><a href="products">Shoe Racks</a></li>
+									<li><a href="products">Console Tables</a></li>
 								</ul>
 							</div>
 						</div>
@@ -271,12 +271,12 @@
 							<div class="h_nav">
 								<h4>Sofas</h4>
 								<ul>
-									<li><a href="/products">All Sofas</a></li>
-									<li><a href="/products">Fabric Sofas</a></li>
-									<li><a href="/products">Leather Sofas</a></li>
-									<li><a href="/products">L-shaped Sofas</a></li>
-									<li><a href="/products">Love Seats</a></li>
-									<li><a href="/products">Wooden Sofas</a></li>
+									<li><a href="products">All Sofas</a></li>
+									<li><a href="products">Fabric Sofas</a></li>
+									<li><a href="products">Leather Sofas</a></li>
+									<li><a href="products">L-shaped Sofas</a></li>
+									<li><a href="products">Love Seats</a></li>
+									<li><a href="products">Wooden Sofas</a></li>
 								</ul>
 							</div>
 						</div>
@@ -284,12 +284,12 @@
 							<div class="h_nav">
 								<h4>Tables</h4>
 								<ul>
-									<li><a href="/products">Coffee Tables</a></li>
-									<li><a href="/products">Dinning Tables</a></li>
-									<li><a href="/products">Study Tables</a></li>
-									<li><a href="/products">Wooden Tables</a></li>
-									<li><a href="/products">Study Tables</a></li>
-									<li><a href="/products">Bar & Unit Stools</a></li>
+									<li><a href="products">Coffee Tables</a></li>
+									<li><a href="products">Dinning Tables</a></li>
+									<li><a href="products">Study Tables</a></li>
+									<li><a href="products">Wooden Tables</a></li>
+									<li><a href="products">Study Tables</a></li>
+									<li><a href="products">Bar & Unit Stools</a></li>
 								</ul>
 							</div>
 						</div>
@@ -297,12 +297,12 @@
 							<div class="h_nav">
 								<h4>Beds</h4>
 								<ul>
-									<li><a href="/products">Single Bed</a></li>
-									<li><a href="/products">Poster Bed</a></li>
-									<li><a href="/products">Sofa Cum Bed</a></li>
-									<li><a href="/products">Bunk Bed</a></li>
-									<li><a href="/products">King Size Bed</a></li>
-									<li><a href="/products">Metal Bed</a></li>
+									<li><a href="products">Single Bed</a></li>
+									<li><a href="products">Poster Bed</a></li>
+									<li><a href="products">Sofa Cum Bed</a></li>
+									<li><a href="products">Bunk Bed</a></li>
+									<li><a href="products">King Size Bed</a></li>
+									<li><a href="products">Metal Bed</a></li>
 								</ul>
 							</div>
 						</div>
@@ -310,12 +310,12 @@
 							<div class="h_nav">
 								<h4>Seating</h4>
 								<ul>
-									<li><a href="/products">Wing Chair</a></li>
-									<li><a href="/products">Accent Chair</a></li>
-									<li><a href="/products">Arm Chair</a></li>
-									<li><a href="/products">Mettal Chair</a></li>
-									<li><a href="/products">Folding Chair</a></li>
-									<li><a href="/products">Bean Bags</a></li>
+									<li><a href="products">Wing Chair</a></li>
+									<li><a href="products">Accent Chair</a></li>
+									<li><a href="products">Arm Chair</a></li>
+									<li><a href="products">Mettal Chair</a></li>
+									<li><a href="products">Folding Chair</a></li>
+									<li><a href="products">Bean Bags</a></li>
 								</ul>
 							</div>
 						</div>
@@ -323,12 +323,12 @@
 							<div class="h_nav">
 								<h4>Solid Woods</h4>
 								<ul>
-									<li><a href="/products">Side Tables</a></li>
-									<li><a href="/products">T.v Units</a></li>
-									<li><a href="/products">Dressing Tables</a></li>
-									<li><a href="/products">Wardrobes</a></li>
-									<li><a href="/products">Shoe Racks</a></li>
-									<li><a href="/products">Console Tables</a></li>
+									<li><a href="products">Side Tables</a></li>
+									<li><a href="products">T.v Units</a></li>
+									<li><a href="products">Dressing Tables</a></li>
+									<li><a href="products">Wardrobes</a></li>
+									<li><a href="products">Shoe Racks</a></li>
+									<li><a href="products">Console Tables</a></li>
 								</ul>
 							</div>
 						</div>
@@ -350,12 +350,12 @@
 							<div class="h_nav">
 								<h4>Sofas</h4>
 								<ul>
-									<li><a href="/products">All Sofas</a></li>
-									<li><a href="/products">Fabric Sofas</a></li>
-									<li><a href="/products">Leather Sofas</a></li>
-									<li><a href="/products">L-shaped Sofas</a></li>
-									<li><a href="/products">Love Seats</a></li>
-									<li><a href="/products">Wooden Sofas</a></li>
+									<li><a href="products">All Sofas</a></li>
+									<li><a href="products">Fabric Sofas</a></li>
+									<li><a href="products">Leather Sofas</a></li>
+									<li><a href="products">L-shaped Sofas</a></li>
+									<li><a href="products">Love Seats</a></li>
+									<li><a href="products">Wooden Sofas</a></li>
 								</ul>
 							</div>
 						</div>
@@ -363,12 +363,12 @@
 							<div class="h_nav">
 								<h4>Tables</h4>
 								<ul>
-									<li><a href="/products">Coffee Tables</a></li>
-									<li><a href="/products">Dinning Tables</a></li>
-									<li><a href="/products">Study Tables</a></li>
-									<li><a href="/products">Wooden Tables</a></li>
-									<li><a href="/products">Study Tables</a></li>
-									<li><a href="/products">Bar & Unit Stools</a></li>
+									<li><a href="products">Coffee Tables</a></li>
+									<li><a href="products">Dinning Tables</a></li>
+									<li><a href="products">Study Tables</a></li>
+									<li><a href="products">Wooden Tables</a></li>
+									<li><a href="products">Study Tables</a></li>
+									<li><a href="products">Bar & Unit Stools</a></li>
 								</ul>
 							</div>
 						</div>
@@ -376,12 +376,12 @@
 							<div class="h_nav">
 								<h4>Beds</h4>
 								<ul>
-									<li><a href="/products">Single Bed</a></li>
-									<li><a href="/products">Poster Bed</a></li>
-									<li><a href="/products">Sofa Cum Bed</a></li>
-									<li><a href="/products">Bunk Bed</a></li>
-									<li><a href="/products">King Size Bed</a></li>
-									<li><a href="/products">Metal Bed</a></li>
+									<li><a href="products">Single Bed</a></li>
+									<li><a href="products">Poster Bed</a></li>
+									<li><a href="products">Sofa Cum Bed</a></li>
+									<li><a href="products">Bunk Bed</a></li>
+									<li><a href="products">King Size Bed</a></li>
+									<li><a href="products">Metal Bed</a></li>
 								</ul>
 							</div>
 						</div>
@@ -389,12 +389,12 @@
 							<div class="h_nav">
 								<h4>Seating</h4>
 								<ul>
-									<li><a href="/products">Wing Chair</a></li>
-									<li><a href="/products">Accent Chair</a></li>
-									<li><a href="/products">Arm Chair</a></li>
-									<li><a href="/products">Mettal Chair</a></li>
-									<li><a href="/products">Folding Chair</a></li>
-									<li><a href="/products">Bean Bags</a></li>
+									<li><a href="products">Wing Chair</a></li>
+									<li><a href="products">Accent Chair</a></li>
+									<li><a href="products">Arm Chair</a></li>
+									<li><a href="products">Mettal Chair</a></li>
+									<li><a href="products">Folding Chair</a></li>
+									<li><a href="products">Bean Bags</a></li>
 								</ul>
 							</div>
 						</div>
@@ -402,12 +402,12 @@
 							<div class="h_nav">
 								<h4>Solid Woods</h4>
 								<ul>
-									<li><a href="/products">Side Tables</a></li>
-									<li><a href="/products">T.v Units</a></li>
-									<li><a href="/products">Dressing Tables</a></li>
-									<li><a href="/products">Wardrobes</a></li>
-									<li><a href="/products">Shoe Racks</a></li>
-									<li><a href="/products">Console Tables</a></li>
+									<li><a href="products">Side Tables</a></li>
+									<li><a href="products">T.v Units</a></li>
+									<li><a href="products">Dressing Tables</a></li>
+									<li><a href="products">Wardrobes</a></li>
+									<li><a href="products">Shoe Racks</a></li>
+									<li><a href="products">Console Tables</a></li>
 								</ul>
 							</div>
 						</div>
@@ -429,12 +429,12 @@
 							<div class="h_nav">
 								<h4>Sofas</h4>
 								<ul>
-									<li><a href="/products">All Sofas</a></li>
-									<li><a href="/products">Fabric Sofas</a></li>
-									<li><a href="/products">Leather Sofas</a></li>
-									<li><a href="/products">L-shaped Sofas</a></li>
-									<li><a href="/products">Love Seats</a></li>
-									<li><a href="/products">Wooden Sofas</a></li>
+									<li><a href="products">All Sofas</a></li>
+									<li><a href="products">Fabric Sofas</a></li>
+									<li><a href="products">Leather Sofas</a></li>
+									<li><a href="products">L-shaped Sofas</a></li>
+									<li><a href="products">Love Seats</a></li>
+									<li><a href="products">Wooden Sofas</a></li>
 								</ul>
 							</div>
 						</div>
@@ -442,12 +442,12 @@
 							<div class="h_nav">
 								<h4>Tables</h4>
 								<ul>
-									<li><a href="/products">Coffee Tables</a></li>
-									<li><a href="/products">Dinning Tables</a></li>
-									<li><a href="/products">Study Tables</a></li>
-									<li><a href="/products">Wooden Tables</a></li>
-									<li><a href="/products">Study Tables</a></li>
-									<li><a href="/products">Bar & Unit Stools</a></li>
+									<li><a href="products">Coffee Tables</a></li>
+									<li><a href="products">Dinning Tables</a></li>
+									<li><a href="products">Study Tables</a></li>
+									<li><a href="products">Wooden Tables</a></li>
+									<li><a href="products">Study Tables</a></li>
+									<li><a href="products">Bar & Unit Stools</a></li>
 								</ul>
 							</div>
 						</div>
@@ -455,12 +455,12 @@
 							<div class="h_nav">
 								<h4>Beds</h4>
 								<ul>
-									<li><a href="/products">Single Bed</a></li>
-									<li><a href="/products">Poster Bed</a></li>
-									<li><a href="/products">Sofa Cum Bed</a></li>
-									<li><a href="/products">Bunk Bed</a></li>
-									<li><a href="/products">King Size Bed</a></li>
-									<li><a href="/products">Metal Bed</a></li>
+									<li><a href="products">Single Bed</a></li>
+									<li><a href="products">Poster Bed</a></li>
+									<li><a href="products">Sofa Cum Bed</a></li>
+									<li><a href="products">Bunk Bed</a></li>
+									<li><a href="products">King Size Bed</a></li>
+									<li><a href="products">Metal Bed</a></li>
 								</ul>
 							</div>
 						</div>
@@ -468,12 +468,12 @@
 							<div class="h_nav">
 								<h4>Seating</h4>
 								<ul>
-									<li><a href="/products">Wing Chair</a></li>
-									<li><a href="/products">Accent Chair</a></li>
-									<li><a href="/products">Arm Chair</a></li>
-									<li><a href="/products">Mettal Chair</a></li>
-									<li><a href="/products">Folding Chair</a></li>
-									<li><a href="/products">Bean Bags</a></li>
+									<li><a href="products">Wing Chair</a></li>
+									<li><a href="products">Accent Chair</a></li>
+									<li><a href="products">Arm Chair</a></li>
+									<li><a href="products">Mettal Chair</a></li>
+									<li><a href="products">Folding Chair</a></li>
+									<li><a href="products">Bean Bags</a></li>
 								</ul>
 							</div>
 						</div>
@@ -481,12 +481,12 @@
 							<div class="h_nav">
 								<h4>Solid Woods</h4>
 								<ul>
-									<li><a href="/products">Side Tables</a></li>
-									<li><a href="/products">T.v Units</a></li>
-									<li><a href="/products">Dressing Tables</a></li>
-									<li><a href="/products">Wardrobes</a></li>
-									<li><a href="/products">Shoe Racks</a></li>
-									<li><a href="/products">Console Tables</a></li>
+									<li><a href="products">Side Tables</a></li>
+									<li><a href="products">T.v Units</a></li>
+									<li><a href="products">Dressing Tables</a></li>
+									<li><a href="products">Wardrobes</a></li>
+									<li><a href="products">Shoe Racks</a></li>
+									<li><a href="products">Console Tables</a></li>
 								</ul>
 							</div>
 						</div>
@@ -516,12 +516,12 @@
 <div class="product-model">
 	 <div class="container">
 			<ol class="breadcrumb">
-		  <li><a href="/home">Home</a></li>
+		  <li><a href="home">Home</a></li>
 		  <li class="active">Products</li>
 		 </ol>
 			<h2>OUR PRODUCTS</h2>
 		 <div class="col-md-9 product-model-sec">
-					 <a href="/single"><div class="product-grid love-grid">
+					 <a href="single"><div class="product-grid love-grid">
 						<div class="more-product"><span> </span></div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
 							<img src="images/p1.jpg" class="img-responsive" alt=""/>
@@ -543,7 +543,7 @@
 						</div>
 					</div>
 
-					 <a href="/single"><div class="product-grid love-grid">
+					 <a href="single"><div class="product-grid love-grid">
 						<div class="more-product"><span> </span></div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
 							<img src="images/p2.jpg" class="img-responsive" alt=""/>
@@ -565,7 +565,7 @@
 						</div>
 					</div>
 
-					<a href="/single"><div class="product-grid love-grid">
+					<a href="single"><div class="product-grid love-grid">
 						<div class="more-product"><span> </span></div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
 							<img src="images/p3.jpg" class="img-responsive" alt=""/>
@@ -587,7 +587,7 @@
 						</div>
 					</div>
 
-					<a href="/single"><div class="product-grid love-grid">
+					<a href="single"><div class="product-grid love-grid">
 						<div class="more-product"><span> </span></div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
 							<img src="images/p4.jpg" class="img-responsive" alt=""/>
@@ -609,7 +609,7 @@
 						</div>
 					</div>
 
-					<a href="/single"><div class="product-grid love-grid">
+					<a href="single"><div class="product-grid love-grid">
 						<div class="more-product"><span> </span></div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
 							<img src="images/p5.jpg" class="img-responsive" alt=""/>
@@ -631,7 +631,7 @@
 						</div>
 					</div>
 
-					<a href="/single"><div class="product-grid love-grid">
+					<a href="single"><div class="product-grid love-grid">
 						<div class="more-product"><span> </span></div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
 							<img src="images/p6.jpg" class="img-responsive" alt=""/>
@@ -652,7 +652,7 @@
 							<div class="clearfix"> </div>
 						</div>
 					</div>
-					<a href="/single"><div class="product-grid love-grid">
+					<a href="single"><div class="product-grid love-grid">
 						<div class="more-product"><span> </span></div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
 							<img src="images/p7.jpg" class="img-responsive" alt=""/>
@@ -673,7 +673,7 @@
 							<div class="clearfix"> </div>
 						</div>
 					</div>
-					<a href="/single"><div class="product-grid love-grid">
+					<a href="single"><div class="product-grid love-grid">
 						<div class="more-product"><span> </span></div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
 							<img src="images/p8.jpg" class="img-responsive" alt=""/>
@@ -694,7 +694,7 @@
 							<div class="clearfix"> </div>
 						</div>
 					</div>
-					<a href="/single"><div class="product-grid love-grid">
+					<a href="single"><div class="product-grid love-grid">
 						<div class="more-product"><span> </span></div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
 							<img src="images/p9.jpg" class="img-responsive" alt=""/>
