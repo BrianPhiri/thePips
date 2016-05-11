@@ -1,7 +1,7 @@
 <div class="vali-form">
  <div class="col-md-6 form-group1">
     <label class="control-label">Image Upload</label>
-    <img src="..." alt="..." class="img-thumbnail">
+    <!-- <img src="..." alt="..." class="img-thumbnail"> -->
     {!! Form::file('file'); !!}
   </div>
   <div class="clearfix"> </div>

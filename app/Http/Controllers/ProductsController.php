@@ -20,7 +20,7 @@ class ProductsController extends Controller
         $products = Products::paginate(15);
         return view('admin.products.products', compact('products'));
     }
-    
+
     public function subcategory(){
       $cat_id = Input::get('category_number');
       $subcategories = Subcategories::where('category_id', '=', $cat_id)
@@ -36,9 +36,17 @@ class ProductsController extends Controller
     }
 
     public function store(){
-     return $input = Request::all();
-      Products::create($input);
-      return Redirect::intended('product');
+      $input = Request::all();
+      if (Input::has('file')) {
+         $file = $input->file('file');
+        return $fileName = $file->getClientOriginalName();
+        // $fileName = $fileName.'_'.$studentNumber;
+        // $destinationPath = config('app.fileDestinationPath').'/'.$fileName;
+        // $uploaded = Storage::put($destinationPath, file_get_contents($file->getRealPath()));
+
+      }
+      // Products::create($input);
+      // return Redirect::intended('product');
     }
 
     public function edit($product_id){
