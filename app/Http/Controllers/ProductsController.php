@@ -37,16 +37,16 @@ class ProductsController extends Controller
 
     public function store(){
       $input = Request::all();
-      if (Input::has('file')) {
-         $file = $input->file('file');
-        return $fileName = $file->getClientOriginalName();
-        // $fileName = $fileName.'_'.$studentNumber;
-        // $destinationPath = config('app.fileDestinationPath').'/'.$fileName;
-        // $uploaded = Storage::put($destinationPath, file_get_contents($file->getRealPath()));
-
-      }
-      // Products::create($input);
-      // return Redirect::intended('product');
+      // if (Input::has('file')) {
+      //    $file = $input->file('file');
+      //   return $fileName = $file->getClientOriginalName();
+      //   // $fileName = $fileName.'_'.$studentNumber;
+      //   // $destinationPath = config('app.fileDestinationPath').'/'.$fileName;
+      //   // $uploaded = Storage::put($destinationPath, file_get_contents($file->getRealPath()));
+      //
+      // }
+      Products::create($input);
+      return Redirect::intended('product');
     }
 
     public function edit($product_id){
@@ -69,4 +69,8 @@ class ProductsController extends Controller
     // TODO: Add image uplod function
     // for image uploads.
 
+    public function test(){
+      // return "hey";
+      return Categories::with('category')->get();
+    }
 }
