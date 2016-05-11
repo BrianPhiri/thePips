@@ -16,11 +16,10 @@
  		<div class="validation-form">
  	<!---->
 
-			{!! Form::open(['url' => 'product']) !!}
+			{!! Form::open(['url' => 'product', 'file' => true ]) !!}
 				@include('admin.products._form', ['submitButtonText' => 'Add Product'])
 			{!! Form::close() !!}
 
  	<!---->
-
 
 @endsection
