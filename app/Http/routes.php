@@ -58,3 +58,11 @@ Route::get('/contact',function(){
 Route::get('/proto',function(){
   return view('homepage/prototype');
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('/auth/login', function(){
+	return view('homepage/login');
+});
