@@ -37,16 +37,20 @@ class ProductsController extends Controller
 
     public function store(){
       $input = Request::all();
-      // if (Input::has('file')) {
-      //    $file = $input->file('file');
-      //   return $fileName = $file->getClientOriginalName();
-      //   // $fileName = $fileName.'_'.$studentNumber;
-      //   // $destinationPath = config('app.fileDestinationPath').'/'.$fileName;
-      //   // $uploaded = Storage::put($destinationPath, file_get_contents($file->getRealPath()));
-      //
-      // }
-      Products::create($input);
-      return Redirect::intended('product');
+      if(Input::has('file')){
+        // return $file = Input::file('file');
+        $path = Input::file('file')->getRealPath();
+        $name = Input::file('file')->getClientOriginalName();
+        $destinationPath = config('app.fileDestinationPath');
+        Input::file('file')->move($destinationPath, $name);
+        $uploaded = Storage::put($destinationPath, $path);
+        if($uploaded){
+          return "success";
+        }
+        // Input::file('file')->move($destinationPath);
+      }
+      // Products::create($input);
+      // return Redirect::intended('product');
     }
 
     public function edit($product_id){
@@ -71,6 +75,9 @@ class ProductsController extends Controller
 
     public function test(){
       // return "hey";
-      return Categories::with('category')->get();
+      $categories = Categories::with('category')->get();
+      // return Response::json(array('data' => $categories));
+      return $categories;
+
     }
 }

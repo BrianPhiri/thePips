@@ -29,14 +29,14 @@
 			 <li class="active grid"><a class="color1" href="home">Home</a></li>
        <!--  -->
        @foreach($subsub as $cat)
-       <li class="grid"><a class="color2" href="#">{{ $cat->category->name}}</a>
+       <li class="grid"><a class="color2" href="#">{{ $cat->name}}</a>
         <div class="megapanel">
           <div class="row">
             <div class="col1">
               <div class="h_nav">
                 <h4>...</h4>
                 <ul>
-                  <li><a href="products">{{ $cat->name}}</a></li>
+                  <li><a href="products">{{ $cat->category.'name' }}</a></li>
                 </ul>
               </div>
             </div>
