@@ -28,9 +28,6 @@ Route::get('/test', 'ProductsController@test');
 
 Route::get('/error', function(){ return view('admin/brian'); });
 
-Route::get('/home',function(){
-  return view('homepage/index');
-});
 Route::get('/account',function(){
   return view('homepage/account');
 });
@@ -39,9 +36,9 @@ Route::get('/cart',function(){
   return view('homepage/cart');
 });
 
-Route::get('/login',function(){
-  return view('homepage/login');
-});
+// Route::get('/login',function(){
+//   return view('homepage/login');
+// });
 
 Route::get('/products',function(){
   return view('homepage/products');
@@ -55,14 +52,10 @@ Route::get('/contact',function(){
   return view('homepage/contact');
 });
 
-Route::get('/proto',function(){
-  return view('homepage/prototype');
-});
-
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/auth/login', function(){
-	return view('homepage/login');
+Route::get('/login', function(){
+	return view('homepage/loginauth');
 });

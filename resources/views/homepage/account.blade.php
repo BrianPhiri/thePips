@@ -12,7 +12,7 @@
 		 </ol>
 	 <div class="registration">
 		 <div class="registration_left">
-			 <h2>new user? <span> create an account </span></h2>
+			 <h2>New user? <span> create an account </span></h2>
 			 <!-- [if IE]
 				< link rel='stylesheet' type='text/css' href='ie.css'/>
 			 [endif] -->
@@ -20,7 +20,7 @@
 			 <!-- [if lt IE 7]>
 				< link rel='stylesheet' type='text/css' href='ie6.css'/>
 			 <! [endif] -->
-			 <script>
+<!-- 			 <script>
 				(function() {
 
 				// Create input element for testing
@@ -57,53 +57,65 @@
 				}
 
 			 })();
-			 </script>
+			 </script> -->
 			 <div class="registration_form">
 			 <!-- Form -->
-				<form id="registration_form" action="contact.php" method="post">
+				<form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+                        {!! csrf_field() !!}
 					<div>
 						<label>
-							<input placeholder="first name:" type="text" tabindex="1" required autofocus>
+							<!-- <input placeholder="first name:" type="text" tabindex="1" required autofocus> -->
+							<input type="text" placeholder="Name:" name="name" value="{{ old('name') }}">
+
+                                @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
 						</label>
 					</div>
 					<div>
 						<label>
-							<input placeholder="last name:" type="text" tabindex="2" required autofocus>
+							<!-- <input placeholder="last name:" type="text" tabindex="2" required autofocus> -->
+							<input type="email" name="email" value="{{ old('email') }}" class="mail" placeholder="E-Mail">
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
 						</label>
 					</div>
 					<div>
 						<label>
-							<input placeholder="email address:" type="email" tabindex="3" required>
+							<!-- <input placeholder="password" type="password" tabindex="4" required> -->
+							<input type="password" placeholder="Password" name="password">
+
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
 						</label>
 					</div>
 					<div>
 						<label>
-							<input placeholder="Mobile:" type="email" tabindex="3" required>
+							<!-- <input placeholder="retype password" type="password" tabindex="4" required> -->
+							<input type="password" placeholder="Confirm Password" name="password_confirmation">
+
+                                @if ($errors->has('password_confirmation'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
+                                    </span>
+                                @endif
 						</label>
 					</div>
-						<div class="sky_form1">
-							<ul>
-								<li><label class="radio left"><input type="radio" name="radio" checked=""><i></i>Male</label></li>
-								<li><label class="radio"><input type="radio" name="radio"><i></i>Female</label></li>
-								<div class="clearfix"></div>
-							</ul>
-						</div>
-					<div>
-						<label>
-							<input placeholder="password" type="password" tabindex="4" required>
-						</label>
-					</div>
-					<div>
-						<label>
-							<input placeholder="retype password" type="password" tabindex="4" required>
-						</label>
-					</div>
-					<div>
-						<input type="submit" value="create an account" id="register-submit">
-					</div>
-					<div class="sky-form">
+					<button type="submit" class="acount-btn">
+                                    <i class="fa fa-btn fa-sign-register"></i>
+                                    Create Account
+                                </button><br>
+					<!-- <div class="sky-form">
 						<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>i agree to mobilya.com &nbsp;<a class="terms" href="#"> terms of service</a> </label>
-					</div>
+					</div> -->
 				</form>
 				<!-- /Form -->
 			 </div>
@@ -112,24 +124,28 @@
 			 <h2>existing user</h2>
 			 <div class="registration_form">
 			 <!-- Form -->
-				<form id="registration_form" action="contact.php" method="post">
-					<div>
-						<label>
-							<input placeholder="email:" type="email" tabindex="3" required>
-						</label>
-					</div>
-					<div>
-						<label>
-							<input placeholder="password" type="password" tabindex="4" required>
-						</label>
-					</div>
-					<div>
-						<input type="submit" value="sign in" id="register-submit">
-					</div>
-					<div class="forget">
-						<a href="#">forgot your password</a>
-					</div>
-				</form>
+				<form role="form" method="POST" action="{{ url('/login') }}">
+                        {!! csrf_field() !!}
+					 <h5>E-Mail:</h5>
+					 <input type="email" name="email" value="{{ old('email') }}" class="mail">
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+					 <h5>Password:</h5>
+					 <input type="password" name="password"><br>
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+					 <button type="submit" class="acount-btn">
+                                    <i class="fa fa-btn fa-sign-in"></i>
+                                    Login
+                                </button><br>
+					  <a href="password/reset">Forgot Password ?</a>
+				 </form>
 			 <!-- /Form -->
 			 </div>
 		 </div>
@@ -137,102 +153,5 @@
 	 </div>
 </div>
 <!-- end registration -->
-<div class="footer-content">
-	 <div class="container">
-		 <div class="ftr-grids">
-			 <div class="col-md-3 ftr-grid">
-				 <h4>About Us</h4>
-				 <ul>
-					 <li><a href="#">Who We Are</a></li>
-					 <li><a href="contact">Contact Us</a></li>
-					 <li><a href="#">Our Sites</a></li>
-					 <li><a href="#">In The News</a></li>
-					 <li><a href="#">Team</a></li>
-					 <li><a href="#">Carrers</a></li>
-				 </ul>
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-				 <h4>Customer service</h4>
-				 <ul>
-					 <li><a href="#">FAQ</a></li>
-					 <li><a href="#">Shipping</a></li>
-					 <li><a href="#">Cancellation</a></li>
-					 <li><a href="#">Returns</a></li>
-					 <li><a href="#">Bulk Orders</a></li>
-					 <li><a href="#">Buying Guides</a></li>
-				 </ul>
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-				 <h4>Your account</h4>
-				 <ul>
-					 <li><a href="/account">Your Account</a></li>
-					 <li><a href="#">Personal Information</a></li>
-					 <li><a href="#">Addresses</a></li>
-					 <li><a href="#">Discount</a></li>
-					 <li><a href="#">Track your order</a></li>
-				 </ul>
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-				 <h4>Categories</h4>
-				 <ul>
-					 <li><a href="#">> Furinture</a></li>
-					 <li><a href="#">> Bean Bags</a></li>
-					 <li><a href="#">> Decor</a></li>
-					 <li><a href="#">> Kichen & Dinning</a></li>
-					 <li><a href="#">> Bed & Bath</a></li>
-					 <li><a href="#">...More</a></li>
-				 </ul>
-			 </div>
-			 <div class="clearfix"></div>
-		 </div>
-	 </div>
-</div>
-<!---->
-<div class="footer">
-	 <div class="container">
-		 <div class="store">
-			<ul>
-				 <li class="active">OUR STORE LOCATOR::</li>
-				 <li><a href="#">Noida</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Belgium</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">China</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Germany</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Japan</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Armenia</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">South Africa</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Malaysia</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Indonesia</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Mumbai</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Portugal</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Spain</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Northern Ireland</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Mohali</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Gurgaon</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Panchkula</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Ambala</a></li>
-			 </ul>
-		 </div>
-		 <div class="copywrite">
-			 <p>Copyright © 2015 Furnyish Store All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-		 </div>
-		 </div>
-	 </div>
-</div>
-<!---->
+@include('homepage._footer')
 @endsection
