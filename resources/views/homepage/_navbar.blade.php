@@ -1,7 +1,7 @@
 <div class="header_top">
 	 <div class="container">
 		 <div class="logo">
-		 	<a href="/"><img src="images/thePIPS_LOGO.png" alt=""/ style="width: 100px; height: 100px;"></a>
+		 	<a href="/"><img src="images/pips.png" alt=""/></a>
 		 </div>
 		 <div class="header_right">
 			 <div class="cart box_1">
