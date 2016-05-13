@@ -9,7 +9,7 @@
 <div class="product-model">
 	 <div class="container">
 			<ol class="breadcrumb">
-		  <li><a href="home">Home</a></li>
+		  <li><a href="/">Home</a></li>
 		  <li class="active">Products</li>
 		 </ol>
 			<h2>OUR PRODUCTS</h2>

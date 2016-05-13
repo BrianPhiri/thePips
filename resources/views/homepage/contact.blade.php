@@ -7,7 +7,7 @@
 <div class="contact">
 	 <div class="container">
 		 <ol class="breadcrumb">
-		  <li><a href="home">Home</a></li>
+		  <li><a href="/">Home</a></li>
 		  <li class="active">Contact</li>
 		 </ol>
 		 <div class="contact-head">

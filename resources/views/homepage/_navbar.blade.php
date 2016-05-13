@@ -1,7 +1,7 @@
 <div class="header_top">
 	 <div class="container">
 		 <div class="logo">
-		 	<a href="home"><img src="images/thePIPS_LOGO.png" alt=""/ style="width: 100px; height: 100px;"></a>
+		 	<a href="/"><img src="images/thePIPS_LOGO.png" alt=""/ style="width: 100px; height: 100px;"></a>
 		 </div>
 		 <div class="header_right">
 			 <div class="cart box_1">
@@ -23,7 +23,7 @@
 		 <div class="menu_sec">
 		 <!-- start header menu -->
 		 <ul class="megamenu skyblue">
-			 <li class="active grid"><a class="color1" href="home">Home</a></li>
+			 <li class="active grid"><a class="color1" href="/">Home</a></li>
        <!--  -->
        @foreach($subsub as $cat)
        <li class="grid"><a class="color2" href="#">{{ $cat->name}}</a>

@@ -7,7 +7,7 @@
 <div class="single-sec">
 	 <div class="container">
 		 <ol class="breadcrumb">
-			 <li><a href="home">Home</a></li>
+			 <li><a href="/">Home</a></li>
 			 <li class="active">Products</li>
 		 </ol>
 		 <!-- start content -->

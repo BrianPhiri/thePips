@@ -8,7 +8,7 @@
 <div class="cart_main">
 	 <div class="container">
 			 <ol class="breadcrumb">
-		  <li><a href="men.html">Home</a></li>
+		  <li><a href="/">Home</a></li>
 		  <li class="active">Cart</li>
 		 </ol>
 		 <div class="cart-items">
