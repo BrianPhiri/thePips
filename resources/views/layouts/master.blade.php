@@ -86,9 +86,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   				<ul>
           <!-- Code for Unauthenticated Users -->
           @if (Auth::guest())
-  					<i class="fa fa-btn fa-sign-in"></i> <li class="top_link"><a href="login">Sign In</a></li>|
-            <i class="fa fa-btn fa-sign-out"></i> <li class="top_link"><a href="logout">Sign Out</a></li>|
-            <i class="fa fa-btn fa-user"></i> <li class="top_link"><a href="account">New User ?</a>
+  					 <li class="top_link"><a href="login"><i class="fa fa-btn fa-sign-in"></i> Sign In</a></li>|
+            <!-- <i class="fa fa-btn fa-sign-out"></i> <li class="top_link"><a href="logout">Sign Out</a></li>| -->
+          <li class="top_link"><a href="account">   <i class="fa fa-btn fa-user"></i> New User ?</a>
             @else
             <!-- Displays the name of the authenticated users. -->
               <li><a href="{{ url('/account') }}"><i class="fa fa-btn fa-user"></i> {{ Auth::user()->name }}</a></li> |

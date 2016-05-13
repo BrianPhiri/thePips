@@ -109,6 +109,7 @@
                                 @endif
 						</label>
 					</div>
+					{!! app('captcha')->display(); !!}
 					<button type="submit" class="acount-btn">
                                     <i class="fa fa-btn fa-sign-register"></i>
                                     Create Account
