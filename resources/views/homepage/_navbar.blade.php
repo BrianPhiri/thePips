@@ -1,11 +1,11 @@
 <div class="header_top">
 	 <div class="container">
 		 <div class="logo">
-		 	<a href="/"><img src="images/pips.png" alt=""/></a>
+		 	<a href="{{ URL::asset('/')}}"><img src="images/pips.png" alt=""/></a>
 		 </div>
 		 <div class="header_right">
 			 <div class="cart box_1">
-				<a href="/cart">
+				<a href="{{ URL::asset('cart')}}">
 					<h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="images/bag.png" alt=""></h3>
 				</a>
 				<p><a href="javascript:;" class="simpleCart_empty">Empty cart</a></p>
@@ -23,7 +23,7 @@
 		 <div class="menu_sec">
 		 <!-- start header menu -->
 		 <ul class="megamenu skyblue">
-			 <li class="active grid"><a class="color1" href="/">Home</a></li>
+			 <li class="active grid"><a class="color1" href="{{ URL::asset('/')}}">Home</a></li>
        <!--  -->
        @foreach($subsub as $cat)
        <li class="grid"><a class="color2" href="#">{{ $cat->name}}</a>
