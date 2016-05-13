@@ -17,26 +17,32 @@
 
 			<div class="col-md-4 ">
 				<div class="content-top-1">
-					<div class="col-md-6 top-content">
+				<div class="col-md-6 top-content">
 					<h5>Category</h5>
 					<label id="category"></label>
-					</div>
-					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-6 top-content1">
+					<div id="demo-pie-1" class="pie-title-center" data-percent="3"> <span class="pie-value"></span> </div>
+				</div>
+				 <div class="clearfix"> </div>
 				</div>
 				<div class="content-top-1">
 				<div class="col-md-6 top-content">
 					<h5>products</h5>
 					<label id="products"></label>
 				</div>
-					<!-- <div class="col-md-6 top-content1">
-						<div id="demo-pie-2" class="pie-title-center" data-percent="50"> <span class="pie-value"></span> </div>
-					</div> -->
+				<div class="col-md-6 top-content1">
+					<div id="demo-pie-2" class="pie-title-center" data-percent="50"> <span class="pie-value"></span> </div>
+				</div>
 				 <div class="clearfix"> </div>
 				</div>
 				<div class="content-top-1">
 				<div class="col-md-6 top-content">
 					<h5>customers</h5>
 					<label id="customers"></label>
+				</div>
+				<div class="col-md-6 top-content1">
+					<div id="demo-pie-3" class="pie-title-center" data-percent="75"> <span class="pie-value"></span> </div>
 				</div>
 				 <div class="clearfix"> </div>
 				</div>
@@ -65,7 +71,7 @@
 				<!---start-chart---->
 				<!----->
 				<div class="content-graph">
-				<div class="content-color">
+				<div class="content-color = '#7f8c8d'">
 					<div class="content-ch"><p><i></i>Sales</p><span>100%</span>
 					<div class="clearfix"> </div>
 					</div>
@@ -228,6 +234,8 @@
 			<div class="clearfix"> </div>
 		</div>
 		<!----->
+			</div>
+			</figure>
 			</div>
 			</div>
 				</div>
