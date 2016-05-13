@@ -16,7 +16,7 @@
  		<div class="validation-form">
  	<!---->
 
-			{!! Form::open(['url' => 'product', 'file' => true ]) !!}
+			{!! Form::open(array('url' => '/product', 'files' => true )) !!}
 				@include('admin.products._form', ['submitButtonText' => 'Add Product'])
 			{!! Form::close() !!}
 
