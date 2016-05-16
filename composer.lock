@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1fee1ff587c9c591242d3d2b291dc3ba",
-    "content-hash": "dc3919b8e076d98eab62e4f16b006476",
+    "hash": "0782be96bc8c69fdbd75faeeb2a24d8b",
+    "content-hash": "842acae73ec3acac78a7f0e808acf619",
     "packages": [
         {
             "name": "anhskohbo/no-captcha",
@@ -205,6 +205,59 @@
                 "string"
             ],
             "time": "2015-11-06 14:35:42"
+        },
+        {
+            "name": "edvinaskrucas/laravel-user-email-verification",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/edvinaskrucas/laravel-user-email-verification.git",
+                "reference": "75f7139543c2be5bb3c71f87fa016cc14be9d733"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/edvinaskrucas/laravel-user-email-verification/zipball/75f7139543c2be5bb3c71f87fa016cc14be9d733",
+                "reference": "75f7139543c2be5bb3c71f87fa016cc14be9d733",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^5.2",
+                "illuminate/database": "^5.2",
+                "illuminate/filesystem": "^5.2",
+                "illuminate/http": "^5.2",
+                "illuminate/mail": "^5.2",
+                "illuminate/support": "^5.2",
+                "php": "^5.5|^7.0"
+            },
+            "require-dev": {
+                "laravel/framework": "^5.2",
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Krucas\\LaravelUserEmailVerification": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Edvinas Kručas",
+                    "email": "edv.krucas@gmail.com"
+                }
+            ],
+            "description": "Laravel Package for easier user email verification.",
+            "keywords": [
+                "email verification",
+                "laravel",
+                "user email verification",
+                "user verification"
+            ],
+            "time": "2016-04-14 08:03:48"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -2447,16 +2500,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.24",
+            "version": "4.8.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "a1066c562c52900a142a0e2bbf0582994671385e"
+                "reference": "6d1588a6542a52ed89636e5a9876bc7502bbb853"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a1066c562c52900a142a0e2bbf0582994671385e",
-                "reference": "a1066c562c52900a142a0e2bbf0582994671385e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6d1588a6542a52ed89636e5a9876bc7502bbb853",
+                "reference": "6d1588a6542a52ed89636e5a9876bc7502bbb853",
                 "shasum": ""
             },
             "require": {
@@ -2470,7 +2523,7 @@
                 "phpunit/php-code-coverage": "~2.1",
                 "phpunit/php-file-iterator": "~1.4",
                 "phpunit/php-text-template": "~1.2",
-                "phpunit/php-timer": ">=1.0.6",
+                "phpunit/php-timer": "^1.0.6",
                 "phpunit/phpunit-mock-objects": "~2.3",
                 "sebastian/comparator": "~1.1",
                 "sebastian/diff": "~1.2",
@@ -2515,7 +2568,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-03-14 06:16:08"
+            "time": "2016-05-10 18:47:12"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

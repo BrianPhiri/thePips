@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\User;
+
+
 class MailsController extends Controller
 {
     public function sendEmailReminder(Request $request)
@@ -19,5 +22,11 @@ class MailsController extends Controller
 
             $m->to("mwathibrian7@gmail.com")->subject('Your Reminder!');
         });
+    }
+    //Accessing values in a collection individually.
+    public function test()
+    {
+        $user = User::All()->first();
+        return $user['email'];
     }
 }

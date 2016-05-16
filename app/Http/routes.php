@@ -56,6 +56,14 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/login', function(){
-	return view('homepage/loginauth');
-});
+//Laracasts.
+Route::get('register/confirm/{token}', 'RegistrationController@confirmEmail');
+
+Route::get('login', 'SessionsController@login');
+Route::post('login', 'SessionsController@postLogin');
+Route::get('signout', 'SessionsController@logout');
+
+Route::get('register', 'RegistrationController@register');
+Route::post('register', 'RegistrationController@postRegister');
+
+Route::get('temp', 'MailsController@test');

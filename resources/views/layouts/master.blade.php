@@ -110,7 +110,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   </div>
   <!-- END OF SECTION -->
   <!-- DYNAMIC ALLOCATION BIT -->
-
+  @include('layouts.flash')
   @yield('content')
   <!---->
 </body>
