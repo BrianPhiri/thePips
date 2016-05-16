@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Request;
+// use Request;
+use Illuminate\Http\Request as Request;
 use Response;
 
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -35,22 +36,26 @@ class ProductsController extends Controller
       return view('admin.products.productsAdd', compact('categories'));
     }
 
-    public function store(){
-      $input = Request::all();
-      if(Input::has('file')){
-        // return $file = Input::file('file');
-        $path = Input::file('file')->getRealPath();
-        $name = Input::file('file')->getClientOriginalName();
-        $destinationPath = config('app.fileDestinationPath');
-        Input::file('file')->move($destinationPath, $name);
-        $uploaded = Storage::put($destinationPath, $path);
+    public function store(Request $post){
+      if($post->hasFile('file')){
+        $file = $post->file('file');
+
+        $fileName = $file->getClientOriginalName();
+        $destinationPath = config('app.fileDestinationPath').'/'.$fileName;
+        $uploaded = Storage::put($destinationPath, file_get_contents($file->getRealPath()));
+
         if($uploaded){
-          return "success";
+          Products::create([
+            'name' => $post['name'],
+            'sub_category_id' => $post['sub_category_id'],
+            'price' => $post['price'],
+            'image' => $destinationPath,
+            'description' => $post['description']
+
+          ]);
         }
-        // Input::file('file')->move($destinationPath);
       }
-      // Products::create($input);
-      // return Redirect::intended('product');
+      return Redirect::intended('product');
     }
 
     public function edit($product_id){
@@ -59,25 +64,16 @@ class ProductsController extends Controller
       return view('admin.products.edit', compact('product', 'categories'));
     }
 
-    public function update($product_id){
-      $input = Request::all();
+    public function update($product_id, Request $input ){
+      // $input = Request::all();
       $product = Products::findOrFail($product_id);
       $product->name = $input['name'];
-      $product->sub_category_id = $input['sub_0category_id'];
+      $product->sub_category_id = $input['sub_category_id'];
       $product->price = $input['price'];
       $product->description = $input['description'];
       $product->save();
       return Redirect::intended('product');
     }
 
-    // TODO: Add image uplod function
-    // for image uploads.
-
-    public function test(){
-      // return "hey";
-      $categories = Categories::with('category')->get();
-      // return Response::json(array('data' => $categories));
-      return $categories;
-
-    }
+    // TODO: work on image edit.
 }

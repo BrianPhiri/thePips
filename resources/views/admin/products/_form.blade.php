@@ -2,7 +2,7 @@
  <div class="col-md-6 form-group1">
     <label class="control-label">Image Upload</label>
     <!-- <img src="..." alt="..." class="img-thumbnail"> -->
-    {!! Form::file('file'); !!}
+      <input type="file" name="file" id="file"> 
   </div>
   <div class="clearfix"> </div>
   <!--  -->
