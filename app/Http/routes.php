@@ -11,9 +11,7 @@
 |
 */
 // customers
-Route::get('/', function () {
-    return view('homepage/index');
-});
+Route::get('/', 'HomeController@index');
 // admin
 Route::get('/admin', 'AdminController@index');
 Route::get('/summary', 'AdminController@summary');
@@ -52,7 +50,7 @@ Route::get('/contact',function(){
   return view('homepage/contact');
 });
 
-Route::auth();
+// Route::auth();
 
 Route::get('/home', 'HomeController@index');
 

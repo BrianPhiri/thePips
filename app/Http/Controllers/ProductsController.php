@@ -51,7 +51,6 @@ class ProductsController extends Controller
             'price' => $post['price'],
             'image' => $destinationPath,
             'description' => $post['description']
-
           ]);
         }
       }
@@ -74,6 +73,12 @@ class ProductsController extends Controller
       $product->save();
       return Redirect::intended('product');
     }
+    public function show($product){
+      return $product;
+    }
 
+    public function destroy($product){
+      return $product;
+    }
     // TODO: work on image edit.
 }
