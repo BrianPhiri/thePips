@@ -6,7 +6,7 @@
 		    	<h2>
 				<a href="dashboard">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Subcatefory Edit</span>
+				<span>Subcategory Edit</span>
 				</h2>
 		    </div>
 		<!--//banner-->

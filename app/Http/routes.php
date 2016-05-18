@@ -21,7 +21,7 @@ Route::get('/subcategories', 'ProductsController@subcategory');
 Route::resource('category', 'CategoriesController');
 Route::resource('product', 'ProductsController');
 Route::resource('subcategory', 'SubcategoryController');
-Route::resource('/customers', 'CustomerController');
+Route::resource('customers', 'CustomerController');
 
 Route::get('/test', 'ProductsController@test');
 
@@ -58,7 +58,7 @@ Route::get('register/confirm/{token}', 'RegistrationController@confirmEmail');
 
 Route::get('login', 'SessionsController@login');
 Route::post('login', 'SessionsController@postLogin');
-Route::get('signout', 'SessionsController@logout');
+Route::get('logout', 'SessionsController@logout');
 
 Route::get('register', 'RegistrationController@register');
 Route::post('register', 'RegistrationController@postRegister');
