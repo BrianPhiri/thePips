@@ -17,7 +17,7 @@ class CustomerController extends Controller
    public function show ($id){
     $user = User::findOrFail($id);
     // $orders = Orders::where('customer_id', '=', $id)->get();
-   	return view('admin.customers.user', compact('user', 'orders'));
+   	return view('admin.customers.user', compact('user'));
    }
 
    public function update(){}

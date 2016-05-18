@@ -22,7 +22,7 @@ Route::resource('category', 'CategoriesController');
 Route::resource('product', 'ProductsController');
 Route::resource('subcategory', 'SubcategoryController');
 Route::resource('customers', 'CustomerController');
-
+Route::get('order', 'AdminController@order');
 Route::get('/test', 'ProductsController@test');
 
 Route::get('/error', function(){ return view('admin/brian'); });
