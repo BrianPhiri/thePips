@@ -74,11 +74,9 @@ class ProductsController extends Controller
       return Redirect::intended('product');
     }
     public function show($product){
-      return $product;
-    }
-
-    public function destroy($product){
-      return $product;
+      $product = Products::findOrFail($product);
+      $product->delete();
+      return Redirect::intended('product');
     }
     // TODO: work on image edit.
 }

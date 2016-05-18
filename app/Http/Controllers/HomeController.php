@@ -28,4 +28,8 @@ class HomeController extends Controller
         $products = Products::All();
         return view('homepage.index', compact('products'));
     }
+    public function show($id){
+      $product = Products::findOrFail($id);
+      return view('homepage.single', compact('product'));
+    }
 }

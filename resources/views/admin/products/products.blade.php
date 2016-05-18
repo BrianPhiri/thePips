@@ -42,6 +42,7 @@
 												<h4 class="modal-title" id="myModalLabel{{ $product->id }}">Product view</h4>
 											</div>
 											<div class="modal-body">
+												<img src="{{ $product->image }}" alt="{{ $product->name }}" class="img-responsive" >
 												<label>Name : </label> <p>{{ $product->name }}</p> <br>
 												<label>Category: </label>
 												<label>Price : </label> <p>{{ $product->price}}</p>

@@ -15,18 +15,7 @@
 				  <div class="single_left">
 					 <div class="grid images_3_of_2">
 						 <ul id="etalage">
-							<li>
-								<a href="optionallink.html">
-									<img class="etalage_thumb_image" src="images/ss1.jpg" class="img-responsive" />
-									<img class="etalage_source_image" src="images/ss1.jpg" class="img-responsive" title="" />
-								</a>
-							</li>
-							<li>
-								<img class="etalage_thumb_image" src="images/ss2.jpg" class="img-responsive" />
-								<img class="etalage_source_image" src="images/ss2.jpg" class="img-responsive" title="" />
-							</li>
 						    <li>
-								<img class="etalage_thumb_image" src="images/ss4.jpg" class="img-responsive"  />
 								<img class="etalage_source_image" src="images/ss4.jpg"class="img-responsive"  />
 							</li>
 						 </ul>
@@ -405,4 +394,5 @@
 	 </div>
 </div>
 <!---->
+@include('homepage._footer')
 @endsection

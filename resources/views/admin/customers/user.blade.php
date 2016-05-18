@@ -27,7 +27,7 @@
 						<td>Name</td>
 						<td>:</td>
 						<td>
-							{{ $user->surname }}, {{ $user->othernames }}
+							{{ $user->name }}
 						</td>
 					</tr>
 					<tr>

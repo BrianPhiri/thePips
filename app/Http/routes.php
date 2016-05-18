@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index');
+Route::resource('/products', 'HomeController');
 // admin
 Route::get('/admin', 'AdminController@index');
 Route::get('/summary', 'AdminController@summary');
@@ -38,9 +39,7 @@ Route::get('/cart',function(){
 //   return view('homepage/login');
 // });
 
-Route::get('/products',function(){
-  return view('homepage/products');
-});
+
 
 Route::get('/single',function(){
   return view('homepage/single');
@@ -72,4 +71,3 @@ Route::get('/pics', function()
 
     return $img->response('jpg');
 });
-
