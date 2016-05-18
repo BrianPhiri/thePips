@@ -10,10 +10,8 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-// customers
-Route::get('/','DisplayProductsController@index');
 
-// Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index');
 // admin
 Route::get('/admin', 'AdminController@index');
 Route::get('/summary', 'AdminController@summary');
