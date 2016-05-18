@@ -27,8 +27,11 @@
 							  <td>{{ $product->id }}</td><td>{{ $product->name }}</td><td style="word-break: break-all; word-wrap:break-word;">{{  substr($product->description,0,50).'...' }}</td>
 								<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal{{ $product->id }}">View</button></td>
                 <td><a href="product/{{$product->id }}/edit" class="btn btn-warning">Edit</a></td>
-								<td><a href="product/{{$product->id }}" class="btn btn-danger">Remove</a></td>
-
+								<td>
+									<form action="product/{{ $product->id }}" method="DELETE" onsubmit="return confirm('Are you sure you want to submit?')">
+										<input class="btn btn-danger" type="submit" name="delete" value="Remove">
+									</form>
+								</td>
 
 								<!-- Modal -->
 								<div class="modal fade" id="myModal{{ $product->id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

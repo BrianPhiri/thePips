@@ -32,8 +32,12 @@
             <div class="col1">
               <div class="h_nav">
                 <h4>...</h4>
-                <ul>
-                  <li><a href="products">{{ $cat->category->pluck('name') }}</a></li>
+                <ul>									
+                @if($cat->category)
+										@foreach($cat->category as $subcat)
+											<li><a href="products/{{ $subcat->id }}">{{ $subcat->name }}</a></li>
+										@endforeach
+									@endif
                 </ul>
               </div>
             </div>

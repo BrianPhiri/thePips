@@ -11,7 +11,11 @@
 |
 */
 // customers
+<<<<<<< HEAD
 Route::get('/','DisplayProductsController@index');
+=======
+Route::get('/', 'HomeController@index');
+>>>>>>> bf9964318e8c51266555b4f54636bad51e4eeb48
 // admin
 Route::get('/admin', 'AdminController@index');
 Route::get('/summary', 'AdminController@summary');
@@ -50,7 +54,7 @@ Route::get('/contact',function(){
   return view('homepage/contact');
 });
 
-Route::auth();
+// Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
@@ -72,3 +76,4 @@ Route::get('/pics', function()
 
     return $img->response('jpg');
 });
+
