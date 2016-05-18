@@ -11,9 +11,7 @@
 |
 */
 // customers
-Route::get('/', function () {
-    return view('homepage/index');
-});
+Route::get('/','DisplayProductsController@index');
 // admin
 Route::get('/admin', 'AdminController@index');
 Route::get('/summary', 'AdminController@summary');
@@ -67,3 +65,10 @@ Route::get('register', 'RegistrationController@register');
 Route::post('register', 'RegistrationController@postRegister');
 
 Route::get('temp', 'MailsController@test');
+
+Route::get('/pics', function()
+{
+    $img = Image::make('image_uploads/uploads/image_1.jpg')->resize(1280, 600);
+
+    return $img->response('jpg');
+});

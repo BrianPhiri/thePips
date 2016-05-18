@@ -8,9 +8,11 @@
 	 <div class="container">
 		 <div class="slider">
 				<ul class="rslides" id="slider1">
-				  <li><img src="images/banner2.jpg" alt=""></li>
-				  <li><img src="images/banner1.jpg" alt=""></li>
-				  <li><img src="images/banner3.jpg" alt=""></li>
+				@foreach($products as $product)
+				  <li><img src="image_uploads/{{$product->image}}" style="width:1140px; height:544.38px; " alt=""/></li>
+				  @endforeach
+				  <!-- <li><img src="images/banner2.jpg" alt=""></li>
+				  <li><img src="images/banner3.jpg" alt=""></li> -->
 				</ul>
 		 </div>
 	 </div>
@@ -33,7 +35,7 @@
 		 </div>
 	 </div>
 </div>
-<!---->
+<!--Specially Designed Furnish Section-->
 <div class="new">
 	 <div class="container">
 		 <h3>specially designed for Furnyish</h3>
@@ -97,18 +99,20 @@
 		 </div>
 	 </div>
 </div>
-<!---->
+<!--Top Sellers-->
 <div class="top-sellers">
 	 <div class="container">
 		 <h3>TOP - SELLERS</h3>
 		 <div class="seller-grids">
-			 <div class="col-md-3 seller-grid">
-				 <a href="products"><img src="images/ts2.jpg" alt=""/></a>
-				 <h4><a href="products">Carnival Doublecot Bed</a></h4>
-				 <span>ID: DB4790</span>
-				 <p>Rs. 25000/-</p>
+		 @foreach($products as $product)
+			 <div class="col-md-3 seller-grid">			 	
+				 <a href="products"><img src="image_uploads/{{$product->image}}" style="width:255px; height:140.59px; " alt=""/></a>
+				 <h4><a href="products">{{$product->name}}</a></h4>
+				 <span>Kshs {{$product->price}}</span>
+				 <p>{{$product->description}}</p>
 			 </div>
-			 <div class="col-md-3 seller-grid">
+			 @endforeach
+			 <!-- <div class="col-md-3 seller-grid">
 				 <a href="products"><img src="images/ts11.jpg" alt=""/></a>
 				 <h4><a href="products">Home Bar Furniture</a></h4>
 				 <span>ID: BR4822</span>
@@ -125,12 +129,12 @@
 				 <h4><a href="products">Ritz Glass Dinning Table </a></h4>
 				 <span>ID: DB4790</span>
 				 <p>Rs. 18000/-</p>
-			 </div>
+			 </div> -->
 			 <div class="clearfix"></div>
 		 </div>
 	 </div>
 </div>
-<!---->
+<!--Recommendations-->
 <div class="recommendation">
 	 <div class="container">
 		 <div class="recmnd-head">
@@ -138,31 +142,13 @@
 		 </div>
 		 <div class="bikes-grids">
 			 <ul id="flexiselDemo1">
+			 	@foreach($products as $product)
 				 <li>
-					 <a href="products"><img src="images/ts1.jpg" alt=""/></a>
-					 <h4><a href="products">King Size Bed</a></h4>
-					 <p>ID: KS3989</p>
+					 <a href="products"><img src="image_uploads/{{$product->image}}" style="width:176.23px; height:100px; " alt=""/></a>
+					 <h4><a href="products">{{$product->name}}</a></h4>
+					 <p>Kshs {{$product->price}}</p>
 				 </li>
-				 <li>
-					 <a href="products"><img src="images/r2.jpg" alt=""/></a>
-					 <h4><a href="products">Elite Diwan Seater</a></h4>
-					 <p>ID: KS3989</p>
-				 </li>
-				 <li>
-					 <a href="products"><img src="images/r3.jpg" alt=""/></a>
-					 <h4><a href="products">Dior Corner Sofa</a></h4>
-					 <p>ID: KS3989</p>
-				 </li>
-				 <li>
-					 <a href="products"><img src="images/r4.jpg" alt=""/></a>
-					 <h4><a href="products">Alia Modular Sofa</a></h4>
-					 <p>ID: KS3989</p>
-				 </li>
-				 <li>
-					 <a href="products"><img src="images/r5.jpg" alt=""/></a>
-					 <h4><a href="products">King Size Bed</a></h4>
-					 <p>ID: KS3989</p>
-				 </li>
+				 @endforeach
 		    </ul>
 			<script type="text/javascript">
 			 $(window).load(function() {

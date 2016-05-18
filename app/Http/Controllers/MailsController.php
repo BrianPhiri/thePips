@@ -9,8 +9,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\User;
-
-
+use App\Products;
+use App\Categories;
+use App\Subcategories;
+use DB;
 class MailsController extends Controller
 {
     public function sendEmailReminder(Request $request)
@@ -26,7 +28,7 @@ class MailsController extends Controller
     //Accessing values in a collection individually.
     public function test()
     {
-        $user = User::All()->first();
-        return $user['email'];
+    	$users = Categories::with('category')->get();
+        return $users;
     }
 }

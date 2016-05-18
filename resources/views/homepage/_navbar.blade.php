@@ -33,7 +33,7 @@
               <div class="h_nav">
                 <h4>...</h4>
                 <ul>
-                  <li><a href="products">{{ $cat->category.'name' }}</a></li>
+                  <li><a href="products">{{ $cat->category->pluck('name') }}</a></li>
                 </ul>
               </div>
             </div>
