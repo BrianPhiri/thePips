@@ -11,11 +11,9 @@
 |
 */
 // customers
-<<<<<<< HEAD
 Route::get('/','DisplayProductsController@index');
-=======
-Route::get('/', 'HomeController@index');
->>>>>>> bf9964318e8c51266555b4f54636bad51e4eeb48
+
+// Route::get('/', 'HomeController@index');
 // admin
 Route::get('/admin', 'AdminController@index');
 Route::get('/summary', 'AdminController@summary');
