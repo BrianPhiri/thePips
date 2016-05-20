@@ -14,7 +14,10 @@ use App\Orders;
 class AdminController extends Controller
 {
     public function index(){
-      return view('admin/dashboard');
+      $products = Products::All()->count();
+      $categories = categories::All()->count();
+      $customers = User::All()->count();
+      return view('admin/dashboard')->with('products', $products)->with('categories', $categories)->with('customers', $customers);
     }
     public function summary(){
       $products = Products::All()->count();
