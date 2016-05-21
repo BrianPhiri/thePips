@@ -34,10 +34,6 @@ Route::get('/cart',function(){
   return view('homepage/cart');
 });
 
-// Route::get('/login',function(){
-//   return view('homepage/login');
-// });
-
 Route::get('/products',function(){
   return view('homepage/products');
 });
@@ -50,25 +46,37 @@ Route::get('/contact',function(){
   return view('homepage/contact');
 });
 
-Route::auth();
-
 Route::get('/home', 'HomeController@index');
-
-//Laracasts.
-Route::get('register/confirm/{token}', 'RegistrationController@confirmEmail');
-
-Route::get('login', 'SessionsController@login');
-Route::post('login', 'SessionsController@postLogin');
-Route::get('signout', 'SessionsController@logout');
-
-Route::get('register', 'RegistrationController@register');
-Route::post('register', 'RegistrationController@postRegister');
 
 Route::get('temp', 'MailsController@test');
 
-Route::get('/pics', function()
-{
-    $img = Image::make('image_uploads/uploads/image_1.jpg')->resize(1280, 600);
+// Authentication and Verification Routes.
+Route::auth();
+Route::get('register/confirm/{token}', 'Auth\AuthController@confirmEmail');
 
-    return $img->response('jpg');
-});
+
+
+
+
+
+
+
+
+
+
+
+//Laracasts.
+// Route::get('register/confirm/{token}', 'RegistrationController@confirmEmail');
+
+// Route::get('login', 'SessionsController@login');
+// Route::post('login', 'SessionsController@postLogin');
+// Route::get('signout', 'SessionsController@logout');
+
+// Route::get('register', 'RegistrationController@register');
+// Route::post('register', 'RegistrationController@postRegister');
+// Route::get('/pics', function()
+// {
+//     $img = Image::make('image_uploads/uploads/image_1.jpg')->resize(1280, 600);
+
+//     return $img->response('jpg');
+// });
