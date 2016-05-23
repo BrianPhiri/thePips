@@ -10,8 +10,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-// customers
-Route::get('/','DisplayProductsController@index');
 // admin
 Route::get('/admin', 'AdminController@index');
 Route::get('/summary', 'AdminController@summary');
@@ -25,10 +23,6 @@ Route::resource('/customers', 'CustomerController');
 Route::get('/test', 'ProductsController@test');
 
 Route::get('/error', function(){ return view('admin/brian'); });
-
-Route::get('/account',function(){
-  return view('homepage/account');
-});
 
 Route::get('/cart',function(){
   return view('homepage/cart');

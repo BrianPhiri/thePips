@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','title_id',
     ];
 
     /**
@@ -47,5 +47,12 @@ class User extends Authenticatable
         $this->token = null;
 
         $this->save();
+    }
+    /**
+     * A user has one title 
+     */
+    public function title()
+    {
+        return $this->belongsTo('App\Titles');
     }
 }
