@@ -22,12 +22,11 @@
 			<div class="col-md-8 profile-text">
 				<h6>The Pips</h6>
 				<table>
-				@foreach($users as $user)
 					<tr>
 						<td>Name</td>
 						<td>:</td>
 						<td>
-							{{ $user->surname }}, {{ $user->othernames }}
+							{{ $user->name }}
 						</td>
 					</tr>
 					<tr>
@@ -50,7 +49,6 @@
 						<td>:</td>
 						<td>{{ $user->gender}}</td>
 					</tr>
-					@endforeach
 				</table>
 			</div>
 			<div class="clearfix"></div>
@@ -64,12 +62,6 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>3002</td><td>Table</td><td>2</td>
-						</tr>
-						<tr>
-							<td>3002</td><td>Table</td><td>2</td>
-						</tr>
 						<tr>
 							<td>3002</td><td>Table</td><td>2</td>
 						</tr>

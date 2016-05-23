@@ -2,9 +2,9 @@
 @section('content')
 <div class="banner">
 	<h2>
-		<a href="index.html">Category</a>
+		<a href="/admin">Home</a>
 		<i class="fa fa-angle-right"></i>
-	    <span>Category</span>
+	    <span>Customers</span>
     </h2>
 </div>
 
@@ -21,7 +21,7 @@
 				<tbody>
 						@foreach($customers as $customer)
 							<tr>
-								<td>{{ $customer->surname }}, {{ $customer->othernames }}</td><td>{{ $customer->email }}</td><td><a class="btn btn-warning" href="customers/{{ $customer->id }}">View</a><td>
+								<td>{{ $customer->name }}</td><td>{{ $customer->email }}</td><td><a class="btn btn-warning" href="customers/{{ $customer->id }}">View</a><td>
 							</tr>
 							@endforeach
 				</tbody>

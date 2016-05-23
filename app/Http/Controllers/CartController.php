@@ -59,4 +59,5 @@ class CartController extends Controller
     	Cart::destroy($id);
     	return Redirect::back();
     }
+
 }

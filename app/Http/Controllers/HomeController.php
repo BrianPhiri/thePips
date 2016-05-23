@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use App\Products;
 
 class HomeController extends Controller
 {
@@ -14,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('guest');
     }
 
     /**
@@ -24,6 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('homepage.index');
+        $products = Products::All();
+        return view('homepage.index', compact('products'));
+    }
+    public function show($id){
+      $product = Products::findOrFail($id);
+      return view('homepage.single', compact('product'));
     }
 }

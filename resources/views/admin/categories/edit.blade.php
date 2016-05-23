@@ -6,7 +6,7 @@
 		    	<h2>
 				<a href="index.html">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Category Add</span>
+				<span>Category Edit</span>
 				</h2>
 		    </div>
 		<!--//banner-->

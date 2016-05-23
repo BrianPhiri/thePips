@@ -20,7 +20,7 @@
    <div class="clearfix"> </div>
    <div class="col-md-6 form-group1">
     {!! Form::label('subcategoryDes', 'Subcategory Description') !!}
-    {!! Form::textarea('description', null, ['placeholder' => 'please write down a brife summary of the category','required' => '']) !!}
+    {!! Form::textarea('description', null, ['placeholder' => 'please write down a brife summary of the Subcategory','required' => '']) !!}
    </div>
    <div class="clearfix"> </div>
    <div class="clearfix"> </div>

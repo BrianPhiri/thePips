@@ -2,9 +2,9 @@
 @section('content')
 <div class="banner">
 	<h2>
-		<a href="index.html">Sub-category</a>
+		<a href="index.html">Subcategory</a>
 		<i class="fa fa-angle-right"></i>
-	    <span>Sub-category</span>
+	    <span>Subcategory</span>
     </h2>
 </div>
 

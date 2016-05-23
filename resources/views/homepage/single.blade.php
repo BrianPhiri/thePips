@@ -15,18 +15,7 @@
 				  <div class="single_left">
 					 <div class="grid images_3_of_2">
 						 <ul id="etalage">
-							<li>
-								<a href="optionallink.html">
-									<img class="etalage_thumb_image" src="images/ss1.jpg" class="img-responsive" />
-									<img class="etalage_source_image" src="images/ss1.jpg" class="img-responsive" title="" />
-								</a>
-							</li>
-							<li>
-								<img class="etalage_thumb_image" src="images/ss2.jpg" class="img-responsive" />
-								<img class="etalage_source_image" src="images/ss2.jpg" class="img-responsive" title="" />
-							</li>
 						    <li>
-								<img class="etalage_thumb_image" src="images/ss4.jpg" class="img-responsive"  />
 								<img class="etalage_source_image" src="images/ss4.jpg"class="img-responsive"  />
 							</li>
 						 </ul>
@@ -274,7 +263,7 @@
 									<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Sofa Cum Beds (30)</label>
 								</div>
 								<div class="col col-4">
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Dinner Sets   (30)</label>
+									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Dinner Sets   	(30)</label>
 									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>3+1+1 Sofa Sets (30)</label>
 									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Sofa Chairs     (30)</label>
 									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>2 Seater Sofas  (30)</label>
@@ -405,4 +394,5 @@
 	 </div>
 </div>
 <!---->
+@include('homepage._footer')
 @endsection

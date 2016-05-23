@@ -202,6 +202,10 @@
                         <a href="customers" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Customers</span> </a>
                     </li>
 
+										<li>
+                        <a href="orders" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Order List</span> </a>
+                    </li>
+
                     <li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-cog nav_icon"></i> <span class="nav-label">Settings</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">

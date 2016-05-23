@@ -105,31 +105,13 @@
 		 <h3>TOP - SELLERS</h3>
 		 <div class="seller-grids">
 		 @foreach($products as $product)
-			 <div class="col-md-3 seller-grid">			 	
-				 <a href="products"><img src="image_uploads/{{$product->image}}" style="width:255px; height:140.59px; " alt=""/></a>
+			 <div class="col-md-3 seller-grid">
+				 <a href="products/{{ $product->id}}"><img src="image_uploads/{{$product->image}}" style="width:255px; height:140.59px; " alt=""/></a>
 				 <h4><a href="products">{{$product->name}}</a></h4>
 				 <span>Kshs {{$product->price}}</span>
 				 <p>{{$product->description}}</p>
 			 </div>
 			 @endforeach
-			 <!-- <div class="col-md-3 seller-grid">
-				 <a href="products"><img src="images/ts11.jpg" alt=""/></a>
-				 <h4><a href="products">Home Bar Furniture</a></h4>
-				 <span>ID: BR4822</span>
-				 <p>Rs. 5000/-</p>
-			 </div>
-			 <div class="col-md-3 seller-grid">
-				 <a href="products"><img src="images/ts3.jpg" alt=""/></a>
-				 <h4><a href="products">L-shaped Fabric Sofa set</a></h4>
-				 <span>ID: LF8560</span>
-				 <p>Rs. 45000/-</p>
-			 </div>
-			 <div class="col-md-3 seller-grid">
-				 <a href="products"><img src="images/ts4.jpg" alt=""/></a>
-				 <h4><a href="products">Ritz Glass Dinning Table </a></h4>
-				 <span>ID: DB4790</span>
-				 <p>Rs. 18000/-</p>
-			 </div> -->
 			 <div class="clearfix"></div>
 		 </div>
 	 </div>
@@ -144,7 +126,7 @@
 			 <ul id="flexiselDemo1">
 			 	@foreach($products as $product)
 				 <li>
-					 <a href="products"><img src="image_uploads/{{$product->image}}" style="width:176.23px; height:100px; " alt=""/></a>
+					 <a href="products/{{ $product->id}}"><img src="image_uploads/{{$product->image}}" style="width:176.23px; height:100px; " alt=""/></a>
 					 <h4><a href="products">{{$product->name}}</a></h4>
 					 <p>Kshs {{$product->price}}</p>
 				 </li>
