@@ -11,8 +11,22 @@
 |
 */
 
+// Authentication Routes...
+$this->get('login', 'Auth\AuthController@showLoginForm');
+$this->post('login', 'Auth\AuthController@login');
+$this->get('logout', 'Auth\AuthController@logout');
+
+// Registration Routes...
+$this->get('register', 'Auth\AuthController@showRegistrationForm');
+$this->post('register', 'Auth\AuthController@register');
+
+// Password Reset Routes...
+$this->get('password/reset/{token?}', 'Auth\PasswordController@showResetForm');
+$this->post('password/email', 'Auth\PasswordController@sendResetLinkEmail');
+$this->post('password/reset', 'Auth\PasswordController@reset');
+
 Route::get('/', 'HomeController@index');
-Route::resource('/products', 'HomeController');
+// Route::resource('/products', 'HomeController');
 // admin
 Route::get('/admin', 'AdminController@index');
 Route::get('/summary', 'AdminController@summary');
@@ -44,10 +58,9 @@ Route::get('/contact',function(){
 });
 
 
-Route::get('/home', 'HomeController@index');
+// Route::get('/home', 'HomeController@index');
 
 Route::get('temp', 'MailsController@test');
 
 // Authentication and Verification Routes.
-Route::auth();
 Route::get('register/confirm/{token}', 'Auth\AuthController@confirmEmail');
