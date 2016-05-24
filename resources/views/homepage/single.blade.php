@@ -15,10 +15,10 @@
 				  <div class="single_left">
 					 <div class="grid images_3_of_2">
 						 <ul id="etalage">
-						    <li>
-								<img class="etalage_source_image" src="images/ss4.jpg"class="img-responsive"  />
-							</li>
-						 </ul>
+						     	<li> 
+								<img class="etalage_source_image" src="{{ URL::asset('image_uploads')}}/{{$product->image}} " class="img-responsive" style="width="300px"; height="400px'"" />
+							    </li>
+							 </ul>
 						 <div class="clearfix"></div>
 				      </div>
 				  </div>
@@ -49,8 +49,8 @@
 							 <ul>
 								 <li>MRP: <del>Rs 55000</del></li>
 								 <li>Sellling Price:</li>
-								 <li class="active">Rs 35000</li>
-								 <a href="#">BUY NOW</a>
+								 <li class="active">Ksh {{$product->price}}</li>
+								 <a href="{{ URL::asset('addItem')}}/{{$product->id}}">BUY NOW</a>
 							 </ul>
 						 </div>
 						 <div class="check">
@@ -104,7 +104,7 @@
 						 <div class="tab1">
 							 <ul class="place">
 								 <li class="sort">Furniture</li>
-								 <li class="by"><img src="images/do.png" alt=""></li>
+								 <li class="by"><img src="{{URL::asset('images/do.png') }}" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
 							 <div class="single-bottom">
@@ -117,7 +117,7 @@
 						  <div class="tab2">
 							 <ul class="place">
 								 <li class="sort">Decor</li>
-								 <li class="by"><img src="images/do.png" alt=""></li>
+								 <li class="by"><img src="{{URL::asset('images/do.png') }}" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
 							 <div class="single-bottom">
@@ -130,7 +130,7 @@
 						  <div class="tab3">
 							 <ul class="place">
 								 <li class="sort">Lighting</li>
-								 <li class="by"><img src="images/do.png" alt=""></li>
+								 <li class="by"><img src="{{URL::asset('images/do.png') }}" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
 							 <div class="single-bottom">
@@ -143,7 +143,7 @@
 						  <div class="tab4">
 							 <ul class="place">
 								 <li class="sort">Bed & Bath</li>
-								 <li class="by"><img src="images/do.png" alt=""></li>
+								 <li class="by"><img src="{{URL::asset('images/do.png') }}" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
 							 <div class="single-bottom">
@@ -156,7 +156,7 @@
 						  <div class="tab5">
 							 <ul class="place">
 								 <li class="sort">Fabric</li>
-								 <li class="by"><img src="images/do.png" alt=""></li>
+								 <li class="by"><img src="{{URL::asset('images/do.png') }}" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
 							 <div class="single-bottom">
@@ -295,104 +295,5 @@
 		     <div class="clearfix"></div>
 	  </div>
 </div>
-<!---->
-<div class="footer-content">
-	 <div class="container">
-		 <div class="ftr-grids">
-			 <div class="col-md-3 ftr-grid">
-				 <h4>About Us</h4>
-				 <ul>
-					 <li><a href="#">Who We Are</a></li>
-					 <li><a href="contact">Contact Us</a></li>
-					 <li><a href="#">Our Sites</a></li>
-					 <li><a href="#">In The News</a></li>
-					 <li><a href="#">Team</a></li>
-					 <li><a href="#">Carrers</a></li>
-				 </ul>
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-				 <h4>Customer service</h4>
-				 <ul>
-					 <li><a href="#">FAQ</a></li>
-					 <li><a href="#">Shipping</a></li>
-					 <li><a href="#">Cancellation</a></li>
-					 <li><a href="#">Returns</a></li>
-					 <li><a href="#">Bulk Orders</a></li>
-					 <li><a href="#">Buying Guides</a></li>
-				 </ul>
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-				 <h4>Your account</h4>
-				 <ul>
-					 <li><a href="account">Your Account</a></li>
-					 <li><a href="#">Personal Information</a></li>
-					 <li><a href="#">Addresses</a></li>
-					 <li><a href="#">Discount</a></li>
-					 <li><a href="#">Track your order</a></li>
-				 </ul>
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-				 <h4>Categories</h4>
-				 <ul>
-					 <li><a href="#">> Furinture</a></li>
-					 <li><a href="#">> Bean Bags</a></li>
-					 <li><a href="#">> Decor</a></li>
-					 <li><a href="#">> Kichen & Dinning</a></li>
-					 <li><a href="#">> Bed & Bath</a></li>
-					 <li><a href="#">...More</a></li>
-				 </ul>
-			 </div>
-			 <div class="clearfix"></div>
-		 </div>
-	 </div>
-</div>
-<!---->
-<div class="footer">
-	 <div class="container">
-		 <div class="store">
-			 <ul>
-				 <li class="active">OUR STORE LOCATOR::</li>
-				 <li><a href="#">Noida</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Belgium</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">China</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Thane</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Chennai</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Armenia</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Kolkata</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Malaysia</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Indonesia</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Mumbai</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Kerala</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Spain</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Northern Ireland</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Mohali</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Gurgaon</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Panchkula</a></li>
-				 <li><a href="#">|</a></li>
-				 <li><a href="#">Ambala</a></li>
-			 </ul>
-		 </div>
-		 <div class="copywrite">
-			 <p>Copyright © 2015 Furnyish All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-		 </div>
-		 </div>
-	 </div>
-</div>
-<!---->
 @include('homepage._footer')
 @endsection

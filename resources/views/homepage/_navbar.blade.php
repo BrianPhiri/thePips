@@ -1,7 +1,7 @@
 <div class="header_top">
 	 <div class="container">
 		 <div class="logo">
-		 	<a href="{{ URL::asset('/')}}"><img src="images/pips.png" alt=""/></a>
+		 	<a href="{{ URL::asset('/')}}"><img src="{{ URL::asset('images/pips.png') }}" alt=""/></a>
 		 </div>
 		 <div class="header_right">
 			 <div class="cart box_1">

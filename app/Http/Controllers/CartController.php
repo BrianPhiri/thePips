@@ -2,43 +2,46 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Model;
 use App\Cart;
 use App\CartItem;
 use Illuminate\Support\Facades\Auth;
- 
-use Illuminate\Http\Request;
-
+use Redirect;
 use App\Http\Requests;
 
 class CartController extends Controller
 {
     public function __construct()
     {
-    	$this->middleware('auth');
+    	// $this->middleware('auth');
     }
 
-    public function addItem($productId)
+    public function addItem(Request $request, $productId)
     {
+        // $cart = Cart::where('user_id',Auth::user()->id)->first();
+ 
+        // if(!$cart){
+        //     $cart =  new Cart();
+        //     $cart->user_id=Auth::user()->id;
+        //     $cart->save();
+        // }
+ 
+        // $cartItem  = new Cartitem();
+        // $cartItem->product_id=$productId;
+        // // $cartItem->cart_id= $cart->id;
+        // // $cartItem->save();
+ 
+        // // return redirect('/cart');
+        // return $cartItem->count();
+        session(['brian'=>'regular','cartItem'=>'Dhania']);
+        return $request->session()->all();
 
-    	$cart = Cart::where('user_id',Auth::user()->id)->first();
-    	if(!$cart)
-    	{
-    		$cart = new Cart();
-    		$cart->user_id = Auth::user()->id;
-    		$cart->save();
-    	}
-
-    	$cartItem = new CartItem();
-    	$cartItem->product_id = $product_id;
-    	$cartItem->cart_id = $cart->id;
-    	$cartItem->save();
-
-    	return Redirect::intended('cart');
     }
 
     public function showCart()
     {
-    	$cart = Cart::where('user_id',Auth::user()->id->first();
+    	// $cart = Cart::where('user_id',Auth::user()->id->first();
     	if(!$cart)
     	{
     		$cart = new Cart();

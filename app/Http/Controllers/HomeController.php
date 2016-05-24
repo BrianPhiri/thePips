@@ -13,13 +13,14 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $products = Products::All();
         return view('homepage.index', compact('products'));
     }
     public function show($id){
       $product = Products::findOrFail($id);
-      return view('homepage.single', compact('product'));
+      return view('homepage/single', compact('product'));
+      // return $product->image;
     }
 }

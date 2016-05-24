@@ -28,11 +28,13 @@ $this->post('password/reset', 'Auth\PasswordController@reset');
 // Email Confirmation
 Route::get('register/confirm/{token}', 'Auth\AuthController@confirmEmail');
 
+// Shop Cart Routes
+Route::get('addItem/{id}','CartController@addItem');
+
 Route::get('/', 'HomeController@index');
-// Route::resource('/products', 'HomeController');
 
 // Route Resource
-Route::resource('/products','HomeController');
+Route::get('products/{productId}','HomeController@show');
 
 // admin
 Route::get('/admin', 'AdminController@index');
@@ -56,9 +58,9 @@ Route::get('/products',function(){
   return view('homepage/products');
 });
 
-Route::get('/single',function(){
-  return view('homepage/single');
-});
+// Route::get('/single',function(){
+//   return view('homepage/single');
+// });
 
 Route::get('/contact',function(){
   return view('homepage/contact');
