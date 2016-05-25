@@ -25,7 +25,8 @@ class HomeController extends Controller
       // return $product->image;
     }
     public function categoryProducts($id){
-      $products = Subcategories::with('products')->get();
-      return view('homepage.products', compact('products'));
+      // $subcategories = Subcategories::with('products')->get();
+      $subcategories = Subcategories::find($id)->products()->get();
+      return view('homepage.products', compact('subcategories'));
     }
 }
