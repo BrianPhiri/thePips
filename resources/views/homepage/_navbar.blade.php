@@ -35,7 +35,7 @@
                 <ul>
                 @if($cat->category)
 										@foreach($cat->category as $subcat)
-											<li><a href="products/{{ $subcat->id }}">{{ $subcat->name }}</a></li>
+											<li><a href="{{URL::asset('products/category')}}/{{ $subcat->id }}">{{ $subcat->name }}</a></li>
 										@endforeach
 									@endif
                 </ul>

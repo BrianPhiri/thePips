@@ -15,7 +15,7 @@
 			<h2>OUR PRODUCTS</h2>
 		 <div class="col-md-9 product-model-sec">
 			 @foreach($subcategories as $product)
-					<a href="{{ URL::asset('single')}}">
+					<a href="{{ URL::asset('products')}}/{{ $product->id }}">
 	 					<div class="product-grid love-grid">
 	 					<div class="more-product"><span> </span></div>
 	 					<div class="product-img b-link-stripe b-animate-go  thickbox">
