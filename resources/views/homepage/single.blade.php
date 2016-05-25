@@ -15,7 +15,7 @@
 				  <div class="single_left">
 					 <div class="grid images_3_of_2">
 						 <ul id="etalage">
-						     	<li> 
+						     	<li>
 								<img class="etalage_source_image img-responsive" src="{{ URL::asset('image_uploads')}}/{{$product->image}}" style="width: 300px; height: 400px" />
 							    </li>
 							 </ul>
@@ -23,8 +23,8 @@
 				      </div>
 				  </div>
 				  <div class="single-right">
-					 <h3>SPENCER 3+1+1 SOFA SET WITH 5 BIG CUSHIONS & WOODEN HANDLE</h3>
-					 <div class="id"><h4>ID: SB2379</h4></div>
+					 <h3>{{ $product->name }}</h3>
+					 <div class="id"><h4>ID: {{ $product->id }}</h4></div>
 					  <form action="" class="sky-form">
 						     <fieldset>
 							   <section>
@@ -84,26 +84,15 @@
 						 </ul>
 					  </div>
 					  <div class="single-bottom1">
-						<h6>Details</h6>
-						<p class="prod-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
 					 </div>
 				  </div>
 				  <div class="clearfix"></div>
 				  <div class="sofaset-info">
-						 <h4>Product Summary SPENCER 3+1+1 SOFA SET WITH 5 BIG CUSHIONS & WOODEN HANDLE</h4>
+						 <h4>Product Summary {{ $product->name }}</h4>
 						 <ul>
-							 <li>Dimensions: 3 Seater: Length 208 x Width 81 x Height 91.5 cm and 1 Seater: Length 99 x Width 81 x Height 91.5 cm</li>
-							 <li>Assembly Type: Pre Assembled</li>
-							 <li>Material: Wooden Structure, Chemical Treated And Seasoned Wood, 19 mm and 12 mm Commercial Ply and Mdf Used On Visible Parts</li>
-							 <li>Looks amazing in a contemporary setting</li>
-							 <li>Colour: Brown Jute, Sheron Brown</li>
-							 <li>Type: Spencer 3 plus 1 plus 1 Sofa Set With 5 Big Cushions and 6 Small Cushions, Wooden Handle</li>
-							 <li>Long lasting, durable and easy to use product</li>
-							 <li>Contents: 3 Pc</li>
-							 <li>Delivery Time: 7 to 10 days from the Day of Dispatch</li>
-							 <li>Very classy and contemporary design</li>
-							 <li>SUPC: SHG21458689652</li>
-							 <li>Material: High Density Foam and Fabric</li>
+							 <p>
+							 	{{ $product->description }}
+							 </p>
 						 </ul>
 				  </div>
 		    </div>

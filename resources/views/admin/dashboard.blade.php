@@ -22,7 +22,7 @@
 					<label id="category"></label>
 				</div>
 				<div class="col-md-6 top-content1">
-					<div id="demo-pie-1" class="pie-title-center" data-percent="3"> <span class="pie-value"></span> </div>
+					<div id="demo-pie-1" class="pie-title-center" data-percent="{{ $categories }}"> <span class="pie-value"></span> </div>
 				</div>
 				 <div class="clearfix"> </div>
 				</div>
@@ -32,7 +32,7 @@
 					<label id="products"></label>
 				</div>
 				<div class="col-md-6 top-content1">
-					<div id="demo-pie-2" class="pie-title-center" data-percent="50"> <span class="pie-value"></span> </div>
+					<div id="demo-pie-2" class="pie-title-center" data-percent="{{ $products }}"> <span class="pie-value"></span> </div>
 				</div>
 				 <div class="clearfix"> </div>
 				</div>
@@ -42,7 +42,7 @@
 					<label id="customers"></label>
 				</div>
 				<div class="col-md-6 top-content1">
-					<div id="demo-pie-3" class="pie-title-center" data-percent="75"> <span class="pie-value"></span> </div>
+					<div id="demo-pie-3" class="pie-title-center" data-percent="{{ $customers }}"> <span class="pie-value"></span> </div>
 				</div>
 				 <div class="clearfix"> </div>
 				</div>
@@ -81,7 +81,6 @@
 					</div>
 				</div>
 
-        >
 				<!--graph-->
 		<link rel="stylesheet" href="css/graph.css">
 		<!--//graph-->

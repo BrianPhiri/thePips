@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->string('image');
             $table->string('product-state');
-            $table->softDelets();
+            // $table->softDelets();
             $table->timestamps();
         });
         Schema::table('products', function (Blueprint $table) {
