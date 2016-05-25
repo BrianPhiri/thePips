@@ -14,10 +14,10 @@
 <!---->
 	<div class="clearfix"> </div>
 	<div class="content-top">
-    <table class="table table-hover">
+    <table class="table table-hover" id="myTable">
         <thead>
             <tr>
-                <td><b>Name</b></td><td><b>Description</b></td><td><b>Action</b></td>
+                <td><b>Name</b></td><td><b>Description</b></td><td><b>Action</b></td><td></td><td></td>
             </tr>
         </thead>
 				<hr>

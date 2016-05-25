@@ -54,7 +54,7 @@
                 lineCap: 'round',
                 lineWidth: 8,
                 onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+                    $(this.element).find('.pie-value').text(Math.round(percent) + '');
                 }
             });
 
@@ -64,7 +64,7 @@
                 lineCap: 'butt',
                 lineWidth: 8,
                 onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+                    $(this.element).find('.pie-value').text(Math.round(percent) + '');
                 }
             });
 
@@ -74,7 +74,7 @@
                 lineCap: 'square',
                 lineWidth: 8,
                 onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+                    $(this.element).find('.pie-value').text(Math.round(percent) + '');
                 }
             });
 
@@ -106,8 +106,8 @@
 				<button id="toggle"><i class="fa fa-arrows-alt"></i></button>
 			</section>
 			<form class=" navbar-left-right">
-              <input type="text"  value="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}">
-              <input type="submit" value="" class="fa fa-search">
+              <!-- <input type="text"  value="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}">
+              <input type="submit" value="" class="fa fa-search"> -->
             </form>
             <div class="clearfix"> </div>
            </div>
@@ -154,7 +154,7 @@
 		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">Admin<i class="caret"></i></span><img height="30" width="30" src="images/thePIPS_LOGO.png" alt="admin"></a>
 		              <ul class="dropdown-menu " role="menu">
 		                <li><a href="profile"><i class="fa fa-user"></i>Edit Profile</a></li>
-		                <li><a href="inbox"><i class="fa fa-envelope"></i>Inbox</a></li>
+		                <!-- <li><a href="inbox"><i class="fa fa-envelope"></i>Inbox</a></li> -->
 		                <li><a href="calendar"><i class="fa fa-calendar"></i>Calender</a></li>
 		              </ul>
 		            </li>
@@ -174,7 +174,7 @@
                     </li>
 
 					 <li>
-                        <a href="{{ URL::asset('inbox') }}" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Inbox</span> </a>
+                        <!-- <a href="{{ URL::asset('inbox') }}" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Inbox</span> </a> -->
                     </li>
                      <li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label">Categories</span><span class="fa arrow"></span></a>
