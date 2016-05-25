@@ -16,7 +16,7 @@
 					 <div class="grid images_3_of_2">
 						 <ul id="etalage">
 						     	<li> 
-								<img class="etalage_source_image" src="{{ URL::asset('image_uploads')}}/{{$product->image}} " class="img-responsive" style="width="300px"; height="400px'"" />
+								<img class="etalage_source_image img-responsive" src="{{ URL::asset('image_uploads')}}/{{$product->image}}" style="width: 300px; height: 400px" />
 							    </li>
 							 </ul>
 						 <div class="clearfix"></div>
@@ -47,10 +47,20 @@
 					  <div class="cost">
 						 <div class="prdt-cost">
 							 <ul>
-								 <li>MRP: <del>Rs 55000</del></li>
-								 <li>Sellling Price:</li>
+								 {{--<li>MRP: <del>Rs 55000</del></li>--}}
+								 <li>Selling Price:</li>
 								 <li class="active">Ksh {{$product->price}}</li>
-								 <a href="{{ URL::asset('addItem')}}/{{$product->id}}">BUY NOW</a>
+								 <!-- Start -->
+								 	<form  method="POST" action="{{ url('/carts') }}">
+                                            <input type="hidden" name="product_id" value="{{$product->id}}">
+                                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                            <button type="submit" class="btn btn-fefault add-to-cart">
+                                                <i class="fa fa-shopping-cart"></i>
+                                                Add to cart
+                                            </button>
+                                        </form>
+   								 <!-- End -->
+								 <!-- <a href="{{ URL::asset('addItem')}}/{{$product->id}}">BUY NOW</a> -->
 							 </ul>
 						 </div>
 						 <div class="check">
