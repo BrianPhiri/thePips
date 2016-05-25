@@ -27,6 +27,7 @@ class AdminController extends Controller
       return Response::json($report);
     }
 
+    // orders information
     public function order(){
       $orders = Orders::All();
       return view('admin.orders', compact('orders', compact('orders')));
