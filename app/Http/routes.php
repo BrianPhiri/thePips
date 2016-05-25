@@ -40,6 +40,7 @@ Route::get('/', 'HomeController@index');
 
 // Route Resource
 Route::get('products/{productId}','HomeController@show');
+Route::get('products/category/{productId}','HomeController@categoryProducts');
 
 // Testing Cart View
 Route::get('mwas',function (){
