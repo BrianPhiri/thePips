@@ -9,27 +9,18 @@ use App\Products;
 class HomeController extends Controller
 {
     /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('guest');
-    }
-
-    /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $products = Products::All();
         return view('homepage.index', compact('products'));
     }
     public function show($id){
       $product = Products::findOrFail($id);
-      return view('homepage.single', compact('product'));
+      return view('homepage/single', compact('product'));
+      // return $product->image;
     }
 }

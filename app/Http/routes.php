@@ -11,8 +11,40 @@
 |
 */
 
+// Authentication Routes...
+$this->get('login', 'Auth\AuthController@showLoginForm');
+$this->post('login', 'Auth\AuthController@login');
+$this->get('logout', 'Auth\AuthController@logout');
+
+// Registration Routes...
+$this->get('register', 'Auth\AuthController@showRegistrationForm');
+$this->post('register', 'Auth\AuthController@register');
+
+// Password Reset Routes...
+$this->get('password/reset/{token?}', 'Auth\PasswordController@showResetForm');
+$this->post('password/email', 'Auth\PasswordController@sendResetLinkEmail');
+$this->post('password/reset', 'Auth\PasswordController@reset');
+
+// Email Confirmation
+Route::get('register/confirm/{token}', 'Auth\AuthController@confirmEmail');
+
+// Shop Cart Routes
+Route::post('carts','CartController@cart');
+Route::resource('carts','CartController@cart');
+Route::get('carts/remove','CartController@remove');
+// Route::get('cart?','CartController@cart');
+
+Route::get('addItem/{id}','CartController@addItem');
+
 Route::get('/', 'HomeController@index');
-Route::resource('/products', 'HomeController');
+
+// Route Resource
+Route::get('products/{productId}','HomeController@show');
+
+// Testing Cart View
+Route::get('mwas',function (){
+	return view('homepage/test');
+});
 // admin
 Route::get('/admin', 'AdminController@index');
 Route::get('/summary', 'AdminController@summary');
@@ -27,47 +59,18 @@ Route::get('/test', 'ProductsController@test');
 
 Route::get('/error', function(){ return view('admin/brian'); });
 
-Route::get('/account',function(){
-  return view('homepage/account');
-});
-
 Route::get('/cart',function(){
   return view('homepage/cart');
 });
 
-// Route::get('/login',function(){
-//   return view('homepage/login');
-// });
-
-
-
-Route::get('/single',function(){
-  return view('homepage/single');
+Route::get('/products',function(){
+  return view('homepage/products');
 });
+
+// Route::get('/single',function(){
+//   return view('homepage/single');
+// });
 
 Route::get('/contact',function(){
   return view('homepage/contact');
-});
-
-// Route::auth();
-
-Route::get('/home', 'HomeController@index');
-
-//Laracasts.
-Route::get('register/confirm/{token}', 'RegistrationController@confirmEmail');
-
-Route::get('login', 'SessionsController@login');
-Route::post('login', 'SessionsController@postLogin');
-Route::get('logout', 'SessionsController@logout');
-
-Route::get('register', 'RegistrationController@register');
-Route::post('register', 'RegistrationController@postRegister');
-
-Route::get('temp', 'MailsController@test');
-
-Route::get('/pics', function()
-{
-    $img = Image::make('image_uploads/uploads/image_1.jpg')->resize(1280, 600);
-
-    return $img->response('jpg');
 });

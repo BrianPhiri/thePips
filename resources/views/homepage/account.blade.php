@@ -62,6 +62,23 @@
 			 <!-- Form -->
 				<form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {!! csrf_field() !!}
+                    <div>
+
+						<label>
+							<select name="title" id="title" class="select_class">
+							<i class="fa fa-btn fa-sign-in"></i>
+					          <option>Select Title</option>
+					        @foreach($title as $titles)
+					          <option value="{{ $titles->id}}">{{$titles->title}}</option>
+					        @endforeach
+					      </select>					      
+                                @if ($errors->has('title_id'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('title_id') }}</strong>
+                                    </span>
+                                @endif
+						</label>
+					</div>
 					<div>
 						<label>
 							<!-- <input placeholder="first name:" type="text" tabindex="1" required autofocus> -->
@@ -77,7 +94,7 @@
 					<div>
 						<label>
 							<!-- <input placeholder="last name:" type="text" tabindex="2" required autofocus> -->
-							<input type="email" name="email" value="{{ old('email') }}" class="mail" placeholder="E-Mail">
+							<input type="email" name="email" value="{{ old('email') }}" placeholder="E-Mail">
                                 @if ($errors->has('email'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>

@@ -4,9 +4,9 @@
 <title>Furnyish Store a Ecommerce Category Flat Bootstarp Responsive Website Template | Cart :: w3layouts</title>
 <!-- Font Awesome -->
 <link href="{{ URL::asset('css/font-awesome.css') }}" rel="stylesheet">
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="{{ URL::asset('css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary JavaScript plugins) -->
-<script type='text/javascript' src="js/jquery-1.11.1.min.js"></script>
+<script type='text/javascript' src="{{ URL::asset('js/jquery-1.11.1.min.js') }}"></script>
 <!-- Custom Theme files -->
 <link href="{{ URL::asset('css/frontpagestyle.css') }}" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
@@ -19,10 +19,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='http://fonts.googleapis.com/css?family=Montserrat|Raleway:400,200,300,500,600,700,800,900,100' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="css/etalage.css" type="text/css">
+<link rel="stylesheet" href="{{ URL::asset('css/etalage.css') }}" type="text/css">
 <!-- start menu -->
 <link href="{{ URL::asset('css/megamenu.css') }}" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="js/megamenu.js"></script>
+<script type="text/javascript" src="{{ URL::asset('js/megamenu.js') }}"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 <script src="{{ asset('js/menu_jquery.js') }}"></script>
 <script src="{{ asset('js/simpleCart.min.js') }}"> </script>
@@ -86,13 +86,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   				<ul>
           <!-- Code for Unauthenticated Users -->
           @if (Auth::guest())
-  					 <li class="top_link"><a href="login"><i class="fa fa-btn fa-sign-in"></i> Sign In</a></li>|
+  					 <li class="top_link"><a href="{{ URL::asset('login') }}"><i class="fa fa-btn fa-sign-in"></i> Sign In</a></li>|
             <!-- <i class="fa fa-btn fa-sign-out"></i> <li class="top_link"><a href="logout">Sign Out</a></li>| -->
-          <li class="top_link"><a href="account">   <i class="fa fa-btn fa-user"></i> New User ?</a>
+          <li class="top_link"><a href="{{ URL::asset('register') }}">   <i class="fa fa-btn fa-user"></i> New User ?</a>
             @else
             <!-- Displays the name of the authenticated users. -->
-              <li><a href="{{ url('/account') }}"><i class="fa fa-btn fa-user"></i> {{ Auth::user()->name }}</a></li> |
-              <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> Sign Out</a></li>
+              <li><a href="{{ url::asset('/register') }}"><i class="fa fa-btn fa-user"></i> {{ Auth::user()->name }}</a></li> |
+              <li><a href="{{ url::asset('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> Sign Out</a></li>
             @endif  
   				</ul>
   				<!-- <div class="social">

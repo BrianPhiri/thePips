@@ -1,14 +1,14 @@
 <div class="header_top">
 	 <div class="container">
 		 <div class="logo">
-		 	<a href="{{ URL::asset('/')}}"><img src="images/pips.png" alt=""/></a>
+		 	<a href="{{ URL::asset('/')}}"><img src="{{ URL::asset('images/pips.png') }}" alt=""/></a>
 		 </div>
 		 <div class="header_right">
 			 <div class="cart box_1">
 				<a href="{{ URL::asset('cart')}}">
 					<h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="images/bag.png" alt=""></h3>
 				</a>
-				<p><a href="javascript:;" class="simpleCart_empty">Empty cart</a></p>
+				<p><a href="{{url('carts/remove')}}" class="simpleCart_empty">Empty cart</a></p>
 				<div class="clearfix"> </div>
 			 </div>
 		 </div>
