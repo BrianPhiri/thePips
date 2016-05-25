@@ -27,7 +27,7 @@
 				 <div class="close1"> </div>
 				 <div class="cart-sec">
 						<div class="cart-item cyc">
-							 <img src="{{URL::asset('image_uploads')}}/"/>
+							 <img src="{{URL::asset('image_uploads')}}/{{$item->options->image}}"/>
 						</div>
 					   <div class="cart-item-info">
 							 <h3>{{$item->name}}<span>Model No: {{$item->id}}</span></h3>
@@ -55,24 +55,6 @@
 					});
 					});
 			 </script>
-			 <!-- <div class="cart-header2">
-				 <div class="close2"> </div>
-				  <div class="cart-sec">
-						<div class="cart-item">
-							 <img src="images/ts1.jpg"/>
-						</div>
-					   <div class="cart-item-info">
-							 <h3>Woolen Shrug<span>Model No: 8768</span></h3>
-							 <h4><span>Rs. $ </span>200.00</h4>
-							 <p class="qty">Qty ::</p>
-							 <input min="1" type="number" id="quantity" name="quantity" value="1" class="form-control input-small">
-					   </div>
-					   <div class="clearfix"></div>
-						<div class="delivery">
-							 <p>Service Charges:: Rs.50.00</p>
-				        </div>
-				  </div>
-			  </div> -->
 		 </div>
 
 		 <div class="cart-total">
@@ -90,13 +72,13 @@
 			 <h4 class="last-price">TOTAL</h4>
 			 <span class="total final">{{Cart::total()}}</span>
 			 <div class="clearfix"></div>
-			 <a class="order" href="#">Place Order</a>
-			<!--  <div class="total-item">
+			 <a class="order" href="{{url("carts/")}}">Place Order</a>
+			<div class="total-item">
 				 <h3>OPTIONS</h3>
 				 <h4>COUPONS</h4>
 				 <a class="cpns" href="#">Apply Coupons</a>
 				 <p><a href="#">Log In</a> to use accounts - linked coupons</p>
-			 </div> -->
+			 </div>
 			</div>
 	 </div>
 </div>
