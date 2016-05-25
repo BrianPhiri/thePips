@@ -60,7 +60,7 @@
 			 </script> -->
 			 <div class="registration_form">
 			 <!-- Form -->
-				<form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+				<form class="form-horizontal" role="form" method="POST" action="{{ url('/account') }}">
                         {!! csrf_field() !!}
                     <div>
 
@@ -71,7 +71,7 @@
 					        @foreach($title as $titles)
 					          <option value="{{ $titles->id}}">{{$titles->title}}</option>
 					        @endforeach
-					      </select>					      
+					      </select>
                                 @if ($errors->has('title_id'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('title_id') }}</strong>
