@@ -8,7 +8,7 @@
 				<a href="{{ URL::asset('cart')}}">
 					<h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="images/bag.png" alt=""></h3>
 				</a>
-				<p><a href="{{url('carts/remove')}}" class="simpleCart_empty">Empty cart</a></p>
+				<p><a href="{{url('carts/remove?yes=1')}}" class="simpleCart_empty"><h5>Empty cart</h5></a></p>
 				<div class="clearfix"> </div>
 			 </div>
 		 </div>
@@ -32,7 +32,7 @@
             <div class="col1">
               <div class="h_nav">
                 <h4>...</h4>
-                <ul>									
+                <ul>
                 @if($cat->category)
 										@foreach($cat->category as $subcat)
 											<li><a href="products/{{ $subcat->id }}">{{ $subcat->name }}</a></li>

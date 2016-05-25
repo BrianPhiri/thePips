@@ -31,8 +31,8 @@ Route::get('register/confirm/{token}', 'Auth\AuthController@confirmEmail');
 // Shop Cart Routes
 Route::post('carts','CartController@cart');
 Route::resource('carts','CartController@cart');
-Route::get('carts/remove','CartController@remove');
-// Route::get('cart?','CartController@cart');
+// Route::get('carts/remove','CartController@remove');
+//Route::resouce('persist','CartController@cart');
 
 Route::get('addItem/{id}','CartController@addItem');
 
