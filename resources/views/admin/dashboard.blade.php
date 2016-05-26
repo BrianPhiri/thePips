@@ -72,7 +72,7 @@
 								@foreach($latestProduct as $image)
 								<div style="width: 133px;" class="owl-item">
 									<div class="item">
-											<img src="{{ $image->image }}" style="display: block;" class="lazyOwl img-responsive" alt="name">
+											<img src="image_uploads/{{ $image->image }}" style="display: block;" class="lazyOwl img-responsive" alt="name">
 									</div>
 								</div>
 								@endforeach
