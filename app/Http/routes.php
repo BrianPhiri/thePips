@@ -75,3 +75,7 @@ Route::get('/products',function(){
 Route::get('/contact',function(){
   return view('homepage/contact');
 });
+
+
+
+Route::get('test', 'AdminController@latestProduct');
