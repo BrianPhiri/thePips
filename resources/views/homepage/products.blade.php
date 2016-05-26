@@ -158,7 +158,7 @@
 						</script>
 						<!-- script -->
 				 </section>
-				 <section  class="sky-form">
+				 <!-- <section  class="sky-form">
 					 <h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>DISCOUNTS</h4>
 					 <div class="row row1 scroll-pane">
 						 <div class="col col-4">
@@ -171,16 +171,7 @@
 								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Other(50)</label>
 						 </div>
 					 </div>
-				 </section>
-				   <section  class="sky-form">
-						<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Price</h4>
-							<ul class="dropdown-menu1">
-								 <li><a href="">
-								<div id="slider-range"></div>
-								<input type="text" id="amount" style="border: 0; font-weight: NORMAL;   font-family: 'Arimo', sans-serif;" />
-							 </a></li>
-						  </ul>
-				   </section>
+				 </section> -->
 				   <!---->
 					 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 					 <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
@@ -199,40 +190,6 @@
 					});//]]>
 					</script>
 					 <!---->
-					 <section  class="sky-form">
-						<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Type</h4>
-							<div class="row row1 scroll-pane">
-								<div class="col col-4">
-									<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Sofa Cum Beds (30)</label>
-								</div>
-								<div class="col col-4">
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Dinner Sets   (30)</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>3+1+1 Sofa Sets (30)</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Sofa Chairs     (30)</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>2 Seater Sofas  (30)</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Display Units   (30)</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>L-shaped Sofas  (30)</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>3 Seater Sofas  (30)</label>
-								</div>
-							</div>
-				   </section>
-				   		<section  class="sky-form">
-						<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Brand</h4>
-							<div class="row row1 scroll-pane">
-								<div class="col col-4">
-									<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Roadstar</label>
-								</div>
-								<div class="col col-4">
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Tornado</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Kissan</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Oakley</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Manga</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>Wega</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Kings</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Zumba</label>
-								</div>
-							</div>
-				   </section>
 			 </div>
 	      </div>
 		</div>
