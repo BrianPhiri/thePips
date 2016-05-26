@@ -67,10 +67,8 @@
                         <label>
                             <select name="title" id="title" class="select_class">
                             <i class="fa fa-btn fa-sign-in"></i>
-                              <option>Select Title</option>
-                            @foreach($title as $titles)
-                              <option value="{{ $titles->id}}">{{$titles->title}}</option>
-                            @endforeach
+                              <option>Select Title</option>                          
+                              <option value=""></option>
                           </select>
                                 @if ($errors->has('title_id'))
                                     <span class="help-block">
