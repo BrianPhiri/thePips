@@ -96,6 +96,16 @@ class CartController extends Controller
       $item = Cart::get($rowId[0]);
       Cart::update($rowId[0], $item->qty - 1);
     }
+    else
+    {
+        // remove an item from the cart
+    if(Request::get('product_id') && (Request::get('remove')))
+    {
+        $rowId = Cart::search(array('id' => Request::get('product_id')));
+        Cart::remove($rowId[0]);
+    }
+
+    }
 
     if (!Auth::check())
     {

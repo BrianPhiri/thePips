@@ -17,13 +17,15 @@ class AdminController extends Controller
       $products = Products::All()->count();
       $categories = categories::All()->count();
       $customers = User::All()->count();
-      return view('admin/dashboard')->with('products', $products)->with('categories', $categories)->with('customers', $customers);
+      $latestProducts = Products::latest()->select('image')->take(5)->get();
+      return view('admin/dashboard')->with('products', $products)->with('categories', $categories)->with('customers', $customers)->with('latestProducts', $latestProducts);
     }
     public function summary(){
       $products = Products::All()->count();
       $categories = categories::All()->count();
       $customers = User::All()->count();
-      $report[] = array('products' => "$products" ,'categories' => "$categories" ,'customers' => "$customers");
+      $latestProducts = Products::latest()->select('image')->take(5)->get();
+      $report[] = array('products' => "$products" ,'categories' => "$categories" ,'customers' => "$customers", 'latestProducts' => "$latestProducts");
       return Response::json($report);
     }
 
