@@ -33,9 +33,13 @@
 							 <h3>{{$item->name}}<span>Model No: {{$item->id}}</span></h3>
 							 <h4><span>Ksh </span>{{$item->price}}</h4>
 							 <p class="qty">Qty ::</p>
-							 <a class="cart_quantity_up" href='{{url("carts?product_id=$item->id&increment=1")}}'> + </a>
+							 <form class="form-inline">
+							 <a class="cart_quantity_up" href='{{url("carts?product_id=$item->id&increment=1")}}'><i class="fa fa-plus-square" aria-hidden="true"></i></a>
 							 <input min="1" type="text" id="quantity" name="quantity" value="{{$item->qty}}" class="form-control input-small">
-							<a class="cart_quantity_down" href='{{url("carts?product_id=$item->id&decrease=1")}}'> - </a>
+							 <a class="cart_quantity_down" href='{{url("carts?product_id=$item->id&decrease=1")}}'><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+							 </form>
+							<br>
+							<a class="cpns" href='{{url("carts?product_id=$item->id&remove=1")}}'>Remove Item</a>
 					   </div>
 					   <div class="clearfix"></div>
 						<div class="delivery">
