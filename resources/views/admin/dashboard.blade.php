@@ -51,17 +51,6 @@
 			<div class="col-md-8 content-top-2">
 				<!---start-chart---->
 				<!----->
-				<div class="content-graph">
-				<div class="content-color = '#7f8c8d'">
-					<div class="content-ch"><p><i></i>Sales</p><span>100%</span>
-					<div class="clearfix"> </div>
-					</div>
-					<div class="content-ch1"><p><i></i>customers</p><span> 50%</span>
-					<div class="clearfix"> </div>
-					</div>
-					</div>
-				</div>
-
 				<!--graph-->
 				<!-- latest post -->
 				<div >
@@ -69,7 +58,7 @@
 						<!-- start content_slider -->
 						<div style="opacity: 1; display: block;" id="owl-demo" class="owl-carousel text-center owl-theme">
 							<div class="owl-wrapper-outer"><div style="width: 1862px; left: 0px; display: block; transition: all 800ms ease 0s; transform: translate3d(-266px, 0px, 0px);" class="owl-wrapper">
-								@foreach($latestProduct as $image)
+								@foreach($latestProducts as $image)
 								<div style="width: 133px;" class="owl-item">
 									<div class="item">
 											<img src="image_uploads/{{ $image->image }}" style="display: block;" class="lazyOwl img-responsive" alt="name">
@@ -128,7 +117,6 @@
 						productCount = reportObj.products;
 						categoryCount = reportObj.categories;
 						customerCount = reportObj.customers;
-						productImages = reportObj.latestProducts;
 					});
 					//  console.log(productCount);
 					 $('#products').html(productCount);
