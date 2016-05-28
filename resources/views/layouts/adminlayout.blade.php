@@ -98,7 +98,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               <h1> <a style="background-color: #6fd954" class="navbar-brand" href="dashbard">thePIPS</a></h1>
+               <h1> <a style="background-color: #6fd954" class="navbar-brand" href="admin">thePIPS</a></h1>
 			   </div>
 			 <div class=" border-bottom">
         	<div class="full-left">
@@ -217,7 +217,7 @@
             </div>
 			</div>
         </nav>
-        <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div id="page-wrapper" class="gray-bg dashboard-1">
        <div class="content-main">
 
 
@@ -228,6 +228,7 @@
             <p> &copy; {!! date('Y-m-d') !!} E-commerce by <a href="" target="_blank">thePIPS</a> </p>
 	    </div>
 		</div>
+
 		<div class="clearfix"> </div>
        </div>
      </div>

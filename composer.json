@@ -19,6 +19,11 @@
         "symfony/css-selector": "2.8.*|3.0.*",
         "symfony/dom-crawler": "2.8.*|3.0.*"
     },
+
+  "require": {
+       "kendu/l5-mpdf" : "dev-master"
+    }
+
     "autoload": {
         "classmap": [
             "database"
