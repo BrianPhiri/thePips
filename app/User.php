@@ -53,6 +53,10 @@ class User extends Authenticatable
      */
     public function title()
     {
-        return $this->belongsTo('App\Titles');
+        return $this->belongsTo('App\Title');
+    }
+    public function shopCart()
+    {
+        return $this->hasMany('App\ShopCart');
     }
 }
