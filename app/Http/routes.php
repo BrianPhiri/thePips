@@ -43,9 +43,7 @@ Route::get('products/{productId}','HomeController@show');
 Route::get('products/category/{productId}','HomeController@categoryProducts');
 
 // Testing Cart View
-Route::get('mwas',function (){
-	return view('homepage/test');
-});
+Route::get('redirect','RedirectsController@redirectUser');
 // admin
 Route::get('/admin', 'AdminController@index');
 Route::get('/summary', 'AdminController@summary');
@@ -76,6 +74,6 @@ Route::get('/contact',function(){
   return view('homepage/contact');
 });
 
-
+Route::post('executeSearch','SearchController@executeSearch');
 
 Route::get('test', 'AdminController@latestProduct');

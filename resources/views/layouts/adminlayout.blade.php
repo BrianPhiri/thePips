@@ -118,7 +118,21 @@
 		   <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="drop-men" >
 		        <ul class=" nav_1">
-
+                <!-- Dynamic Display of Icons Based on the authenticated user -->
+                    @if (Auth::guest())
+                     <li class="dropdown at-drop"><a href="{{ URL::asset('login') }}"><i class="fa fa-btn fa-sign-in"></i> Sign In</a></li>
+                    @else
+                    <!-- Displays the name of the authenticated users. -->
+                      <li class="dropdown at-drop">
+                      <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class="at-drop name-caret"><i class="fa fa-user"></i> Admin<i class="caret"></i></span></a>
+                      <ul class="dropdown-menu " role="menu">
+                        <li class="dropdown at-drop"><a href="profile"><i class="fa fa-user"></i>Edit Profile</a></li>
+                        <!-- <li><a href="inbox"><i class="fa fa-envelope"></i>Inbox</a></li> -->
+                        <li class="dropdown at-drop"><a href="{{ url::asset('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> Sign Out</a></li>
+                      </ul>
+                    </li>
+                    @endif
+                    <!-- END -->
 		    		<li class="dropdown at-drop">
 		              <a href="#" class="dropdown-toggle dropdown-at " data-toggle="dropdown"><i class="fa fa-globe"></i> <span class="number">2</span></a>
 		              <ul class="dropdown-menu menu1 " role="menu">
@@ -150,16 +164,7 @@
 		                <li><a href="#" class="view">View all messages</a></li>
 		              </ul>
 		            </li>
-					<li class="dropdown">
-		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">Admin<i class="caret"></i></span><img height="30" width="30" src="images/thePIPS_LOGO.png" alt="admin"></a>
-		              <ul class="dropdown-menu " role="menu">
-		                <li><a href="profile"><i class="fa fa-user"></i>Edit Profile</a></li>
-		                <!-- <li><a href="inbox"><i class="fa fa-envelope"></i>Inbox</a></li> -->
-		                <li><a href="calendar"><i class="fa fa-calendar"></i>Calender</a></li>
-		              </ul>
-		            </li>
-
-		        </ul>
+				</ul>
 		     </div><!-- /.navbar-collapse -->
 			<div class="clearfix">
 
