@@ -15,6 +15,7 @@ use Session;
 use Illuminate\Support\Collection;
 use App\Http\Requests;
 use Cart;
+use Input;
 
 class CartController extends Controller
 {
@@ -26,62 +27,7 @@ class CartController extends Controller
       Cart::destroy();
       Redirect::back();
     }
-    // Special Increments and Decrements for the database.
-    // if (Request::get('product_id') && (Request::get('increment')) == 1 && Request::get('yes'))
-    // {
-    //   // For the database
-    //   $dbRowId = ShopCart::where('product_id', Request::get('product_id'))->firstOrFail()->quantity;
-    //   // Increment the quantity by 1.
-    //   $newQuantity = $dbRowId + 1;
-    //   // Update the database
-    //   ShopCart::where('product_id', Request::get('product_id'))->update(['quantity' => $newQuantity]);
-    // }
-    // elseif (Request::get('product_id') && (Request::get('decrease')) == 1 && Request::get('yes'))
-    // {
-    //    // For the database
-    //   $dbRowId = ShopCart::where('product_id', Request::get('product_id'))->first()->quantity;
-    //   // Decrement the quantity by 1.
-    //   $newQuantity = $dbRowId - 1;
-    //   // Update the database
-    //   ShopCart::where('product_id', Request::get('product_id'))->update(['quantity' => $newQuantity]);
-    // }
-    // else
-    // {
-    //   // remove an item from the cart
-    //   if(Request::get('product_id') && (Request::get('remove')) && Request::get('yes'))
-    //   {
-    //      // For the database
-    //       $dbRowId = ShopCart::where('product_id', Request::get('product_id'))->first()->delete();
-    //   }
-    // }
-    // Not fully retrievable.
-    //increment the quantity
-    if (Request::get('product_id') && (Request::get('increment')) == 1) {
-      $rowId = Cart::search(array('id' => Request::get('product_id')));
-      $item = Cart::get($rowId[0]);
-      Cart::update($rowId[0], $item->qty + 1);
-      // For the database
-      $dbRowId = ShopCart::where('product_id', Request::get('product_id'))->first()->quantity;
-      // Increment the quantity by 1.
-      $newQuantity = $dbRowId + 1;
-      // Update the database
-      ShopCart::where('product_id', Request::get('product_id'))->update(['quantity' => $newQuantity]);
-      // return Redirect::back();
-    }
 
-    //decrease the quantity
-    elseif (Request::get('product_id') && (Request::get('decrease')) == 1) {
-      $rowId = Cart::search(array('id' => Request::get('product_id')));
-      $item = Cart::get($rowId[0]);
-      Cart::update($rowId[0], $item->qty - 1);
-      // For the database
-      $dbRowId = ShopCart::where('product_id', Request::get('product_id'))->first()->quantity;
-      // Decrement the quantity by 1.
-      $newQuantity = $dbRowId - 1;
-      // Update the database
-      ShopCart::where('product_id', Request::get('product_id'))->update(['quantity' => $newQuantity]);
-      // return Redirect::back();
-    }
     else
     {
       // remove an item from the cart
@@ -143,4 +89,28 @@ class CartController extends Controller
     Cart::destroy();
     return Redirect::back();
   }
+
+  //increment or decrement the quantity
+  public function quantity($id){
+    if(Request::ajax()){
+      $qty = Input::get('quantity');
+      // Update the database
+       ShopCart::where('product_id', '=', $id)->update(['quantity' => $qty]);
+    }
+  }
+
+  public function subTotal(){
+    $cart = ShopCart::with('products')->get();
+    $products = $cart->first()->products;
+    foreach ($cart as $products) {
+        $qty = $products->quantity;
+
+      foreach ($products->products as $val) {
+        $price = $val->price;
+      }
+    }
+    $sub_total = $price * $qty;
+    return Response::json($sub_total);
+  }
+
 }

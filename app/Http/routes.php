@@ -30,6 +30,7 @@ Route::get('register/confirm/{token}', 'Auth\AuthController@confirmEmail');
 
 // Shop Cart Routes
 Route::post('carts','CartController@cart');
+Route::post('carts/quantity/{id}', 'CartController@quantity');
 Route::resource('carts','CartController@cart');
 // Route::get('carts/remove','CartController@remove');
 //Route::resouce('persist','CartController@cart');
@@ -56,7 +57,8 @@ Route::resource('product', 'ProductsController');
 Route::resource('subcategory', 'SubcategoryController');
 Route::resource('customers', 'CustomerController');
 Route::get('order', 'AdminController@order');
-Route::get('/test', 'ProductsController@test');
+
+Route::get('/test', 'CartController@subTotal');
 
 Route::get('/error', function(){ return view('admin/brian'); });
 
@@ -75,7 +77,3 @@ Route::get('/products',function(){
 Route::get('/contact',function(){
   return view('homepage/contact');
 });
-
-
-
-Route::get('test', 'AdminController@latestProduct');
