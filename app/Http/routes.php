@@ -75,10 +75,5 @@ Route::get('/products',function(){
 Route::get('/contact',function(){
   return view('homepage/contact');
 });
-<<<<<<< HEAD
-=======
 
 Route::post('executeSearch','SearchController@executeSearch');
-
-Route::get('test', 'AdminController@latestProduct');
->>>>>>> deb700850930fcf69d3b8205eb34ec9ad1f4e7b9
