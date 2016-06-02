@@ -31,7 +31,7 @@
                                     </span>
                                 @endif
                      <button type="submit" class="acount-btn"><i class="fa fa-btn fa-sign-in"></i> Login</button><br>
-                      <a href="#">Forgot Password ?</a>
+                      <a href="password/reset">Forgot Password ?</a>
                  </form>
          </div>
           <div class="col-md-6 login-right">

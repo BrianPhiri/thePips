@@ -55,8 +55,12 @@
   		</ul>
   		<div class="search">
     		<form>
-      		<input type="text" value="" placeholder="Search...">
+				{!! csrf_field() !!}
+      		<input type="text" id="search-input" value="" placeholder="Search..." onkeydown="down()" onkeyup="up()">
       		<input type="submit" value="">
+				<ul id="search-results">
+
+				</ul>
     		</form>
   	  </div>
   			 <div class="clearfix"></div>
