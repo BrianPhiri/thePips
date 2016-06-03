@@ -17,10 +17,10 @@ class RedirectsController extends Controller
 
     	// Determine if you are an administrator or a customer.
     	if($role == 'Customer')
-    		return redirect('/');
+    		return redirect()->intended('/');
     	else
     	{
-    		return redirect('admin');
+    		return redirect()->intended('admin');
     	}
     }
 }
