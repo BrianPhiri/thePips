@@ -1,4 +1,4 @@
 @foreach($searched as $products)
-      <a href="/products/{{ $products->id}}">{{$products->name}}</a>
+      <a href="{{URL::asset('/products')}}/{{ $products->id}}">{{$products->name}}</a>
     <br>
 @endforeach

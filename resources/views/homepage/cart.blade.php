@@ -37,27 +37,22 @@
 					</div>
 					<div class="cart-item-info">
 						<h3>{{$products->name}}<span>Model No: {{$products->id}}</span></h3>
-						<h4><span>Ksh </span><div id="price">{{$products->price}}</h4>
+						<h4><span>Ksh </span>{{$products->price}}</h4>
 						<p class="qty">Qty ::</p>
 						<form class="form-inline">
-						  <input type="hidden" id="id" name="name" value="{{ $item->product_id}}">
-							<input type="hidden" name="_token" value="{{ csrf_token() }}">
-							<!-- <a class="cart_quantity_up" href='{{url("carts?product_id=$item->product_id&increment=1")}}'><i class="fa fa-plus-square" aria-hidden="true"></i></a> -->
-<a class="cart_quantity_up" id="cart_quantity_up" ><i class="fa fa-plus-square" aria-hidden="true"></i></a>
-							<input min="1" type="text" id="quantity" name="quantity" value="{{$item->quantity}}" class="form-control input-small">
-							<!-- <a class="cart_quantity_down" href='{{url("carts?product_id=$item->product_id&decrease=1")}}'><i class="fa fa-minus-square" aria-hidden="true"></i></a> -->
-<a class="cart_quantity_down" id="cart_quantity_down" ><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+							<a class="cart_quantity_up" href='{{url("carts/quantity")}}/{{$item->id}}/{{$item->quantity}}/increment'><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+							<input min="1" type="text" id="quantity" name="quantity" value="{{$item->quantity}}" class="form-control input-small" readonly>
+							<a class="cart_quantity_down" href='{{url("carts/quantity")}}/{{$item->id}}/{{$item->quantity}}/decrement'><i class="fa fa-minus-square" aria-hidden="true"></i></a>
 						</form>
 						<br>
-						<a class="cpns" href='{{url("carts?product_id=$item->product_id&remove=1")}}'>Remove Item</a>
+							<a class="cpns" href='{{url("carts/destroy")}}/{{$item->id}}'>Remove Item</a>
 					</div>
 					<div class="clearfix"></div>
 					<div class="delivery">
-						<p><h4>Sub-Total:: <div id="subtotal"></div></h4></p>
+						<p><h4>Sub-Total::{{$products->price * $item->quantity}}</h4></p>
 					</div>
 				</div>
 			</div>
-
 			@endforeach
 			@endforeach
 			@else
@@ -120,7 +115,7 @@
 			<div class="price-details">
 				<h3>Price Details</h3>
 				<span>Total</span>
-				<span class="total">Ksh. {{Cart::total()}}</span>
+				<span class="total">Ksh. </span>
 				<span>Discount</span>
 				<span class="total">---</span>
 				<!-- <span>Delivery Charges</span> -->
@@ -135,55 +130,12 @@
 				<h3>OPTIONS</h3>
 				<h4>COUPONS</h4>
 				<a class="cpns" href="#">Apply Coupons</a>
-				<p><a href="#">Log In</a> to use accounts - linked coupons</p>
+				<!-- <p><a href="#">Log In</a> to use accounts - linked coupons</p> -->
 			</div>
 		</div>
 	</div>
 </div>
 <!---->
 
-<script >
-$(document).ready(function(){
-	var id = $('#id').val();
-	var price = $('#price').html();
-	console.log(price);
-	var sub_total;
-	$('#cart_quantity_up').click(function(){
-		var qty = $('#quantity').val();
-		qty++;
-		$.ajax({
-			url : "{{ URL::asset('/carts/quantity') }}/"+id,
-			type : "post",
-			data : { '_token' : $('input[name=_token]').val(),'quantity' : qty },
-			success : function (){
-				sub_total = price * qty;
-				$('#subtotal').html(sub_total);
-			}
-		});
-		$('#quantity').val(qty);
-	});
-	$('#cart_quantity_down').click(function(){
-		var qty = $('#quantity').val();
-		qty--;
-		$.ajax({
-			url : "{{ URL::asset('/carts/quantity') }}/"+id,
-			type : "post",
-			data : { '_token' : $('input[name=_token]').val(),'quantity' : qty },
-			success : function (){
-				sub_total = price * qty;
-				$('#subtotal').html(sub_total);
-			}
-		});
-		$('#quantity').val(qty);
-	});
-
-	// get subTotal
-
-	var qty =	$('#quantity').val();
-	sub_total = price * qty;
-	$('#subtotal').html(sub_total);
-});
-</script>
-<!-- <script src="{{ asset('js/cart.js') }}" type="text/javascript"></script> -->
 @include('homepage._footer')
 @endsection

@@ -29,9 +29,14 @@ $this->post('password/reset', 'Auth\PasswordController@reset');
 Route::get('register/confirm/{token}', 'Auth\AuthController@confirmEmail');
 
 // Shop Cart Routes
-Route::post('carts','CartController@cart');
-Route::post('carts/quantity/{id}', 'CartController@quantity');
-Route::resource('carts','CartController@cart');
+Route::post('carts','CartController@index');
+Route::resource('carts','CartController');
+Route::post('carts/destroy/{id}', 'CartController@destroy');
+Route::get('carts/destroy/{id}', 'CartController@destroy');
+Route::post('carts/quantity/{id}/{type}', 'CartController@quantity');
+Route::get('carts/quantity/{id}/{qty}/{type}', 'CartController@quantity');
+
+Route::get('test', 'OrdersController@buy');
 // Route::get('carts/remove','CartController@remove');
 //Route::resouce('persist','CartController@cart');
 
@@ -55,8 +60,6 @@ Route::resource('product', 'ProductsController');
 Route::resource('subcategory', 'SubcategoryController');
 Route::resource('customers', 'CustomerController');
 Route::get('order', 'AdminController@order');
-
-Route::get('/test', 'CartController@subTotal');
 
 Route::get('/error', function(){ return view('admin/brian'); });
 

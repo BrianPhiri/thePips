@@ -7,7 +7,7 @@
   <link href="{{ URL::asset('css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
   <!-- jQuery (necessary JavaScript plugins) -->
   <script type='text/javascript' src="{{ URL::asset('js/jquery-1.11.1.min.js') }}"></script>
-  <script src="{{asset('js/search.js')}}"></script>
+  <!-- <script src="{{asset('js/search.js')}}"></script> -->
   <!-- Custom Theme files -->
   <link href="{{ URL::asset('css/frontpagestyle.css') }}" rel='stylesheet' type='text/css' />
   <!-- Custom Theme files -->
@@ -64,6 +64,34 @@
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
       }
     });
+  </script>
+  <script type="text/javascript">
+  $.ajaxSetup({
+      headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+  });
+
+  var timer;
+
+  function up()
+  {
+    timer = setTimeout(function ()
+    {
+      var keywords = $('#search-input').val();
+      if (keywords.length > 0)
+      {
+        $.post("{{ URL::asset('/executeSearch')}}",{keywords: keywords}, function (markup) {
+          $('#search-results').html(markup);
+        });
+      }
+    },5);
+  }
+  function down()
+  {
+    clearTimeout(timer);
+  }
+
   </script>
   <span>
   <style type="text/css">
