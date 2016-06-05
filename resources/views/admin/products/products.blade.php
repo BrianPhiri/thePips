@@ -17,7 +17,7 @@
     <table id="myTable" class="table table-hover">
         <thead>
             <tr>
-                <td><b>Product</b> Number</td><td><b>Name</b></td><td><b>Description</b></td><td><b>Action</b></td><td></td><td></td>
+                <td><b>Product Number<b></td><td><b>Name</b></td><td><b>Description</b></td><td><b>Action</b></td><td></td><td></td>
             </tr>
         </thead>
 				<hr>

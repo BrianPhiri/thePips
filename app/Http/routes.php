@@ -54,12 +54,12 @@ Route::get('redirect','RedirectsController@redirectUser');
 Route::get('/admin', 'AdminController@index');
 Route::get('/summary', 'AdminController@summary');
 Route::get('/subcategories', 'ProductsController@subcategory');
-
 Route::resource('category', 'CategoriesController');
 Route::resource('product', 'ProductsController');
 Route::resource('subcategory', 'SubcategoryController');
 Route::resource('customers', 'CustomerController');
-Route::get('order', 'AdminController@order');
+Route::get('/orders', 'AdminController@order');
+Route::get('/user/{id}', 'CustomerController@show');
 
 Route::get('/error', function(){ return view('admin/brian'); });
 

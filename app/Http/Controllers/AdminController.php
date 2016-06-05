@@ -32,6 +32,6 @@ class AdminController extends Controller
     // orders information
     public function order(){
       $orders = Orders::All();
-      return view('admin.orders', compact('orders', compact('orders')));
+    return view('admin.orders.orders', compact('orders'));
     }
 }
