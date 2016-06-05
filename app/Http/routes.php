@@ -10,6 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Auth::loginUsingId(1);
 
 // Authentication Routes...
 $this->get('login', 'Auth\AuthController@showLoginForm');
@@ -35,7 +36,7 @@ Route::post('carts/destroy/{id}', 'CartController@destroy');
 Route::get('carts/destroy/{id}', 'CartController@destroy');
 Route::post('carts/quantity/{id}/{type}', 'CartController@quantity');
 Route::get('carts/quantity/{id}/{qty}/{type}', 'CartController@quantity');
-
+Route::post('/checkout', 'OrdersController@checkout');
 Route::get('test', 'OrdersController@buy');
 // Route::get('carts/remove','CartController@remove');
 //Route::resouce('persist','CartController@cart');

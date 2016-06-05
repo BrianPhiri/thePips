@@ -27,6 +27,13 @@ class CreateUsersTable extends Migration
         {
             $table->foreign('title_id')->references('id')->on('title');
         });
+        
+        Schema::table('users', function(Blueprint $table){
+            $table->string('stripe_id')->nullable();
+            $table->string('card_brand')->nullable();
+            $table->string('card_last_four')->nullable();
+            $table->timestamp('trial_ends_at')->nullable();
+        });
     }
 
     /**
