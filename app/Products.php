@@ -13,4 +13,14 @@ class Products extends Model
     protected $fillable = [
       'name', 'sub_category_id','price', 'description', 'image'
     ];
+
+    public function orderItems()
+    {
+    	return $this->hasMany('App\OrderItems');
+    }
+
+    public function shopCart()
+    {
+    	return $this->belongsTo('App\ShopCart');
+    }
 }

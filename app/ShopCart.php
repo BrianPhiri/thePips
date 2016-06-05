@@ -14,8 +14,9 @@ class ShopCart extends Model
     {
     	return $this->belongsTo('App\User');
     }
-    public function cartItems()
+    public function products()
     {
-    	return $this->hasMany('App\CartItem');
+    	return $this->hasMany('App\Products', 'id', 'product_id');
     }
+
 }

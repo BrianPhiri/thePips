@@ -5,7 +5,7 @@
 		 </div>
 		 <div class="header_right">
 			 <div class="cart box_1">
-				<a href="{{ URL::asset('cart')}}">
+				<a href="{{ URL::asset('carts')}}">
 					<h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="images/bag.png" alt=""></h3>
 				</a>
 				<p><a href="{{url('carts/remove?yes=1')}}" class="simpleCart_empty"><h5>Empty cart</h5></a></p>
@@ -55,8 +55,12 @@
   		</ul>
   		<div class="search">
     		<form>
-      		<input type="text" value="" placeholder="Search...">
+				{!! csrf_field() !!}
+      		<input type="text" id="search-input" value="" placeholder="Search..." onkeydown="down()" onkeyup="up()">
       		<input type="submit" value="">
+				<ul id="search-results">
+
+				</ul>
     		</form>
   	  </div>
   			 <div class="clearfix"></div>

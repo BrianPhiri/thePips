@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Request;
 use Illuminate\Database\Eloquent\Model;
 use App\ShopCart;
 use App\Products;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use Redirect;
 use Session;
@@ -17,96 +18,26 @@ use Cart;
 
 class CartController extends Controller
 {
-  // public function __construct()
-  // {
-  // 	// $this->middleware('auth');
-  // }
+  public function index(){
+    if (!Auth::check()){
+        $cart = Cart::content();
+        return view('homepage.cart', array('db' => null, 'cart' => $cart, 'title' => 'Welcome', 'description' => '', 'page' => 'home'));
+      }
+      // This is strictly for logged in persons.
+      else{
 
-  // public function addItem(Request $request, $productId)
-  // {
-  //     if (Auth::check())
-  //     {
-  //         $cart = Cart::where('user_id',Auth::user()->id)->first();
-  //         // If a user does not have a cart, a new instance of the Cart Model is created.
-  //         if(!$cart){
-  //             $cart =  new Cart();
-  //             $cart->user_id=Auth::user()->id;
-  //             $cart->save();
-  //         }
-  //         // Items are inserted into the cart.
-  //         $cartItem  = new Cartitem();
-  //         $cartItem->product_id=$productId;
-  //         $cartItem->cart_id= $cart->id;
-  //         $cartItem->save();
+        $total = 10000;
+        $db = ShopCart::with('products')->get();
+          return view('homepage.cart', array('db' => $db, 'cart' => null, 'title' => 'Welcome', 'description' => '', 'page' => 'home'))->with('total', $total);
+       }
+  }
 
-  //         return redirect('/cart');
-  //     }
-  //     else
-  //     {
-  //         // Stores the items in the shop cart temporarily during a session.
-  //         $items =['product_id' => $productId,'quantity' => 1];
-  //         $request->session()->push('cart',$items);
-  //         $test = $request->session()->pull('cart','default');
-  //         return view('homepage.test',compact('test'));
-  //     }
-  // }
+  public function destroy($id){
+    ShopCart::destroy($id);
+    return Redirect::intended('carts');
+  }
 
-  // public function showCart()
-  // {
-  // 	// $cart = Cart::where('user_id',Auth::user()->id->first();
-  // 	if(!$cart)
-  // 	{
-  // 		$cart = new Cart();
-  // 		$cart->user_id = Auth::user()->id;
-  // 		$cart->save();
-  // 	}
-  // 	$items = $cart->cartItems;
-  // 	$total = 0;
-  // 	foreach ($items as $item) {
-  // 		$total += $item->product->price;
-  // 	}
-
-  // 	return view('homepage.cart', compact('items','total'));
-  // }
-
-  // public function removeItem($id)
-  // {
-  // 	Cart::destroy($id);
-  // 	return Redirect::back();
-  // }
-
-  public function cart()
-  {
-    // remove items from the Cart
-    if(Request::get('yes'))
-    {
-      Cart::destroy();
-      Redirect::back();    
-    }
-    //increment the quantity
-    if (Request::get('product_id') && (Request::get('increment')) == 1) {
-      $rowId = Cart::search(array('id' => Request::get('product_id')));
-      $item = Cart::get($rowId[0]);
-      Cart::update($rowId[0], $item->qty + 1);
-    }
-
-    //decrease the quantity
-    if (Request::get('product_id') && (Request::get('decrease')) == 1) {
-      $rowId = Cart::search(array('id' => Request::get('product_id')));
-      $item = Cart::get($rowId[0]);
-      Cart::update($rowId[0], $item->qty - 1);
-    }
-    else
-    {
-        // remove an item from the cart
-    if(Request::get('product_id') && (Request::get('remove')))
-    {
-        $rowId = Cart::search(array('id' => Request::get('product_id')));
-        Cart::remove($rowId[0]);
-    }
-
-    }
-
+  public function store(){
     if (!Auth::check())
     {
       // Stores the items in the shop cart temporarily during a session.
@@ -117,38 +48,78 @@ class CartController extends Controller
       }
 
       $cart = Cart::content();
-      // return $cart;
-      return view('homepage.cart', array('cart' => $cart, 'title' => 'Welcome', 'description' => '', 'page' => 'home'));
+
+      return view('homepage.cart', array('db' => null, 'cart' => $cart, 'title' => 'Welcome', 'description' => '', 'page' => 'home'))->with('total', $total);
     }
+    // This is strictly for logged in persons.
     else
     {
-      $cartItems = Cart::content();
-      $cart = ShopCart::where('user_id',Auth::user()->id)->first();
-      // If a user does not have a cart, a new instance of the Cart Model is created.
-      if(!$cart){
-        $cart =  new ShopCart();
-        $cart->user_id=Auth::user()->id;
-        $cart->save();
-      }
-      foreach ($cartItems as $kat)
-      {
-        // Items are inserted into the cart's database.
-        $cartItem  = new CartItem();
-        $cartItem->product_id=$kat->id;
-        $cartItem->quantity=$kat->qty;
-        $cartItem->sale_price=$kat->price;
-        $cartItem->cart_id= $cart->id;
-        $cartItem->save();
-      }
-      return view('homepage.cart', array('cart' => $cartItems, 'title' => 'Welcome', 'description' => '', 'page' => 'home'));
-    }
-    }
-    /**
-    * Empty the cart.
-    */
-    public function remove()
-    {
-      Cart::destroy();
-      return Redirect::back();
+
+          // Avoid multi-product creation
+          $cartItems = Cart::content();
+          // Should insert items into the cart table based on the user.
+          foreach ($cartItems as $kat)
+          {
+            // Items are inserted into the cart's database.
+            $cartItem =  new ShopCart();
+            $cartItem->user_id=Auth::user()->id;
+            $cartItem->product_id=$kat->id;
+            $cartItem->quantity=$kat->qty;
+            $cartItem->save();
+          }
+
+          $db = ShopCart::with('products')->get();
+          return view('homepage.cart', array('db' => $db, 'cart' => null, 'title' => 'Welcome', 'description' => '', 'page' => 'home'));
     }
   }
+
+
+  public function quantity($id, $qty ,$type){
+
+    if($type == "increment"){
+      $qty++;
+    }elseif($type == "decrement"){
+      if($qty < 2){
+        $qty = 1;
+      }else{
+        $qty--;
+      }
+      $qty--;
+
+    }else{
+
+    }
+    ShopCart::where('id', '=', $id)->update(['quantity' => $qty]);
+    return Redirect::intended('carts');
+  }
+
+  public function toDb(){
+    // Avoid multi-product creation
+    $cartItems = Cart::content();
+    // Should insert items into the cart table based on the user.
+    foreach ($cartItems as $kat)
+    {
+      // Items are inserted into the cart's database.
+      $cartItem =  new ShopCart();
+      $cartItem->user_id=Auth::user()->id;
+      $cartItem->product_id=$kat->id;
+      $cartItem->quantity=$kat->qty;
+      $cartItem->save();
+    }
+    return Redirect::intended('carts');
+  }
+
+  public function test(){
+    $cart = ShopCart::with('products')->get();
+    return $products = $cart->first()->products;
+    foreach ($cart as $products) {
+        $qty = $products->quantity;
+
+        foreach ($products->products as $val) {
+          $price = $val->price;
+        }
+      }
+    return  $sub_total = $price * $qty;
+
+  }
+}
