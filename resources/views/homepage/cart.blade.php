@@ -125,7 +125,18 @@
 			<h4 class="last-price">TOTAL</h4>
 			<span class="total final">{{Cart::total()}}</span>
 			<div class="clearfix"></div>
-			<a class="order" href="{{url("carts/")}}">Place Order</a>
+			<form action="/checkout" method="POST">
+				<input type="hidden" name="_token" value="{{ csrf_token() }}">
+			<script
+				src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+				data-key="pk_test_GIjjWsmv1wDgFvt2BG0Fhtpl"
+				data-amount="{{Cart::total()}} *100"
+				data-name="ThePips"
+				data-description="Buying product"
+				data-image="/img/documentation/checkout/marketplace.png"
+				data-locale="auto">
+			</script>
+			</form>
 			<div class="total-item">
 				<h3>OPTIONS</h3>
 				<h4>COUPONS</h4>
