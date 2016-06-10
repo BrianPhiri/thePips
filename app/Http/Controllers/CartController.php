@@ -21,26 +21,22 @@ class CartController extends Controller
   public function cart() {
     //update/ add new item to cart
     if (Request::isMethod('post')) {
-      if(Request::get('product_id') && (Request::get('remove'))) {
-        $rowId = Cart::search(array('id' => Request::get('product_id')));
-        return $rowId; exit;
-        Cart::remove($rowId[0]);
-        App\Flight::destroy(23);
-      }else{
         $product_id = Request::get('product_id');
         $product = Products::find($product_id);
-        // Cart::add(array('id' => $product_id, 'name' => $product->name, 'qty' => 1, 'price' => $product->price));
-      }
-    }
-    if(Auth::check()){
-      $cartItems = Cart::content();
-      foreach($cartItems as $cartItem){
-        $cartPost = new ShopCart();
-        $cartPost->user_id=Auth::user()->id;
-        $cartPost->product_id=$cartItem->id;
-        $cartPost->quantity=$cartItem->qty;
-        $cartPost->save();
-      }
+        Cart::add(array('id' => $product_id, 'name' => $product->name, 'qty' => 1, 'price' => $product->price));
+        if(!Auth::check()){
+            //
+          }else{
+            $cartItems = Cart::content();
+            foreach($cartItems as $cartItem){
+              $cartPost = new ShopCart();
+              $fromShopCart = ShopCart::where('product_id', '=', $cartItem->id)->select('product_id', 'user_id')->get();
+              $cartPost->user_id=Auth::user()->id;
+              $cartPost->product_id=$cartItem->id;
+              $cartPost->quantity=$cartItem->qty;
+              $cartPost->save();
+          }
+        }
     }
     //increment the quantity
     if (Request::get('product_id') && (Request::get('increment')) == 1) {

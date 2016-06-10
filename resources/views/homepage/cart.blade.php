@@ -78,7 +78,7 @@
 			<h4 class="last-price">TOTAL</h4>
 			<span class="total final">{{Cart::total()}}</span>
 			<div class="clearfix"></div>
-			<form action="/checkout" method="POST">
+			<form action="{{URL::asset('checkout')}}" method="POST">
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			<script
 				src="https://checkout.stripe.com/checkout.js" class="stripe-button"

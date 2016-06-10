@@ -42,7 +42,7 @@ Route::get('/carts', 'CartController@cart');
 
 
 
-Route::get('test', 'OrdersController@buy');
+Route::get('/checkout', 'OrdersController@checkout');
 // Route::get('carts/remove','CartController@remove');
 //Route::resouce('persist','CartController@cart');
 
