@@ -52,13 +52,13 @@
 								 <li class="active">Ksh {{$product->price}}</li>
 								 <!-- Start -->
 								 	<form  method="POST" action="{{ url('/carts') }}">
-                                            <input type="hidden" name="product_id" value="{{$product->id}}">
-                                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                            <button type="submit" class="btn btn-fefault add-to-cart">
-                                                <i class="fa fa-shopping-cart"></i>
-                                                Add to cart
-                                            </button>
-                                        </form>
+                  	<input type="hidden" name="product_id" value="{{$product->id}}">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <button type="submit" class="btn btn-fefault add-to-cart">
+                      <i class="fa fa-shopping-cart"></i>
+                      Add to cart
+                    </button>
+                  </form>
    								 <!-- End -->
 								 <!-- <a href="{{ URL::asset('addItem')}}/{{$product->id}}">BUY NOW</a> -->
 							 </ul>

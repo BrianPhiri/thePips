@@ -29,25 +29,20 @@ $this->post('password/reset', 'Auth\PasswordController@reset');
 Route::get('register/confirm/{token}', 'Auth\AuthController@confirmEmail');
 
 // Shop Cart Routes
-// Route::post('carts','CartController@index');
-// Route::resource('carts','CartController');
-// Route::post('carts/destroy/{id}', 'CartController@destroy');
-// Route::get('carts/destroy/{id}', 'CartController@destroy');
-// Route::post('carts/quantity/{id}/{type}', 'CartController@quantity');
-// Route::get('carts/quantity/{id}/{qty}/{type}', 'CartController@quantity');
+Route::resource('/carts', 'CartController@cart');
+Route::get('/carts', 'CartController@cart');
 
+// Route::get('/addProduct/{productId}', 'CartController@addItem');
+// Route::post('/addProduct/{productId}', 'CartController@addItem');
+// Route::get('/removeItem/{productId}', 'CartController@removeItem');
+// Route::post('/removeItem/{productId}', 'CartController@removeItem');
+// Route::get('/carts', 'CartController@showCart');
+// Route::post('/carts', 'CartController@showCart');
 
-Route::get('/addProduct/{productId}', 'CartController@addItem');
-Route::post('/addProduct/{productId}', 'CartController@addItem');
-Route::get('/removeItem/{productId}', 'CartController@removeItem');
-Route::post('/removeItem/{productId}', 'CartController@removeItem');
-Route::get('/carts', 'CartController@showCart');
-Route::post('/carts', 'CartController@showCart');
- 
+//Route::get('pdfs', 'OrdersController@buy');
 
- 
+Route::get('/checkout', 'OrdersController@checkout');
 
-Route::get('pdfs', 'OrdersController@buy');
 // Route::get('carts/remove','CartController@remove');
 //Route::resouce('persist','CartController@cart');
 
@@ -94,6 +89,7 @@ Route::post('executeSearch','SearchController@executeSearch');
 
 //PDFs Route
 Route::get('catalogue','PdfsController@downloadPDF');
+
 Route::get('pdfs','PdfsController@getProducts');
 Route::get('/trial',function(){
     return view('pdfs/index');
