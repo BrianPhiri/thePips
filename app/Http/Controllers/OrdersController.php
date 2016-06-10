@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Orders;
 use App\OrderItems;
 use App\ShopCart;
-
+use Cart;
 class OrdersController extends Controller
 {
   public function checkout(Request $request){
@@ -17,32 +17,33 @@ class OrdersController extends Controller
     //  $cart = ShopCart::where('user_id', '=', Auth::user()->id)->first();
      $items = ShopCart::with('products')->where('user_id', '=', Auth::user()->id)->get();
     //  $items = $cart->cartItems;
-     $total =0;
-     foreach($items as $item){
-       foreach($item->products as $prd){
-         $total += $prd['price'];
-       }
-      //  $total += $item->product->price;
-     }
-     if(Auth::user()->charge($total*100, [
-       'source' -> $token,
-       'recept_email' -> Auth::user()->email,
+     $total = Cart::total();
+    //  foreach($items as $item){
+    //    foreach($item->products as $prd){
+    //      $total += $prd['price'];
+    //    }
+    //   //  $total += $item->product->price;
+    //  }
+
+     if(Auth::user()->charge($total-100, [
+       'source' => $token,
+       'receipt_email' => Auth::user()->email,
      ])){
-       $order = new Order();
+       $order = new Orders();
        $order->total = $total;
        $order->user_id = Auth::user()->id;
        $order->save();
 
        // saving in orderItems
        foreach($items as $item){
-         $orderItem = new OrderItem();
+         $orderItem = new OrderItems();
          $orderItem->order_id = $order->id;
          $orderItem->product_id = $item->product_id;
          $orderItem->save();
 
          ShopCart::destroy($item->id);
-       }
-       return view('brian');
+        }
+      //  return view('brian');
      }else{
        return redirect('/carts');
      }
