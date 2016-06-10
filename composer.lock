@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "92b86a2c2c3731ba8d8539f2e4812b4c",
-    "content-hash": "e95a3d4ff8f1ad9006f7392f0ce0abdd",
+    "hash": "3b7ef66cce35f1e85dff561cab2a4dc5",
+    "content-hash": "e090e87ccf04b460f258897c8f77741a",
     "packages": [
         {
             "name": "anhskohbo/no-captcha",
@@ -51,6 +51,54 @@
                 "recaptcha"
             ],
             "time": "2015-12-27 16:44:09"
+        },
+        {
+            "name": "barryvdh/laravel-dompdf",
+            "version": "v0.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-dompdf.git",
+                "reference": "b606788108833f7765801dca35455fb23ce9f869"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/laravel-dompdf/zipball/b606788108833f7765801dca35455fb23ce9f869",
+                "reference": "b606788108833f7765801dca35455fb23ce9f869",
+                "shasum": ""
+            },
+            "require": {
+                "dompdf/dompdf": "0.6.*",
+                "illuminate/support": "5.0.x|5.1.x|5.2.x",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Barryvdh\\DomPDF\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "A DOMPDF Wrapper for Laravel",
+            "keywords": [
+                "dompdf",
+                "laravel",
+                "pdf"
+            ],
+            "time": "2015-12-21 19:51:22"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -558,48 +606,6 @@
             "time": "2015-12-05 17:17:57"
         },
         {
-            "name": "kendu/l5-mpdf",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kendu/l5-mpdf.git",
-                "reference": "ec7dd92c53f196cad4a29d281589e58231686457"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kendu/l5-mpdf/zipball/ec7dd92c53f196cad4a29d281589e58231686457",
-                "reference": "ec7dd92c53f196cad4a29d281589e58231686457",
-                "shasum": ""
-            },
-            "require": {
-                "mpdf/mpdf": "5.7.*",
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Kendu\\Mpdf": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache 2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Kendu",
-                    "email": "info@kendu.si"
-                }
-            ],
-            "description": "mPDF wrapper for Laravel 5",
-            "keywords": [
-                "laravel",
-                "mpdf",
-                "pdf"
-            ],
-            "time": "2016-05-20 05:22:24"
-        },
-        {
             "name": "laravel/cashier",
             "version": "v6.0.17",
             "source": {
@@ -1002,49 +1008,6 @@
                 "psr-3"
             ],
             "time": "2016-04-12 18:29:35"
-        },
-        {
-            "name": "mpdf/mpdf",
-            "version": "v5.7.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mpdf/mpdf.git",
-                "reference": "f9a374c7ea975ce8c795cec4dfd17ef55addac9c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mpdf/mpdf/zipball/f9a374c7ea975ce8c795cec4dfd17ef55addac9c",
-                "reference": "f9a374c7ea975ce8c795cec4dfd17ef55addac9c",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "php": ">=4.3.10"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "mpdf.php",
-                    "classes"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-1.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Ian Back"
-                }
-            ],
-            "description": "A PHP class to generate PDF files from HTML with Unicode/UTF-8 and CJK support",
-            "homepage": "http://www.mpdf1.com/mpdf/index.php",
-            "keywords": [
-                "pdf",
-                "php",
-                "utf-8"
-            ],
-            "time": "2014-12-14 18:32:11"
         },
         {
             "name": "mtdowling/cron-expression",
@@ -3740,9 +3703,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "kendu/l5-mpdf": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

@@ -154,7 +154,7 @@
       this.daysOfTheWeek = this.shiftWeekdayLabels(this.options.weekOffset);
     }
 
-    // quick & dirty test to make sure rendering is possible.
+    // quick & dirty pdfs to make sure rendering is possible.
     if( !$.isFunction(this.options.render) ) {
       this.options.render = null;
       if (typeof _ === 'undefined') {
@@ -301,7 +301,7 @@
 
     var j = 0, l = monthEvents.length;
     for(j; j < l; j++) {
-      // keep in mind that the events here already passed the month/year test.
+      // keep in mind that the events here already passed the month/year pdfs.
       // now all we have to compare is the moment.date(), which returns the day of the month.
       if(self.options.multiDayEvents) {
         var start = monthEvents[j]._clndrStartDateObject;

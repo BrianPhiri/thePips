@@ -39,10 +39,10 @@ Route::get('/carts', 'CartController@cart');
 // Route::get('/carts', 'CartController@showCart');
 // Route::post('/carts', 'CartController@showCart');
 
-
-
+//Route::get('pdfs', 'OrdersController@buy');
 
 Route::get('/checkout', 'OrdersController@checkout');
+
 // Route::get('carts/remove','CartController@remove');
 //Route::resouce('persist','CartController@cart');
 
@@ -86,3 +86,11 @@ Route::get('/contact',function(){
 });
 
 Route::post('executeSearch','SearchController@executeSearch');
+
+//PDFs Route
+Route::get('catalogue','PdfsController@downloadPDF');
+
+Route::get('pdfs','PdfsController@getProducts');
+Route::get('/trial',function(){
+    return view('pdfs/index');
+});
