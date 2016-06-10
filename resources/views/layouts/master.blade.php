@@ -23,6 +23,7 @@
   <link href='http://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="{{ URL::asset('css/etalage.css') }}" type="text/css">
   <!-- start menu -->
+  <script src="{{ asset('js/cartComputation.js') }}"></script>
   <link href="{{ URL::asset('css/megamenu.css') }}" rel="stylesheet" type="text/css" media="all" />
   <script type="text/javascript" src="{{ URL::asset('js/megamenu.js') }}"></script>
   <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>

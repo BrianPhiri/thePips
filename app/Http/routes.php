@@ -43,10 +43,14 @@ Route::get('/carts', 'CartController@cart');
 
 Route::get('/checkout', 'OrdersController@checkout');
 Route::post('/checkout', 'OrdersController@checkout');
-// Route::get('carts/remove','CartController@remove');
-//Route::resouce('persist','CartController@cart');
 
-Route::get('addItem/{id}','CartController@addItem');
+Route::post('addItems','CartController@addItem');
+Route::get('destroyCart','CartController@destroyCart');
+Route::get('carts','CartController@cart');
+
+// cartComputation
+Route::post('increment','CartController@increment');
+Route::post('decrement','CartController@decrement');
 
 Route::get('/', 'HomeController@index');
 
