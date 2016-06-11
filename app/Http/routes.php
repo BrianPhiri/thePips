@@ -44,9 +44,17 @@ Route::get('/carts', 'CartController@cart');
 Route::get('/checkout', 'OrdersController@checkout');
 Route::post('/checkout', 'OrdersController@checkout');
 
+// Cart routes
+Route::get('shopCart','CartController@showCart');
 Route::post('addItems','CartController@addItem');
 Route::get('destroyCart','CartController@destroyCart');
+Route::post('increment','CartController@increment');
+Route::post('decrement','CartController@increment');
 Route::get('carts','CartController@cart');
+Route::get('shopcarts','CartController@cartDb');
+
+// Testing the Cart
+Route::get('cartTest','CartController@cartTest');
 
 // cartComputation
 Route::post('increment','CartController@increment');

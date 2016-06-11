@@ -11,6 +11,49 @@
 			<li><a href="/">Home</a></li>
 			<li class="active">Cart</li>
 		</ol>
+		<!-- START -->
+		@if(count($db_content))
+<div class="cart-items">
+	<h2>My Shopping Bag ({{Cart::count()}})</h2>
+	<script>$(document).ready(function(c) {
+		$('.close1').on('click', function(c){
+			$('.cart-header').fadeOut('slow', function(c){
+				$('.cart-header').remove();
+			});
+		});
+	});
+	</script>
+	@foreach($db_content as $item)
+	<div class="cart-header">
+		<div class="close1"> </div>
+		<div class="cart-sec">
+		<!--  -->
+			<div class="cart-item cyc">
+				<img src="{{URL::asset('image_uploads')}}/{{$item->products->image}}"/>
+			</div>
+			<div class="cart-item-info">
+				<h3>{{$item->products->name}}<span>Model No: {{$item->products->id}}</span></h3>
+				<h4><span>Ksh </span>{{$item->products->price}}</h4>
+				<p class="qty">Qty ::</p>
+				<form class="form-inline">
+					<a class="cart_quantity_up" href='{{url("shopcarts?product_id=$item->products_id&increment=1")}}'><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+					<input min="1" type="text" id="quantity" name="quantity" value="{{$item->quantity}}" class="form-control input-small">
+					<a class="cart_quantity_down" href='{{url("shopcarts?product_id=$item->products_id&decrease=1")}}'><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+				</form>
+				<br>
+				<a class="cpns" href='{{url("shopcarts?product_id=$item->products_id&remove=1")}}'>Remove Item</a>
+			</div>
+			<div class="clearfix"></div>
+			<div class="delivery">
+			</div>
+		</div>
+	</div>
+	@endforeach
+	@else
+	<p>You have no items in the persisted shopping cart</p>
+	@endif
+
+	<!-- END -->
 		@if(count($content))
 		<div class="cart-items">
 			<h2>My Shopping Bag ({{Cart::count()}})</h2>
@@ -75,7 +118,7 @@
 				<div class="clearfix"></div>
 			</div>
 			<h4 class="last-price">TOTAL</h4>
-			<span class="total final">{{Cart::total()}}</span>
+			<span id="total" class="total final">{{$total}}</span>
 			<div class="clearfix"></div>
 			<!-- <a class="order" href="{{url("carts/")}}">Place Order</a> -->
 			<form action="{{URL::asset('checkout')}}" method="POST">
@@ -100,47 +143,12 @@
 	</div>
 </div>
 <!---->
-<script >
-$(document).ready(function(){
-	var id = $('#id').val();
-	var price = $('#price').html();
-	console.log(price);
-	var sub_total;
-	$('#cart_quantity_up').click(function(){
-		var qty = $('#quantity').val();
-		qty++;
-		$.ajax({
-			url : "{{ URL::asset('/carts/quantity') }}/"+id,
-			type : "post",
-			data : { '_token' : $('input[name=_token]').val(),'quantity' : qty },
-			success : function (){
-				sub_total = price * qty;
-				$('#subtotal').html(sub_total);
-			}
+<script type="text/javascript">
+	$(document).ready(function()
+		{
+			sub_total = 'The power of javascript';
+			$('#sub-total').html(sub_total);
 		});
-		$('#quantity').val(qty);
-	});
-	$('#cart_quantity_down').click(function(){
-		var qty = $('#quantity').val();
-		qty--;
-		$.ajax({
-			url : "{{ URL::asset('/carts/quantity') }}/"+id,
-			type : "post",
-			data : { '_token' : $('input[name=_token]').val(),'quantity' : qty },
-			success : function (){
-				sub_total = price * qty;
-				$('#subtotal').html(sub_total);
-			}
-		});
-		$('#quantity').val(qty);
-	});
-
-	// get subTotal
-
-	var qty =	$('#quantity').val();
-	sub_total = price * qty;
-	$('#subtotal').html(sub_total);
-});
 </script>
 @include('homepage._footer')
 @endsection

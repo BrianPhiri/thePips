@@ -21,6 +21,6 @@ class Products extends Model
 
     public function shopCart()
     {
-    	return $this->belongsTo('App\ShopCart');
+    	return $this->hasMany('App\ShopCart');
     }
 }

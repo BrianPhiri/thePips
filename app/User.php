@@ -63,10 +63,4 @@ class User extends Authenticatable
         return $this->hasMany('App\ShopCart');
     }
 
-    public function role()
-    {
-        // return $this->role;
-    }
-    
-    
 }
