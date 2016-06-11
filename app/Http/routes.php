@@ -104,3 +104,8 @@ Route::get('pdfs','PdfsController@getProducts');
 Route::get('/trial',function(){
     return view('pdfs/index');
 });
+// Vue
+Route::get('vue',function()
+{
+	return view('vue.vue');
+});

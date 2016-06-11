@@ -90,9 +90,9 @@
 					<div class="clearfix"></div>
 					<div class="delivery">
 						<p><h4>Sub-Total:: {{$item->subtotal}}</h4></p>
+						<p><h3 id="result"></h3></p>
 					</div>
 				</div>
-				<h3 id="test"></h3>
 			</div>
 			@endforeach
 			@else

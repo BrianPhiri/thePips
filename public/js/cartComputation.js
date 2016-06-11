@@ -13,7 +13,7 @@ function increment()
     if (id.length > 0)
     {
       $.post('compute',{id: id}, function (markup) {
-        console.log(markup);
+      $('#quantity').text(markup.name);
       });
     }
   }
