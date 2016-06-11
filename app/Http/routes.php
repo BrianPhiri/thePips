@@ -57,9 +57,7 @@ Route::get('shopcarts','CartController@cartDb');
 Route::get('cartTest','CartController@cartTest');
 
 // cartComputation
-Route::post('increment','CartController@increment');
-Route::post('decrement','CartController@decrement');
-
+Route::post('compute','CartController@addToSession');
 Route::get('/', 'HomeController@index');
 
 // Route Resource

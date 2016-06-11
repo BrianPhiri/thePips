@@ -15,6 +15,8 @@ use Session;
 use Illuminate\Support\Collection;
 use App\Http\Requests;
 use Cart;
+use Illuminate\Support\Facades\Input;
+use Response;
 
 class CartController extends Controller
 {
@@ -86,7 +88,8 @@ class CartController extends Controller
       $content = Cart::instance('shopping')->content();
       // Contents of the db do not exist
       $db_content = null;
-      return view('homepage.cart',compact('content','db_content'));
+      $total = null;
+      return view('homepage.cart',compact('content','db_content','total'));
     }
     else{
       // Awesome!!
@@ -131,7 +134,7 @@ class CartController extends Controller
     }
 
     $content = Cart::instance('shopping')->content();
-    return view('homepage.cart',compact('content'));
+    return redirect('shopCart');
     }
     /**
      * Database Updates
@@ -190,10 +193,24 @@ class CartController extends Controller
     }
   }
 
-  // Auth
-  public function addToDb()
+  // Testing response AJAX
+  public function addToSession()
   {
-    
+    // $rowId = Cart::instance('shopping')->search(array('id' => intval(Request::get('product_id'))));
+    // $item = Cart::instance('shopping')->get($rowId[0]);
+
+    // Cart::instance('shopping')->update($rowId[0], $item->qty + 1);
+    $content = Cart::instance('shopping')->content();
+    foreach ($content as $contents) 
+    {
+      return Response::json(array(
+          'id'=>$contents->id,
+          'name'=>$contents->name,
+          'quantity'=>$contents->qty,
+          'price'=>$contents->price,
+          'subtotal'=>$contents->subtotal
+        ));
+    }
   }
 
 }

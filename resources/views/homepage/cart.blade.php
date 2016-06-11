@@ -14,7 +14,7 @@
 		<!-- START -->
 		@if(count($db_content))
 <div class="cart-items">
-	<h2>My Shopping Bag ({{Cart::count()}})</h2>
+	<h2>My Shopping Bag ({{$db_content->count()}})</h2>
 	<script>$(document).ready(function(c) {
 		$('.close1').on('click', function(c){
 			$('.cart-header').fadeOut('slow', function(c){
@@ -29,7 +29,7 @@
 		<div class="cart-sec">
 		<!--  -->
 			<div class="cart-item cyc">
-				<img src="{{URL::asset('image_uploads')}}/{{$item->products->image}}"/>
+				<img src="{{URL::asset('image_uploads')}}/{{$item->products->image}}" style="width: 221.59px; height: 200px;" />
 			</div>
 			<div class="cart-item-info">
 				<h3>{{$item->products->name}}<span>Model No: {{$item->products->id}}</span></h3>
@@ -77,8 +77,10 @@
 						<h4><span>Ksh </span>{{$item->price}}</h4>
 						<p class="qty">Qty ::</p>
 						<form class="form-inline">
-							<!-- <input type="hidden" id="productId" value="{{$item->id}}"> -->
-							<a href='{{url("carts?product_id=$item->id&increment=1")}}'><i class="fa fa-plus-square" aria-hidden="true" onclick="increment()"></i></a>
+							<!--  -->
+							<input type="hidden" id="productId" value="{{$item->id}}">
+							<a href='{{url("carts?product_id=$item->id&increment=1")}}'>Add</a>
+							<i class="fa fa-plus-square" aria-hidden="true" onclick="increment()"></i>
 							<input min="1" type="text" id="quantity" name="quantity" value="{{$item->qty}}" class="form-control input-small">
 							<a href='{{url("carts?product_id=$item->id&decrease=1")}}'><i class="fa fa-minus-square" aria-hidden="true" onclick="decrement()"></i></a>
 						</form>
@@ -90,6 +92,7 @@
 						<p><h4>Sub-Total:: {{$item->subtotal}}</h4></p>
 					</div>
 				</div>
+				<h3 id="test"></h3>
 			</div>
 			@endforeach
 			@else

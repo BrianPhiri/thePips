@@ -4,22 +4,16 @@ $.ajaxSetup({
     }
 });
 
-var timer;
-
+$(document).ready(
+  
+);
 function increment()
-{
-  timer = setTimeout(function ()
   {
-    var product = $('#productId').val();;
-    if (product.length > 0)
+    var id = $('#productId').val();;
+    if (id.length > 0)
     {
-      $.post('increment',{product: product}, function (markup) {
-        $('#quantity').html(markup);
+      $.post('compute',{id: id}, function (markup) {
+        console.log(markup);
       });
     }
-  },5);
-}
-function down()
-{
-  clearTimeout(timer);
-}
+  }
