@@ -43,7 +43,7 @@ class OrdersController extends Controller
 
          ShopCart::destroy($item->id);
         }
-      //  return view('brian');
+      return redirect('/carts');
      }else{
        return redirect('/carts');
      }
