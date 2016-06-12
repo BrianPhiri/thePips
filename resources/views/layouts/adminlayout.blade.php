@@ -8,7 +8,11 @@
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 <link href="{{ URL::asset('css/style.css') }}" rel='stylesheet' type='text/css' />
 <link href="{{ URL::asset('css/font-awesome.css') }}" rel="stylesheet">
 <script src="{{ asset('js/jquery.min.js') }}"> </script>
@@ -182,33 +186,33 @@
                         <!-- <a href="{{ URL::asset('inbox') }}" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Inbox</span> </a> -->
                     </li>
                      <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label">Categories</span><span class="fa arrow"></span></a>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="glyphicon glyphicon-th-large nav_icon"></i> <span class="nav-label">Categories</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="{{ URL::asset('category') }}" class=" hvr-bounce-to-right"> <i class="fa fa-info-circle nav_icon"></i>List Categories</a></li>
-                            <li><a href="{{ URL::asset('category/create') }}" class=" hvr-bounce-to-right"><i class="fa fa-question-circle nav_icon"></i>Add Category</a></li>
+                            <li><a href="{{ URL::asset('category') }}" class=" hvr-bounce-to-right"> <i class="glyphicon glyphicon-list-alt nav_icon"></i>List Categories</a></li>
+                            <li><a href="{{ URL::asset('category/create') }}" class=" hvr-bounce-to-right"><i class="glyphicon glyphicon-pencil nav_icon"></i>Add Category</a></li>
                        </ul>
                     </li>
 										<li>
-											 <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label">Sub-Categories</span><span class="fa arrow"></span></a>
+											 <a href="#" class=" hvr-bounce-to-right"><i class="glyphicon glyphicon-th-list  nav_icon"></i> <span class="nav-label">Sub-Categories</span><span class="fa arrow"></span></a>
 											 <ul class="nav nav-second-level">
-													 <li><a href="{{ URL::asset('subcategory') }}" class=" hvr-bounce-to-right"> <i class="fa fa-info-circle nav_icon"></i>List Sub-Categories</a></li>
-													 <li><a href="{{ URL::asset('subcategory/create') }}" class=" hvr-bounce-to-right"><i class="fa fa-question-circle nav_icon"></i>Add A Sub-Category</a></li>
+													 <li><a href="{{ URL::asset('subcategory') }}" class=" hvr-bounce-to-right"> <i class="fa glyphicon glyphicon-list-alt nav_icon"></i>List Sub-Categories</a></li>
+													 <li><a href="{{ URL::asset('subcategory/create') }}" class=" hvr-bounce-to-right"><i class="glyphicon glyphicon-pencil nav_icon"></i>Add A Sub-Category</a></li>
 											</ul>
 									 </li>
                      <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label">Products</span><span class="fa arrow"></span></a>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="glyphicon glyphicon-th nav_icon"></i> <span class="nav-label">Products</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="{{ URL::asset('product') }}" class=" hvr-bounce-to-right"> <i class="fa fa-info-circle nav_icon"></i>List Products</a></li>
-                            <li><a href="{{ URL::asset('product/create') }}" class=" hvr-bounce-to-right"><i class="fa fa-question-circle nav_icon"></i>Add Products</a></li>
+                            <li><a href="{{ URL::asset('product') }}" class=" hvr-bounce-to-right"> <i class="glyphicon glyphicon-list-alt nav_icon"></i>List Products</a></li>
+                            <li><a href="{{ URL::asset('product/create') }}" class=" hvr-bounce-to-right"><i class="glyphicon glyphicon-pencil nav_icon"></i>Add Products</a></li>
                        </ul>
                     </li>
 
                     <li>
-                        <a href="customers" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Customers</span> </a>
+                        <a href="customers" class=" hvr-bounce-to-right"><i class="glyphicon glyphicon-user nav_icon"></i> <span class="nav-label">Customers</span> </a>
                     </li>
 
 										<li>
-                        <a href="orders" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Order List</span> </a>
+                        <a href="orders" class=" hvr-bounce-to-right"><i class="glyphicon glyphicon-list nav_icon"></i> <span class="nav-label">Order List</span> </a>
                     </li>
 
                     <li>

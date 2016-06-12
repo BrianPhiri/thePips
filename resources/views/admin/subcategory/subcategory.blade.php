@@ -25,8 +25,8 @@
             @foreach( $subcategories as  $subcategory)
             <tr>
                 <td>{{ $subcategory->name }}</td><td>{{  substr($subcategory->description,0,90).'...' }}</td>
-								<td><a href="subcategory/{{$subcategory->id }}/edit" class="btn btn-warning">Edit</a></td>
 								<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal{{ $subcategory->id }}">View</button></td>
+								<td><a href="subcategory/{{$subcategory->id }}/edit" class="btn btn-warning">Edit</a></td>
 								<td><a href="subcategory/{{$subcategory->id }}" class="btn btn-danger">Remove</a></td>
 
 								<!-- Modal -->
