@@ -63,4 +63,9 @@ class User extends Authenticatable
         return $this->hasMany('App\ShopCart');
     }
 
+    public function orders()
+    {
+        return $this->hasMany('App\Orders');
+    }
+
 }

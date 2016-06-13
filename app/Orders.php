@@ -9,6 +9,10 @@ class Orders extends Model
     protected $table = 'orders';
     
     public function orderItems(){
-        $this->hasMany('App/OrderItems', 'order_id', 'id');
+        return $this->hasMany('App\OrderItems');
+    }
+    public function user()
+    {
+    	return $this->belongsTo('App\User');
     }
 }

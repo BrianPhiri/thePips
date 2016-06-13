@@ -12,4 +12,9 @@ class OrderItems extends Model
    {
    		return $this->belongsTo('App\Products');
    }
+
+   public function orders()
+   {
+   		return $this->belongsTo('App\Orders');
+   }
 }
