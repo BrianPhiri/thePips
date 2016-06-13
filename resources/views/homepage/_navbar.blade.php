@@ -5,9 +5,15 @@
 		 </div>
 		 <div class="header_right">
 			 <div class="cart box_1">
-				<a href="{{ URL::asset('carts')}}">
-					<h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="images/bag.png" alt=""></h3>
-				</a>
+       @if(Auth::check())
+       <a href="{{ URL::asset('carts')}}">
+         <h3>({{$cartdb}} items) <img src="images/bag.png" alt=""></h3>
+        </a>
+       @else
+       <a href="{{ URL::asset('carts')}}">
+          <h3>Kshs {{Cart::total()}} ({{$cart}} items) <img src="images/bag.png" alt=""></h3>
+        </a>
+       @endif
 				<p><a href="{{url('carts/remove?yes=1')}}" class="simpleCart_empty"><h5>Empty cart</h5></a></p>
 				<div class="clearfix"> </div>
 			 </div>

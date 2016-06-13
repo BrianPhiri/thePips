@@ -113,7 +113,7 @@
 			<div class="price-details">
 				<h3>Price Details</h3>
 				<span>Total</span>
-				<span class="total">Ksh. {{$item->subtotal}}</span>
+				<span class="total">Ksh.</span>
 				<span>Discount</span>
 				<span class="total">---</span>
 				<!-- <span>Delivery Charges</span> -->
