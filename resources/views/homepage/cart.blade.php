@@ -29,7 +29,7 @@
 		<div class="cart-sec">
 		<!--  -->
 			<div class="cart-item cyc">
-				<img src="{{URL::asset('image_uploads')}}/{{$item->products->image}}" style="width: 221.59px; height: 200px;" />
+				<img src="{{URL::asset('image_uploads')}}/{{$item->products->image}}" style="width: 189.594px; height: 200px;" />
 			</div>
 			<div class="cart-item-info">
 				<h3>{{$item->products->name}}<span>Model No: {{$item->products->id}}</span></h3>

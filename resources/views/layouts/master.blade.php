@@ -92,7 +92,12 @@
   {
     clearTimeout(timer);
   }
-
+  </script>
+  <script type="text/javascript">
+    // For fading flash messages
+    $(document).ready(function(){
+      $('.alert').hide(10000);
+    });
   </script>
   <span>
   <style type="text/css">

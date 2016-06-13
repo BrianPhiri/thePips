@@ -11,6 +11,10 @@
 |
 */
 
+// Admin Authentication
+$this->get('admin/login', 'SessionsController@showLoginForm');
+$this->post('admin/login', 'SessionsController@postLogin');
+Route::get('admin/logout','SessionsController@logout');
 // Authentication Routes...
 $this->get('login', 'Auth\AuthController@showLoginForm');
 $this->post('login', 'Auth\AuthController@login');
@@ -31,13 +35,6 @@ Route::get('register/confirm/{token}', 'Auth\AuthController@confirmEmail');
 // Shop Cart Routes
 Route::resource('/carts', 'CartController@cart');
 Route::get('/carts', 'CartController@cart');
-
-// Route::get('/addProduct/{productId}', 'CartController@addItem');
-// Route::post('/addProduct/{productId}', 'CartController@addItem');
-// Route::get('/removeItem/{productId}', 'CartController@removeItem');
-// Route::post('/removeItem/{productId}', 'CartController@removeItem');
-// Route::get('/carts', 'CartController@showCart');
-// Route::post('/carts', 'CartController@showCart');
 
 //Route::get('pdfs', 'OrdersController@buy');
 
@@ -64,8 +61,6 @@ Route::get('/', 'HomeController@index');
 Route::get('products/{productId}','HomeController@show');
 Route::get('products/category/{productId}','HomeController@categoryProducts');
 
-// Testing Cart View
-Route::get('redirect','RedirectsController@redirectUser');
 // admin
 Route::get('/admin', 'AdminController@index');
 Route::get('/summary', 'AdminController@summary');
@@ -79,18 +74,6 @@ Route::get('/user/{id}', 'CustomerController@show');
 
 Route::get('/error', function(){ return view('admin/brian'); });
 
-Route::get('/cart',function(){
-  return view('homepage/cart');
-});
-
-Route::get('/products',function(){
-  return view('homepage/products');
-});
-
-// Route::get('/single',function(){
-//   return view('homepage/single');
-// });
-
 Route::get('/contact',function(){
   return view('homepage/contact');
 });
@@ -101,11 +84,3 @@ Route::post('executeSearch','SearchController@executeSearch');
 Route::get('catalogue','PdfsController@downloadPDF');
 
 Route::get('pdfs','PdfsController@getProducts');
-Route::get('/trial',function(){
-    return view('pdfs/index');
-});
-// Vue
-Route::get('vue',function()
-{
-	return view('vue.vue');
-});
