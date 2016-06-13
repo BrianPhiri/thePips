@@ -113,7 +113,7 @@
 			<div class="price-details">
 				<h3>Price Details</h3>
 				<span>Total</span>
-				<span class="total">Ksh. {{Cart::total()}}</span>
+				<span class="total">Ksh. {{$item->subtotal}}</span>
 				<span>Discount</span>
 				<span class="total">---</span>
 				<!-- <span>Delivery Charges</span> -->
@@ -129,10 +129,10 @@
 			<script
 			  src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 			  data-key="pk_test_GIjjWsmv1wDgFvt2BG0Fhtpl"
-			  data-amount="{{Cart::total()}}"
+			  data-amount="{{$total}}"
 			  data-name="ThePips"
 			  data-description="Buying product"
-			  data-image="/img/documentation/checkout/marketplace.png"
+			  data-image="{{ URL::asset('images/pips.png') }}"
 			  data-locale="auto">
 			</script>
 			</form>
