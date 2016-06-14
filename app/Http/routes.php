@@ -11,6 +11,10 @@
 |
 */
 
+// Admin Authentication
+$this->get('admin/login', 'SessionsController@showLoginForm');
+$this->post('admin/login', 'SessionsController@postLogin');
+Route::get('admin/logout','SessionsController@logout');
 // Authentication Routes...
 $this->get('login', 'Auth\AuthController@showLoginForm');
 $this->post('login', 'Auth\AuthController@login');
@@ -18,7 +22,7 @@ $this->get('logout', 'Auth\AuthController@logout');
 
 // Registration Routes...
 $this->get('register', 'Auth\AuthController@showRegistrationForm');
-$this->post('register', 'Auth\AuthController@account');
+$this->post('register', 'Auth\AuthController@register');
 
 // Password Reset Routes...
 $this->get('password/reset/{token?}', 'Auth\PasswordController@showResetForm');
@@ -29,27 +33,34 @@ $this->post('password/reset', 'Auth\PasswordController@reset');
 Route::get('register/confirm/{token}', 'Auth\AuthController@confirmEmail');
 
 // Shop Cart Routes
-Route::post('carts','CartController@index');
-Route::resource('carts','CartController');
-Route::post('carts/destroy/{id}', 'CartController@destroy');
-Route::get('carts/destroy/{id}', 'CartController@destroy');
-Route::post('carts/quantity/{id}/{type}', 'CartController@quantity');
-Route::get('carts/quantity/{id}/{qty}/{type}', 'CartController@quantity');
+Route::resource('/carts', 'CartController@cart');
+Route::get('/carts', 'CartController@cart');
 
-Route::get('test', 'OrdersController@buy');
-// Route::get('carts/remove','CartController@remove');
-//Route::resouce('persist','CartController@cart');
+//Route::get('pdfs', 'OrdersController@buy');
 
-Route::get('addItem/{id}','CartController@addItem');
+Route::get('/checkout', 'OrdersController@checkout');
+Route::post('/checkout', 'OrdersController@checkout');
 
+// Cart routes
+Route::get('shopCart','CartController@showCart');
+Route::post('addItems','CartController@addItem');
+Route::get('destroyCart','CartController@destroyCart');
+Route::post('increment','CartController@increment');
+Route::post('decrement','CartController@increment');
+Route::get('carts','CartController@cart');
+Route::get('shopcarts','CartController@cartDb');
+
+// Testing the Cart
+Route::get('cartTest','CartController@cartTest');
+
+// cartComputation
+Route::post('compute','CartController@addToSession');
 Route::get('/', 'HomeController@index');
 
 // Route Resource
 Route::get('products/{productId}','HomeController@show');
 Route::get('products/category/{productId}','HomeController@categoryProducts');
 
-// Testing Cart View
-Route::get('redirect','RedirectsController@redirectUser');
 // admin
 Route::get('/admin', 'AdminController@index');
 Route::get('/summary', 'AdminController@summary');
@@ -63,20 +74,13 @@ Route::get('/user/{id}', 'CustomerController@show');
 
 Route::get('/error', function(){ return view('admin/brian'); });
 
-Route::get('/cart',function(){
-  return view('homepage/cart');
-});
-
-Route::get('/products',function(){
-  return view('homepage/products');
-});
-
-// Route::get('/single',function(){
-//   return view('homepage/single');
-// });
-
 Route::get('/contact',function(){
   return view('homepage/contact');
 });
 
 Route::post('executeSearch','SearchController@executeSearch');
+
+//PDFs Route
+Route::get('catalogue','PdfsController@downloadPDF');
+
+Route::get('pdfs','PdfsController@getProducts');

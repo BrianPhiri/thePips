@@ -12,15 +12,15 @@ class CreateOrderItemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('order-items', function (Blueprint $table) {
+        Schema::create('order_items', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('order_id')->unsigned();            
-            $table->integer('product_id')->unsigned();
+            $table->integer('orders_id')->unsigned();            
+            $table->integer('products_id')->unsigned();
             $table->integer('quantity');
             $table->decimal('price', 10,2);
             $table->timestamps();
-            $table->foreign('order_id')->references('id')->on('orders');
-            $table->foreign('product_id')->references('id')->on('products');
+            $table->foreign('orders_id')->references('id')->on('orders');
+            $table->foreign('products_id')->references('id')->on('products');
         });
     }
 
@@ -31,6 +31,6 @@ class CreateOrderItemsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('order-items');
+        Schema::drop('order_items');
     }
 }

@@ -19,11 +19,11 @@
 					</tr>
 				</thead>
 				<tbody>
-						@foreach($customers as $customer)
-							<tr>
-								<td>{{ $customer->name }}</td><td>{{ $customer->email }}</td><td><a class="btn btn-warning" href="customers/{{ $customer->id }}">View</a><td>
-							</tr>
-							@endforeach
+					@foreach($customers as $customer)
+						<tr>
+							<td>{{ $customer->name }}</td><td>{{ $customer->email }}</td><td><a class="btn btn-warning" href="customers/{{ $customer->id }}">View</a><td>
+						</tr>
+					@endforeach
 				</tbody>
 			</table>
 		</div>

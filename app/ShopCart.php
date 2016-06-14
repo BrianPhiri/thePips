@@ -10,13 +10,17 @@ class ShopCart extends Model
 
 	protected $fillable = ['user_id'];
 
+    /**
+     * A Shop Cart Belongs to a user. 
+     */
     public function user()
     {
     	return $this->belongsTo('App\User');
     }
+
     public function products()
     {
-    	return $this->hasMany('App\Products', 'id', 'product_id');
+    	return $this->belongsTo('App\Products');
     }
 
 }

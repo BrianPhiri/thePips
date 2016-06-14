@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\User;
 use App\Orders;
+use App\OrderItems;
 
 class CustomerController extends Controller
 {
@@ -14,10 +15,20 @@ class CustomerController extends Controller
     $customers = User::All();
    	return view('admin.customers.customer', compact('customers'));
    }
+
    public function show ($id){
-    $user = User::findOrFail($id);
-    // $orders = Orders::where('customer_id', '=', $id)->get();
-   	return view('admin.user.profile', compact('user'));
+    $user = User::findOrFail($id)->first();
+    // count orders
+    $orderCount = Orders::where('user_id','=', $id)->count();
+    // get order items
+    $items = OrderItems::with('orders')->whereHas('orders', function($query){
+        $query->where('user_id', '=', 6);
+    })->get();
+    // count order items
+    $itemsCount = $items->count();
+    $orderItems = Orders::where('user_id', '=', $id)->get();
+   	return view('admin.customers.profile', compact('user', 'orderCount','itemsCount', 'orderItems'));
+       
    }
 
    public function update(){}

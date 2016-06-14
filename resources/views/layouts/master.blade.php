@@ -23,6 +23,7 @@
   <link href='http://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="{{ URL::asset('css/etalage.css') }}" type="text/css">
   <!-- start menu -->
+  <script src="{{ asset('js/cartComputation.js') }}"></script>
   <link href="{{ URL::asset('css/megamenu.css') }}" rel="stylesheet" type="text/css" media="all" />
   <script type="text/javascript" src="{{ URL::asset('js/megamenu.js') }}"></script>
   <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
@@ -91,7 +92,12 @@
   {
     clearTimeout(timer);
   }
-
+  </script>
+  <script type="text/javascript">
+    // For fading flash messages
+    $(document).ready(function(){
+      $('.alert').hide(10000);
+    });
   </script>
   <span>
   <style type="text/css">
@@ -103,6 +109,10 @@
     border: 1px solid #D6D6D6;
     outline: none;
     color: #5d5959;margin-bottom:2em;
+  }
+  .fa-15x
+  {
+    font-size: 1.5em;
   }
   </style>
 </span>
@@ -116,7 +126,7 @@
           <ul>
             <li><a href="#">help</a></li>|
             <li><a href="contact">Contact</a></li>|
-            <li><a href="login">Track Order</a></li>
+            <li><a href="pdfs">Catalogue</a></li>
           </ul>
         </div>
         <div class="top_left">
@@ -125,7 +135,7 @@
             @if (Auth::guest())
             <li class="top_link"><a href="{{ URL::asset('login') }}"><i class="fa fa-btn fa-sign-in"></i> Sign In</a></li>|
             <!-- <i class="fa fa-btn fa-sign-out"></i> <li class="top_link"><a href="logout">Sign Out</a></li>| -->
-            <li class="top_link"><a href="{{ URL::asset('register') }}">   <i class="fa fa-btn fa-user"></i> New User ?</a>
+            <li class="top_link"><a href="{{ URL::asset('register') }}">   <i class="fa fa-btn fa-user"></i> New User ?</a></li>
               @else
               <!-- Displays the name of the authenticated users. -->
               <li><a href="{{ url::asset('/register') }}"><i class="fa fa-btn fa-user"></i> {{ Auth::user()->name }}</a></li> |

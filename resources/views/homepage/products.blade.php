@@ -33,7 +33,13 @@
 	 							<p>Kes{{ $product->price}}</p>
 	 							<!-- <span class="item_price">$187.95</span> -->
 	 							<input type="text" class="item_quantity" value="1" />
-	 							<input type="button" class="item_add items" value="ADD">
+								<form  method="POST" action="{{ url('/carts') }}">
+									<input type="hidden" name="product_id" value="{{$product->id}}">
+									<input type="hidden" name="_token" value="{{ csrf_token() }}">
+									<button type="submit" class="btn btn-fefault add-to-cart">
+										<i class="fa fa-shopping-cart"></i>
+										Add to cart
+									</button>
 	 						</div>
 	 						<div class="clearfix"> </div>
 	 					</div>

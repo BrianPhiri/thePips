@@ -3,12 +3,17 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 
+=======
+use Laravel\Cashier\Billable;
+>>>>>>> 69d64049acb423d3c495dfec02d2b9336745850b
 
 class User extends Authenticatable
 {
+    use Billable;
     /**
      * The attributes that are mass assignable.
      *
@@ -67,8 +72,9 @@ class User extends Authenticatable
         return $this->hasMany('App\ShopCart');
     }
 
-    public function role()
+    public function orders()
     {
-        // return $this->role;
+        return $this->hasMany('App\Orders');
     }
+
 }

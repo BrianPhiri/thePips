@@ -16,6 +16,6 @@
 
   <div class="col-md-12 form-group">
     {!! Form::submit($submitButtonText, ['class' => 'btn btn-primary']) !!}
-    <button type="reset" class="btn btn-default">Reset</button>
+    <button type="reset" class="btn btn-default">Cancel</button>
   </div>
 <div class="clearfix"> </div>
