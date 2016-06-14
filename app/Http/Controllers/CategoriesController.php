@@ -39,8 +39,14 @@ class CategoriesController extends Controller
       $category->save();
       return Redirect::intended('category');
     }
-
+    public function show($category_id){
+      $category = Categories::findOrFail($category_id);
+      $category->delete();
+      return Redirect::intended('category');
+    }
     public function destroy($category_id){
-      return $category_id."deleted";
+      $category = Categories::find($id);
+      $products->delete();
+      return Redirect::to('/categories');
     }
 }
