@@ -42,7 +42,7 @@ class OrdersController extends Controller
        // saving in orderItems
        foreach($items as $item){
          $orderItem = new OrderItems();
-         $orderItem->order_id = $order->id;
+         $orderItem->orders_id = $order->id;
          $orderItem->products_id = $item->products_id;
          $orderItem->quantity = $item->quantity;
          $orderItem->price = $item->products->price;

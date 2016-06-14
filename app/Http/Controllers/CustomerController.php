@@ -15,15 +15,20 @@ class CustomerController extends Controller
     $customers = User::All();
    	return view('admin.customers.customer', compact('customers'));
    }
+
    public function show ($id){
     $user = User::findOrFail($id)->first();
     // count orders
     $orderCount = Orders::where('user_id','=', $id)->count();
+    // get order items
+    $items = OrderItems::with('orders')->whereHas('orders', function($query){
+        $query->where('user_id', '=', 6);
+    })->get();
     // count order items
-    // $itemsCount = OrderItems::where('user_id', '=', $id)->count();
-    $itemsCount = 22;
+    $itemsCount = $items->count();
     $orderItems = Orders::where('user_id', '=', $id)->get();
    	return view('admin.customers.profile', compact('user', 'orderCount','itemsCount', 'orderItems'));
+       
    }
 
    public function update(){}
