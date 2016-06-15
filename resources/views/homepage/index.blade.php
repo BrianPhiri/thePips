@@ -42,18 +42,18 @@
 		<div class="new-products">
 			<div class="new-items">
 				<div class="item1">
-					<a href="products"><img src="images/s1.jpg" alt=""/></a>
+					<a href="products"><img src="image_uploads/{{$prd1->image}}" alt=""/></a>
 					<div class="item-info">
-						<h4><a href="products">Brown Furny Seater</a></h4>
-						<span>ID: SR5421</span>
+						<h4><a href="products">{{ $prd1->name }}</a></h4>
+						<span>ID: {{$prd1->id}}</span>
 						<a href="single">Buy Now</a>
 					</div>
 				</div>
 				<div class="item4">
-					<a href="products"><img src="images/s4.jpg" alt=""/></a>
+					<a href="products"><img src="image_uploads/{{$prd2->image}}" alt=""/></a>
 					<div class="item-info4">
-						<h4><a href="products">Dream Furniture Bed</a></h4>
-						<span>ID: SR5421</span>
+						<h4><a href="products">{{ $prd2->name }}</a></h4>
+						<span>ID: {{ $prd2->id }}</span>
 						<a href="single">Buy Now</a>
 					</div>
 				</div>
@@ -61,35 +61,35 @@
 			<div class="new-items new_middle">
 				<div class="item2">
 					<div class="item-info2">
-						<h4><a href="products">Georgia Sofa Set</a></h4>
-						<span>ID: GS7641</span>
+						<h4><a href="products">{{ $prd3->name }}</a></h4>
+						<span>ID: {{ $prd3->id }}</span>
 						<a href="single">Buy Now</a>
 					</div>
-					<a href="products"><img src="images/s2.jpg" alt=""/></a>
+					<a href="products"><img src="image_uploads/{{$prd3->image}}" alt=""/></a>
 				</div>
 				<div class="item5">
-					<a href="products"><img src="images/s5.jpg" alt=""/></a>
+					<a href="products"><img src="image_uploads/{{$prd4->image}}" alt=""/></a>
 					<div class="item-info5">
-						<h4><a href="products">BlackBurn Law Set</a></h4>
-						<span>ID: SR5421</span>
+						<h4><a href="products">{{ $prd4->name }}</a></h4>
+						<span>ID: {{ $prd4->id }}</span>
 						<a href="single">Buy Now</a>
 					</div>
 				</div>
 			</div>
 			<div class="new-items new_last">
 				<div class="item3">
-					<a href="products"><img src="images/s3.jpg" alt=""/></a>
+					<a href="products"><img src="image_uploads/{{$prd5->image}}" alt=""/></a>
 					<div class="item-info3">
-						<h4><a href="products">Shefan Dinning Set</a></h4>
-						<span>ID: SR5421</span>
+						<h4><a href="products">{{ $prd5->name }}</a></h4>
+						<span>ID: {{ $prd5->id }}</span>
 						<a href="single">Buy Now</a>
 					</div>
 				</div>
 				<div class="item6">
-					<a href="products"><img src="images/s6.jpg" alt=""/></a>
+					<a href="products"><img src="image_uploads/{{$prd6->image}}" alt=""/></a>
 					<div class="item-info6">
-						<h4><a href="products">Irony Sofa Set</a></h4>
-						<span>ID: SR5421</span>
+						<h4><a href="products">{{ $prd6->name }}</a></h4>
+						<span>ID: {{ $prd6->id }}</span>
 						<a href="single">Buy Now</a>
 					</div>
 
