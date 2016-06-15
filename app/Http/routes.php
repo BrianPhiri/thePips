@@ -84,3 +84,5 @@ Route::post('executeSearch','SearchController@executeSearch');
 Route::get('catalogue','PdfsController@downloadPDF');
 
 Route::get('pdfs','PdfsController@getProducts');
+
+Route::get('test', 'TestsController@index');

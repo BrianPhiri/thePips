@@ -14,7 +14,9 @@ class OrdersController extends Controller
 {
 
   public function index(){
-    
+    $orders = Orders::with('orderItems')->get();
+    return $orders;
+    // return view('admin.orders', compact('orders'));
   }
 
 

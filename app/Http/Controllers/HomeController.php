@@ -16,8 +16,17 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $products = Products::All();
-        $new = Products::latest()->take(6)->get();
-        return view('homepage.index', compact('products'));
+        $product= array();
+        for ($i=1; $i < 7; $i++) { 
+          $product[] = Products::all()->random(1);
+        }
+        $prd1 = $product[0];
+        $prd2 = $product[1];
+        $prd3 = $product[2];
+        $prd4 = $product[3];
+        $prd5 = $product[4];
+        $prd6 = $product[5];
+        return view('homepage.index', compact('products','prd1','prd2', 'prd3', 'prd4', 'prd5', 'prd6')
     }
     public function show($id){
       $product = Products::findOrFail($id);
