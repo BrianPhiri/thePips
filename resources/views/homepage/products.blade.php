@@ -30,7 +30,7 @@
 	 					<div class="product-info simpleCart_shelfItem">
 	 						<div class="product-info-cust">
 	 							<h4>{{ $product->name}}</h4>
-	 							<p>Kes{{ $product->price}}</p>
+	 							<p>Kes{{ number_format($product->price)}}</p>
 	 							<!-- <span class="item_price">$187.95</span> -->
 	 							<input type="text" class="item_quantity" value="1" />
 								<form  method="POST" action="{{ url('/carts') }}">
