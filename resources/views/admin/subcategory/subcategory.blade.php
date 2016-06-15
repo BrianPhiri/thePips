@@ -26,16 +26,13 @@
             <tr>
                 <td>{{ $subcategory->name }}</td><td>{{  substr($subcategory->description,0,90).'...' }}</td>
 								<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal{{ $subcategory->id }}">View</button></td>
-<<<<<<< HEAD
 								<td>
 									<form action="subcategory/{{$subcategory->id}}" method="DELETE" onsubmit="return confirm('Are you sure you want to remove this subcategory?')">
 										<input class="btn btn-danger" type="submit" name="delete" value="Remove">
 
 									</form></td>
-=======
 								<td><a href="subcategory/{{$subcategory->id }}/edit" class="btn btn-warning">Edit</a></td>
 								<td><a href="subcategory/{{$subcategory->id }}" class="btn btn-danger">Remove</a></td>
->>>>>>> 69d64049acb423d3c495dfec02d2b9336745850b
 
 								<!-- Modal -->
 								<div class="modal fade" id="myModal{{ $subcategory->id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
