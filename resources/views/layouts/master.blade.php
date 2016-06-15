@@ -110,6 +110,10 @@
     outline: none;
     color: #5d5959;margin-bottom:2em;
   }
+  .fa-15x
+  {
+    font-size: 1.5em;
+  }
   </style>
 </span>
 </head>
@@ -131,7 +135,7 @@
             @if (Auth::guest())
             <li class="top_link"><a href="{{ URL::asset('login') }}"><i class="fa fa-btn fa-sign-in"></i> Sign In</a></li>|
             <!-- <i class="fa fa-btn fa-sign-out"></i> <li class="top_link"><a href="logout">Sign Out</a></li>| -->
-            <li class="top_link"><a href="{{ URL::asset('register') }}">   <i class="fa fa-btn fa-user"></i> New User ?</a>
+            <li class="top_link"><a href="{{ URL::asset('register') }}">   <i class="fa fa-btn fa-user"></i> New User ?</a></li>
               @else
               <!-- Displays the name of the authenticated users. -->
               <li><a href="{{ url::asset('/register') }}"><i class="fa fa-btn fa-user"></i> {{ Auth::user()->name }}</a></li> |

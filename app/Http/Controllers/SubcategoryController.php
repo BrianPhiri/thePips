@@ -39,4 +39,14 @@ class SubcategoryController extends Controller
         $subcategory->save();
         return Redirect::intended('subcategory');
     }
+    public function show($subcategory){
+      $subcategory = Subcategories::findOrFail($subcategory);
+      $subcategory->delete();
+      return Redirect::intended('subcategory');
+    }
+    public function destroy($product_id){
+        $subcategory = Subcategories::find($id);
+        $subcategory->delete();
+        return Redirect::to('/subcategories');
+    }
 }

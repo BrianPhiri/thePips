@@ -3,6 +3,9 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 use Laravel\Cashier\Billable;
 
 class User extends Authenticatable
@@ -16,6 +19,9 @@ class User extends Authenticatable
     protected $fillable = [
         'name', 'email', 'password','title_id','role',
     ];
+
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -51,7 +57,7 @@ class User extends Authenticatable
         $this->save();
     }
     /**
-     * A user has one title 
+     * A user has one title
      */
     public function title()
     {

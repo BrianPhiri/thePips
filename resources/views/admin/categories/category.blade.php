@@ -27,7 +27,11 @@
 								<td>{{ $category->name }}</td><td>{{ substr($category->description,0,90).'...' }}</td>
 								<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal{{ $category->id }}">View</button></td>
                 <td><a href="category/{{$category->id }}/edit" class="btn btn-warning">Edit</a></td>
-								<td><a href="category/{{$category->id }}" class="btn btn-danger">Remove</a></td>
+								<td>
+									<form action="category/{{$category->id}}" method="DELETE" onsubmit="return confirm('Are you sure you want to remove this category?')">
+									<input class="btn btn-danger" type="submit" name="delete" value="Remove">
+									</form>
+									</td>
 								<!-- Modal -->
 								<div class="modal fade" id="myModal{{ $category->id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 									<div class="modal-dialog" role="document">
