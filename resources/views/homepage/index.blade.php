@@ -108,7 +108,7 @@
 			<div class="col-md-3 seller-grid">
 				<a href="products/{{ $product->id}}"><img src="image_uploads/{{$product->image}}" style="width:255px; height:140.59px; " alt=""/></a>
 				<h4><a href="products">{{$product->name}}</a></h4>
-				<span>Kshs {{$product->price}}</span>
+				<span>Kshs {{number_format($product->price)}}</span>
 				<p>{{$product->description}}</p>
 			</div>
 			@endforeach
@@ -128,7 +128,7 @@
 				<li>
 					<a href="products/{{ $product->id}}"><img src="image_uploads/{{$product->image}}" style="width:176.23px; height:100px; " alt=""/></a>
 					<h4><a href="products">{{$product->name}}</a></h4>
-					<p>Kshs {{$product->price}}</p>
+					<p>Kshs {{number_format($product->price)}}</p>
 				</li>
 				@endforeach
 			</ul>

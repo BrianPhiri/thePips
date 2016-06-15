@@ -49,7 +49,7 @@
 						<ul>
 							{{--<li>MRP: <del>Rs 55000</del></li>--}}
 							<li>Selling Price:</li>
-							<li class="active">Ksh {{$product->price}}</li>
+							<li class="active">Ksh {{number_format($product->price)}}</li>
 							<!-- Start -->
 							<form  method="POST" action="{{ url('/addItems') }}">
 								<input type="hidden" name="product_id" value="{{$product->id}}">
