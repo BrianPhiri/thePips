@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Subcategories extends Model
 {
@@ -10,6 +11,9 @@ class Subcategories extends Model
   protected $fillable = [
     'name', 'description', 'category_id'
   ];
+
+  use SoftDeletes;
+  protected $dates = ['deleted_at'];
 
   public function category(){
     return $this->hasMany('App\Categories', 'categories_id', 'id');

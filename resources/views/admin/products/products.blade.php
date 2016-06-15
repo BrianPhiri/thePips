@@ -28,7 +28,7 @@
 								<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal{{ $product->id }}">View</button></td>
                 <td><a href="product/{{$product->id }}/edit" class="btn btn-warning">Edit</a></td>
 								<td>
-									<form action="product/{{ $product->id }}" method="DELETE" onsubmit="return confirm('Are you sure you want to submit?')">
+									<form action="product/{{ $product->id }}" method="DELETE" onsubmit="return confirm('Are you sure you want to delete this product?')">
 										<input class="btn btn-danger" type="submit" name="delete" value="Remove">
 									</form>
 								</td>

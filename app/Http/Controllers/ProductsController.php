@@ -18,7 +18,7 @@ use Storage;
 class ProductsController extends Controller
 {
     public function index(){
-        $products = Products::paginate(15);
+        $products = Products::/*onlyTrashed()->*/paginate(15);
         return view('admin.products.products', compact('products'));
     }
 
@@ -79,4 +79,9 @@ class ProductsController extends Controller
       return Redirect::intended('product');
     }
     // TODO: work on image edit.
+    public function destroy($product_id){
+        $products = Products::find($id);
+        $products->delete();
+        return Redirect::to('/products');
+    }
 }
