@@ -14,7 +14,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('title_id')->unsigned();
+            $table->string('title');
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password', 60);
@@ -23,10 +23,6 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
             
-        });
-        Schema::table('users', function (Blueprint $table)
-        {
-            $table->foreign('title_id')->references('id')->on('title');
         });
         Schema::table('users', function ($table) {
             $table->string('stripe_id')->nullable();

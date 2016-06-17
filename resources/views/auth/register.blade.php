@@ -69,7 +69,7 @@
                             <i class="fa fa-btn fa-sign-in"></i>
                               <option>Select Title</option>
                             @foreach($title as $titles)
-                              <option value="{{ $titles->id}}">{{$titles->title}}</option>
+                              <option value="{{ $titles->title}}">{{$titles->title}}</option>
                             @endforeach
                           </select>
                                 @if ($errors->has('title_id'))
