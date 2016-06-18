@@ -67,15 +67,29 @@ class ProductsController extends Controller
 
     public function update($product_id, Request $input ){
       $subcategory = '';
+      $image_uploads = '';
       $product = Products::findOrFail($product_id);
 
       if($input['sub_category_id'] == ''){
-        return $subcategory = $product->sub_category_id;
+        $subcategory = $product->sub_category_id;
       }else{
-        return $subcategory = $input['sub_category_id']; 
+        $subcategory = $input['sub_category_id']; 
+      }
+      if($input['file'] == ''){
+        $image_uploads = $product->imgage;
+      }else{
+        $file = $post->file('file');
+        $fileName = $file->getClientOriginalName();
+        $destinationPath = config('app.fileDestinationPath').'/'.$fileName;
+        $uploaded = Storage::put($destinationPath, file_get_contents($file->getRealPath()));
+
+        if($uploaded){
+          $image_uploads = $destinationPath;
+        }
       }
       
       $product->name = $input['name'];
+      $product->image = $image_uploads;
       $product->sub_category_id = $subcategory;
       $product->price = $input['price'];
       $product->description = $input['description'];
