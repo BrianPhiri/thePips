@@ -42,7 +42,7 @@
 		<div class="new-products">
 			<div class="new-items">
 				<div class="item1">
-					<a href="products"><img src="image_uploads/{{$prd1->image}}" alt=""/></a>
+					<a href="products"><img src="image_uploads/{{$prd1->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
 					<div class="item-info">
 						<h4><a href="products">{{ $prd1->name }}</a></h4>
 						<span>ID: {{$prd1->id}}</span>
@@ -50,7 +50,7 @@
 					</div>
 				</div>
 				<div class="item4">
-					<a href="products"><img src="image_uploads/{{$prd2->image}}" alt=""/></a>
+					<a href="products"><img src="image_uploads/{{$prd2->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
 					<div class="item-info4">
 						<h4><a href="products">{{ $prd2->name }}</a></h4>
 						<span>ID: {{ $prd2->id }}</span>
@@ -65,10 +65,10 @@
 						<span>ID: {{ $prd3->id }}</span>
 						<a href="single">Buy Now</a>
 					</div>
-					<a href="products"><img src="image_uploads/{{$prd3->image}}" alt=""/></a>
+					<a href="products"><img src="image_uploads/{{$prd3->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
 				</div>
 				<div class="item5">
-					<a href="products"><img src="image_uploads/{{$prd4->image}}" alt=""/></a>
+					<a href="products"><img src="image_uploads/{{$prd4->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
 					<div class="item-info5">
 						<h4><a href="products">{{ $prd4->name }}</a></h4>
 						<span>ID: {{ $prd4->id }}</span>
@@ -78,7 +78,7 @@
 			</div>
 			<div class="new-items new_last">
 				<div class="item3">
-					<a href="products"><img src="image_uploads/{{$prd5->image}}" alt=""/></a>
+					<a href="products"><img src="image_uploads/{{$prd5->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
 					<div class="item-info3">
 						<h4><a href="products">{{ $prd5->name }}</a></h4>
 						<span>ID: {{ $prd5->id }}</span>
@@ -86,7 +86,7 @@
 					</div>
 				</div>
 				<div class="item6">
-					<a href="products"><img src="image_uploads/{{$prd6->image}}" alt=""/></a>
+					<a href="products"><img src="image_uploads/{{$prd6->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
 					<div class="item-info6">
 						<h4><a href="products">{{ $prd6->name }}</a></h4>
 						<span>ID: {{ $prd6->id }}</span>

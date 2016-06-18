@@ -7,11 +7,11 @@
 			 <div class="cart box_1">
        @if(Auth::check())
        <a href="{{ URL::asset('carts')}}">
-         <h3>({{$cartdb}} items) <img src="images/bag.png" alt=""></h3>
+         <h3>({{$cartdb}} items) <img src="{{URL::asset('images/bag.png')}}" alt=""></h3>
         </a>
        @else
        <a href="{{ URL::asset('carts')}}">
-          <h3>Kshs {{Cart::total()}} ({{$cart}} items) <img src="images/bag.png" alt=""></h3>
+          <h3>Kshs {{Cart::total()}} ({{$cart}} items) <img src="{{URL::asset('images/bag.png')}}" alt=""></h3>
         </a>
        @endif
 				<p><a href="{{url('carts/remove?yes=1')}}" class="simpleCart_empty"><h5>Empty cart</h5></a></p>
@@ -23,7 +23,7 @@
 </div>
 <!--cart-->
 
-<!------>
+<!---->
 <div class="mega_nav">
 	 <div class="container">
 		 <div class="menu_sec">
