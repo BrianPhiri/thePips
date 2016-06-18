@@ -113,16 +113,13 @@
 				<h3>Price Details</h3>
 				<span>Total</span>
 				<span class="total">Ksh.</span>
-				<span>Discount</span>
-				<span class="total">---</span>
 				<!-- <span>Delivery Charges</span> -->
 				<!-- <span class="total">100.00</span> -->
 				<div class="clearfix"></div>
 			</div>
-			<h4 class="last-price">TOTAL</h4>
+			<h4 class="last-price">Total</h4>
 			<span id="total" class="total final">{{number_format($total)}}</span>
-			<div class="clearfix"></div>
-			<!-- <a class="order" href="{{url("carts/")}}">Place Order</a> -->
+			<div class="clearfix"></div><br>
 			<form action="{{URL::asset('checkout')}}" method="POST">
 			  <input type="hidden" name="_token" value="{{ csrf_token() }}">
 			<script
@@ -135,12 +132,12 @@
 			  data-locale="auto">
 			</script>
 			</form>
-			<div class="total-item">
+			<!-- <div class="total-item">
 				<h3>OPTIONS</h3>
 				<h4>COUPONS</h4>
 				<a class="cpns" href="#">Apply Coupons</a>
 				<p><a href="#">Log In</a> to use accounts - linked coupons</p>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </div>

@@ -14,6 +14,12 @@ use Cart;
 class OrdersController extends Controller
 {
 
+  public function __construct()
+  {
+      $this->middleware('auth', ['only'=>'checkout']);
+
+  }
+
   public function index(){
     $orders = Orders::with('orderItems')->get();
     return $orders;
