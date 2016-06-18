@@ -15,12 +15,10 @@
 
  		<div class="validation-form">
  	<!---->
-
+			 This product belongs the sub category: {{ $subcategory_name->name }}
 			{!! Form::model($product,  ['method' => 'PATCH', 'url' => 'product/'. $product->id ]) !!}
 				@include('admin.products._form', ['submitButtonText' => 'Update Product'])
 			{!! Form::close() !!}
 
  	<!---->
-
-
 @endsection
