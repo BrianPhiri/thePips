@@ -10,6 +10,7 @@ use App\Orders;
 use App\OrderItems;
 use App\ShopCart;
 use Cart;
+
 class OrdersController extends Controller
 {
 
@@ -52,9 +53,14 @@ class OrdersController extends Controller
 
         ShopCart::destroy($item->id);
         }
-      return redirect('/carts');
-     }else{
-       return redirect('/carts');
+
+      $request->session()->flash('message','Thank You '.Auth::user()->title.' '.Auth::user()->name.' for Shopping with us.');
+
+      return redirect()->intended('/shopCart');
+     }else
+     {
+        $request->session()->flash('message','Sorry '.Auth::user()->title.' '.Auth::user()->name.'the order has not been processed.');
+        return redirect('/shopCart');
      }
    }
 

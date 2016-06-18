@@ -1,7 +1,6 @@
 @extends('layouts.master')
 @section('content')
 <!-- header -->
-<!-- navbar for products -->
 @include('homepage._navbar')
 <!-- end navbar -->
 <!---->
@@ -33,7 +32,7 @@
 			</div>
 			<div class="cart-item-info">
 				<h3>{{$item->products->name}}<span>Model No: {{$item->products->id}}</span></h3>
-				<h4><span>Ksh </span>{{$item->products->price}}</h4>
+				<h4><span>Ksh </span>{{number_format($item->products->price)}}</h4>
 				<p class="qty">Qty ::</p>
 				<form class="form-inline">
 					<a class="cart_quantity_up" href='{{url("shopcarts?product_id=$item->products_id&increment=1")}}'><i class="fa fa-plus-square" aria-hidden="true"></i></a>
@@ -74,7 +73,7 @@
 					</div>
 					<div class="cart-item-info">
 						<h3>{{$item->name}}<span>Model No: {{$item->id}}</span></h3>
-						<h4><span>Ksh </span>{{$item->price}}</h4>
+						<h4><span>Ksh </span>{{number_format($item->price)}}</h4>
 						<p class="qty">Qty ::</p>
 						<form class="form-inline">
 							<!--  -->
@@ -121,7 +120,7 @@
 				<div class="clearfix"></div>
 			</div>
 			<h4 class="last-price">TOTAL</h4>
-			<span id="total" class="total final">{{$total}}</span>
+			<span id="total" class="total final">{{number_format($total)}}</span>
 			<div class="clearfix"></div>
 			<!-- <a class="order" href="{{url("carts/")}}">Place Order</a> -->
 			<form action="{{URL::asset('checkout')}}" method="POST">

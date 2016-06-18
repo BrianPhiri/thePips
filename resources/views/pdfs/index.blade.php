@@ -22,7 +22,7 @@
     @foreach($product as $products)
     <tr>
         <td>{{$products->name}}</td>
-        <td>{{$products->price}}</td>
+        <td>{{number_format($products->price)}}</td>
     </tr>
     @endforeach
 </table>

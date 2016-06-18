@@ -47,7 +47,6 @@
 				<div class="cost">
 					<div class="prdt-cost">
 						<ul>
-							{{--<li>MRP: <del>Rs 55000</del></li>--}}
 							<li>Selling Price:</li>
 							<li class="active">Ksh {{number_format($product->price)}}</li>
 							<!-- Start -->
@@ -63,25 +62,7 @@
 							<!-- <a href="{{ URL::asset('addItem')}}/{{$product->id}}">BUY NOW</a> -->
 						</ul>
 					</div>
-					<div class="check">
-						<p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>Enter pin code for delivery & availability</p>
-						<form class="navbar-form navbar-left" role="search">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Enter Pin code">
-							</div>
-							<button type="submit" class="btn btn-default">Verify</button>
-						</form>
-					</div>
 					<div class="clearfix"></div>
-				</div>
-				<div class="item-list">
-					<ul>
-						<li>Material: Solid Wood</li>
-						<li>Color: Brown</li>
-						<li>Style: Solid Wood</li>
-						<li>Brand: Corelle</li>
-						<li><a href="#">Click here for more details</a></li>
-					</ul>
 				</div>
 				<div class="single-bottom1">
 				</div>
@@ -214,7 +195,7 @@
 					</script>
 					<!-- script -->
 				</section>
-				<section  class="sky-form">
+				<!-- <section  class="sky-form">
 					<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>DISCOUNTS</h4>
 					<div class="row row1 scroll-pane">
 						<div class="col col-4">
@@ -227,8 +208,8 @@
 							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Other(50)</label>
 						</div>
 					</div>
-				</section>
-				<section  class="sky-form">
+				</section> -->
+				<!-- <section  class="sky-form">
 					<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Price</h4>
 					<ul class="dropdown-menu1">
 						<li><a href="">
@@ -236,7 +217,7 @@
 							<input type="text" id="amount" style="border: 0; font-weight: NORMAL;   font-family: 'Arimo', sans-serif;" />
 						</a></li>
 					</ul>
-				</section>
+				</section> -->
 				<!---->
 				<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 				<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
@@ -255,7 +236,7 @@
 				});//]]>
 
 				</script>
-				<section  class="sky-form">
+				<!-- <section  class="sky-form">
 					<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Type</h4>
 					<div class="row row1 scroll-pane">
 						<div class="col col-4">
@@ -271,8 +252,8 @@
 							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>3 Seater Sofas  (30)</label>
 						</div>
 					</div>
-				</section>
-				<section  class="sky-form">
+				</section> -->
+				<!-- <section  class="sky-form">
 					<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Brand</h4>
 					<div class="row row1 scroll-pane">
 						<div class="col col-4">
@@ -288,7 +269,7 @@
 							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Zumba</label>
 						</div>
 					</div>
-				</section>
+				</section> -->
 			</div>
 		</div>
 		<div class="clearfix"></div>

@@ -126,7 +126,7 @@
           <ul>
             <li><a href="#">help</a></li>|
             <li><a href="contact">Contact</a></li>|
-            <li><a href="pdfs">Catalogue</a></li>
+            <li><a href="{{url('pdfs')}}">Catalogue</a></li>
           </ul>
         </div>
         <div class="top_left">
