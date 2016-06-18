@@ -13,6 +13,11 @@ use App\Orders;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+      $this->middleware('admin');
+    }
+
     public function index(){
       $products = Products::All()->count();
       $categories = categories::All()->count();
