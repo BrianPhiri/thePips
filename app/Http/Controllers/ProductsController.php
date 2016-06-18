@@ -60,14 +60,23 @@ class ProductsController extends Controller
     public function edit($product_id){
       $product = Products::findOrFail($product_id);
       $categories = categories::All();
-      return view('admin.products.edit', compact('product', 'categories'));
+      $subcategory_name = Subcategories::findOrFail($product->sub_category_id)->select('category_id','name')->first();
+      $category_name = categories::findOrFail($subcategory_name->category_id)->select('name')->first();
+      return view('admin.products.edit', compact('product', 'categories',  'subcategory_name', 'category_name'));
     }
 
     public function update($product_id, Request $input ){
-      // $input = Request::all();
+      $subcategory = '';
       $product = Products::findOrFail($product_id);
+
+      if($input['sub_category_id'] == ''){
+        return $subcategory = $product->sub_category_id;
+      }else{
+        return $subcategory = $input['sub_category_id']; 
+      }
+      
       $product->name = $input['name'];
-      $product->sub_category_id = $input['sub_category_id'];
+      $product->sub_category_id = $subcategory;
       $product->price = $input['price'];
       $product->description = $input['description'];
       $product->save();
