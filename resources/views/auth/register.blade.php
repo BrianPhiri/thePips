@@ -72,9 +72,9 @@
                               <option value="{{ $titles->title}}">{{$titles->title}}</option>
                             @endforeach
                           </select>
-                                @if ($errors->has('title_id'))
+                                @if ($errors->has('title'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('title_id') }}</strong>
+                                        <strong>{{ $errors->first('title') }}</strong>
                                     </span>
                                 @endif
                         </label>
