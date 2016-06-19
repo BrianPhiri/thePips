@@ -14,7 +14,8 @@ class TitleTableSeeder extends Seeder
         
         DB::table('title')->insert([
             'title' => 'Mr',
-        ]);DB::table('title')->insert([
+        ]);
+        DB::table('title')->insert([
             'title' => 'Ms',
         ]);
         DB::table('title')->insert([
