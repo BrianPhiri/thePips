@@ -141,12 +141,12 @@
 		</div>
 	</div>
 </div>
-<!--Top Sellers-->
+<!--New Products-->
 <div class="top-sellers">
 	<div class="container">
 		<h3>New to the Family</h3>
 		<div class="seller-grids">
-			@foreach($products as $product)
+			@foreach($newProducts as $product)
 			<div class="col-md-3 seller-grid">
 				<a href="products/{{ $product->id}}"><img src="image_uploads/{{$product->image}}" style="width:255px; height:140.59px; " alt=""/></a>
 				<h4><a href="products">{{$product->name}}</a></h4>

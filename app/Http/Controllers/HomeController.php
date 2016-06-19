@@ -18,6 +18,7 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $products = Products::All();
+        $newProducts = Products::latest()->take(5)->get();
         // return $top = OrderItems::with('products')->count('products_id')->orderBy('count', 'desc')->get(); exit;
         $product= array();
         for ($i=1; $i < 7; $i++) { 
@@ -29,7 +30,7 @@ class HomeController extends Controller
         $prd4 = $product[3];
         $prd5 = $product[4];
         $prd6 = $product[5];
-        return view('homepage.index', compact('products','top','prd1','prd2', 'prd3', 'prd4', 'prd5', 'prd6'));
+        return view('homepage.index', compact('products','newProducts','top','prd1','prd2', 'prd3', 'prd4', 'prd5', 'prd6'));
     }
     public function show($id){
       $product = Products::findOrFail($id);
