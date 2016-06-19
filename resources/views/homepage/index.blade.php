@@ -42,9 +42,9 @@
 		<div class="new-products">
 			<div class="new-items">
 				<div class="item1">
-					<a href="products"><img src="image_uploads/{{$prd1->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
+					<a href="products/{{$prd1->id}}"><img src="image_uploads/{{$prd1->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
 					<div class="item-info">
-						<h4><a href="products">{{ $prd1->name }}</a></h4>
+						<h4><a href="products/{{$prd1->id}}">{{ $prd1->name }}</a></h4>
 						<span>ID: {{$prd1->id}}</span>
 						<form  method="POST" action="{{ url('/addItems') }}">
 								<input type="hidden" name="product_id" value="{{$prd1->id}}">
@@ -57,9 +57,9 @@
 					</div>
 				</div>
 				<div class="item4">
-					<a href="products"><img src="image_uploads/{{$prd2->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
+					<a href="products/{{$prd2->id}}"><img src="image_uploads/{{$prd2->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
 					<div class="item-info4">
-						<h4><a href="products">{{ $prd2->name }}</a></h4>
+						<h4><a href="products/{{$prd2->id}}">{{ $prd2->name }}</a></h4>
 						<span>ID: {{ $prd2->id }}</span>
 						<form  method="POST" action="{{ url('/addItems') }}">
 								<input type="hidden" name="product_id" value="{{$prd2->id}}">
@@ -75,7 +75,7 @@
 			<div class="new-items new_middle">
 				<div class="item2">
 					<div class="item-info2">
-						<h4><a href="products">{{ $prd3->name }}</a></h4>
+						<h4><a href="products/{{$prd3->id}}">{{ $prd3->name }}</a></h4>
 						<span>ID: {{ $prd3->id }}</span>
 						<form  method="POST" action="{{ url('/addItems') }}">
 								<input type="hidden" name="product_id" value="{{$prd3->id}}">
@@ -86,12 +86,12 @@
 								</button>
 							</form>
 					</div>
-					<a href="products"><img src="image_uploads/{{$prd3->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
+					<a href="products/{{$prd3->id}}"><img src="image_uploads/{{$prd3->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
 				</div>
 				<div class="item5">
-					<a href="products"><img src="image_uploads/{{$prd4->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
+					<a href="products/{{$prd4->id}}"><img src="image_uploads/{{$prd4->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
 					<div class="item-info5">
-						<h4><a href="products">{{ $prd4->name }}</a></h4>
+						<h4><a href="products/{{$prd4->id}}">{{ $prd4->name }}</a></h4>
 						<span>ID: {{ $prd4->id }}</span>
 						<form  method="POST" action="{{ url('/addItems') }}">
 								<input type="hidden" name="product_id" value="{{$prd4->id}}">
@@ -106,9 +106,9 @@
 			</div>
 			<div class="new-items new_last">
 				<div class="item3">
-					<a href="products"><img src="image_uploads/{{$prd5->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
+					<a href="products/{{$prd5->id}}"><img src="image_uploads/{{$prd5->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
 					<div class="item-info3">
-						<h4><a href="products">{{ $prd5->name }}</a></h4>
+						<h4><a href="products/{{$prd5->id}}">{{ $prd5->name }}</a></h4>
 						<span>ID: {{ $prd5->id }}</span>
 						<form  method="POST" action="{{ url('/addItems') }}">
 								<input type="hidden" name="product_id" value="{{$prd5->id}}">
@@ -121,9 +121,9 @@
 					</div>
 				</div>
 				<div class="item6">
-					<a href="products"><img src="image_uploads/{{$prd6->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
+					<a href="products/{{$prd6->id}}"><img src="image_uploads/{{$prd6->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
 					<div class="item-info6">
-						<h4><a href="products">{{ $prd6->name }}</a></h4>
+						<h4><a href="products/{{$prd6->id}}">{{ $prd6->name }}</a></h4>
 						<span>ID: {{ $prd6->id }}</span>
 						<form  method="POST" action="{{ url('/addItems') }}">
 								<input type="hidden" name="product_id" value="{{$prd6->id}}">
@@ -149,7 +149,7 @@
 			@foreach($newProducts as $product)
 			<div class="col-md-3 seller-grid">
 				<a href="products/{{ $product->id}}"><img src="image_uploads/{{$product->image}}" style="width:255px; height:140.59px; " alt=""/></a>
-				<h4><a href="products">{{$product->name}}</a></h4>
+				<h4><a href="products/{{ $product->id}}">{{$product->name}}</a></h4>
 				<span>Kshs {{number_format($product->price)}}</span>
 				<p>{{ substr($product->description,0,80).'...'}}</p>
 			</div>
@@ -169,7 +169,7 @@
 				@foreach($products as $product)
 				<li>
 					<a href="products/{{ $product->id}}"><img src="image_uploads/{{$product->image}}" style="width:176.23px; height:100px; " alt=""/></a>
-					<h4><a href="products">{{$product->name}}</a></h4>
+					<h4><a href="products/{{ $product->id}}">{{$product->name}}</a></h4>
 					<p>Kshs {{number_format($product->price)}}</p>
 				</li>
 				@endforeach
