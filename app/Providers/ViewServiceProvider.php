@@ -18,7 +18,7 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer(['homepage._navbar','layouts.master'], function ($view) {
+        view()->composer(['homepage._navbar','layouts.master','homepage._footer'], function ($view) {
             $view->with('subsub', Categories::with('category')->get());
             // Gets the number of items in the Authenticated users shop cart.
             if(Auth::check())

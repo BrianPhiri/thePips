@@ -32,24 +32,25 @@
 					 <li><span></span></li>
 					 <li>
 						 <div class="address-info">
-							 <h4>New York, Washington</h4>
-							 <p>10-765 MD-Road</p>
-							 <p>Washington, DC, United States,</p>
+							 <h4>Nairobi, Kenya</h4>
+							 <p>10-765 Pips-Avenue</p>
+							 <p>Nairobi, Kenya,</p>
 							 <p>Phone: 123 456 7890</p>
-							 <p>Mail: <a href="mailto:info@example.com">info(at)example.com</a></p>
+							 <p>Mail: <a href="mailto:info@example.com">thePips11@gmail.com</a></p>
 							 <h5><a href="">Visit on Google Maps >></a></h5>
 						 </div>
 					 </li>
 				  </ul>
+				  <!-- -->
 				  <ul>
 					 <li><span></span></li>
 					 <li>
 						 <div class="address-info">
-							 <h4>London, UK</h4>
-							 <p>10-765 MD-Road</p>
-							 <p>Lorem ipsum, domon sit, UK,</p>
+							 <h4>Mombasa, Kenya</h4>
+							 <p>10-765 Nyali-Avenue</p>
+							 <p>Mombasa, Kenya,</p>
 							 <p>Phone: 123 456 7890</p>
-							 <p>Mail: <a href="mailto:info@example.com">info(at)example.com</a></p>
+							 <p>Mail: <a href="#">thePips11@outlook.com</a></p>
 							 <h5><a href="">Visit on Google Maps >></a></h5>
 						 </div>
 					 </li>

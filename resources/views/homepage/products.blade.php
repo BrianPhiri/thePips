@@ -32,21 +32,21 @@
 	 							<h4>{{ $product->name}}</h4>
 	 							<p>Kes{{ number_format($product->price)}}</p>
 	 							<!-- <span class="item_price">$187.95</span> -->
-	 							<input type="text" class="item_quantity" value="1" />
-								<form  method="POST" action="{{ url('/carts') }}">
-									<input type="hidden" name="product_id" value="{{$product->id}}">
-									<input type="hidden" name="_token" value="{{ csrf_token() }}">
-									<button type="submit" class="btn btn-fefault add-to-cart">
-										<i class="fa fa-shopping-cart"></i>
-										Add to cart
-									</button>
+	 							<form  method="POST" action="{{ url('/addItems') }}">
+								<input type="hidden" name="product_id" value="{{$product->id}}">
+								<input type="hidden" name="_token" value="{{ csrf_token() }}">
+								<button type="submit" class="btn btn-fefault add-to-cart">
+									<i class="fa fa-shopping-cart"></i>
+									Add to cart
+								</button>
+							</form>
 	 						</div>
 	 						<div class="clearfix"> </div>
 	 					</div>
 	 				</div>
 			 @endforeach
 			</div>
-			@include(homepage._sidebar)
+			@include('homepage._sidebar')
 	      </div>
 		</div>
 </div>

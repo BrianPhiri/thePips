@@ -5,7 +5,7 @@
     <title>Sign Up Confirmation</title>
 </head>
 <body>
-    <h1><u>WELCOME TO THE PIPS</u></h1>
+    <h1>WELCOME TO THE PIPS</h1>
     <h2>Thanks for signing up!</h2>
 
     <p>

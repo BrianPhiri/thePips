@@ -45,6 +45,7 @@ Route::post('/checkout', 'OrdersController@checkout');
 Route::get('shopCart','CartController@showCart');
 Route::post('addItems','CartController@addItem');
 Route::get('destroyCart','CartController@destroyCart');
+Route::get('destroyDbCart','CartController@destroyDbCart');
 Route::post('increment','CartController@increment');
 Route::post('decrement','CartController@increment');
 Route::get('carts','CartController@cart');
@@ -86,3 +87,6 @@ Route::get('catalogue','PdfsController@downloadPDF');
 Route::get('pdfs','PdfsController@getProducts');
 
 Route::get('test', 'TestsController@index');
+
+// About Us
+$this->get('about', function(){ return view('homepage.about'); });

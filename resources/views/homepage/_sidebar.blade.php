@@ -5,7 +5,7 @@
 						 <div class="tab1">
 							 <ul class="place">
 								 <li class="sort">Furniture</li>
-								 <li class="by"><img src="images/do.png" alt=""></li>
+								 <li class="by"><img src="{{url('images/do.png')}}" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
 							 <div class="single-bottom">
@@ -18,7 +18,7 @@
 						  <div class="tab2">
 							 <ul class="place">
 								 <li class="sort">Decor</li>
-								 <li class="by"><img src="images/do.png" alt=""></li>
+								 <li class="by"><img src="{{url('images/do.png')}}" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
 							 <div class="single-bottom">
@@ -31,7 +31,7 @@
 						  <div class="tab3">
 							 <ul class="place">
 								 <li class="sort">Lighting</li>
-								 <li class="by"><img src="images/do.png" alt=""></li>
+								 <li class="by"><img src="{{url('images/do.png')}}" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
 							 <div class="single-bottom">
@@ -44,7 +44,7 @@
 						  <div class="tab4">
 							 <ul class="place">
 								 <li class="sort">Bed & Bath</li>
-								 <li class="by"><img src="images/do.png" alt=""></li>
+								 <li class="by"><img src="{{url('images/do.png')}}" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
 							 <div class="single-bottom">
@@ -57,7 +57,7 @@
 						  <div class="tab5">
 							 <ul class="place">
 								 <li class="sort">Fabric</li>
-								 <li class="by"><img src="images/do.png" alt=""></li>
+								 <li class="by"><img src="{{url('images/do.png')}}" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
 							 <div class="single-bottom">

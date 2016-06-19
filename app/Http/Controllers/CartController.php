@@ -94,10 +94,10 @@ class CartController extends Controller
     else{
       // Awesome!!
       $db_content = ShopCart::where('user_id',Auth::user()->id)->with('products')->get();
-        $total=0;
-        foreach($db_content as $item){
-            $total += $item->products->price*$item->quantity;
-        }
+      $total=0;
+      foreach($db_content as $item){
+        $total += $item->products->price*$item->quantity;
+      }
       // Means that contents of the Session are null.
       $content = null;
       // return $total;
@@ -112,18 +112,18 @@ class CartController extends Controller
   {
     // increments the quantity
     if (Request::get('product_id') && (Request::get('increment')) == 1) {
-        $rowId = Cart::instance('shopping')->search(array('id' => intval(Request::get('product_id'))));
-        $item = Cart::instance('shopping')->get($rowId[0]);
+      $rowId = Cart::instance('shopping')->search(array('id' => intval(Request::get('product_id'))));
+      $item = Cart::instance('shopping')->get($rowId[0]);
 
-        Cart::instance('shopping')->update($rowId[0], $item->qty + 1);
+      Cart::instance('shopping')->update($rowId[0], $item->qty + 1);
     }
 
     // decrease the quantity
     if (Request::get('product_id') && (Request::get('decrease')) == 1) {
-        $rowId = Cart::instance('shopping')->search(array('id' => intval(Request::get('product_id'))));
-        $item = Cart::instance('shopping')->get($rowId[0]);
+      $rowId = Cart::instance('shopping')->search(array('id' => intval(Request::get('product_id'))));
+      $item = Cart::instance('shopping')->get($rowId[0]);
 
-        Cart::instance('shopping')->update($rowId[0], $item->qty - 1);
+      Cart::instance('shopping')->update($rowId[0], $item->qty - 1);
     }
 
      // removes an Item
@@ -135,23 +135,23 @@ class CartController extends Controller
 
     $content = Cart::instance('shopping')->content();
     return redirect('shopCart');
-    }
+  }
     /**
      * Database Updates
     */
-      public function cartDb()
-  {
+    public function cartDb()
+    {
     // increments the quantity in db
-    if (Request::get('product_id') && (Request::get('increment')) == 1) {
+      if (Request::get('product_id') && (Request::get('increment')) == 1) {
         $cartItem = ShopCart::where('products_id',Request::get('product_id'))->first();
         $cartItem->quantity += 1;
         $cartItem->save();
 
         return redirect()->intended('shopCart');
-    }
+      }
 
     // decrease the quantity in db
-    if (Request::get('product_id') && (Request::get('decrease')) == 1) {
+      if (Request::get('product_id') && (Request::get('decrease')) == 1) {
         $cartItem = ShopCart::where('products_id',Request::get('product_id'))->first();
         $cartItem->quantity -= 1;
         $cartItem->save();
@@ -159,15 +159,15 @@ class CartController extends Controller
         ShopCart::where('quantity', 0)->delete();
 
         return redirect()->intended('shopCart');
-    }
+      }
 
      // removes an Item from db
-    if (Request::get('product_id') && (Request::get('remove')) == 1) 
-    {
-      ShopCart::where('products_id',Request::get('product_id'))->delete();
+      if (Request::get('product_id') && (Request::get('remove')) == 1) 
+      {
+        ShopCart::where('products_id',Request::get('product_id'))->delete();
 
-      return redirect()->intended('shopCart');
-    }
+        return redirect()->intended('shopCart');
+      }
     }
   /**
     * Deletes all Items From the Cart
@@ -175,6 +175,15 @@ class CartController extends Controller
   public function destroyCart()
   {
     Cart::instance('shopping')->destroy();
+    return redirect()->back();
+  }
+  /**
+   * Deletes the Cart from the Database
+   */
+  public function destroyDbCart()
+  {
+    ShopCart::where('user_id',Auth::user()->id)->delete();
+    return redirect()->back();
   }
   /**
     * Test Function
@@ -204,11 +213,11 @@ class CartController extends Controller
     foreach ($content as $contents) 
     {
       return Response::json(array(
-          'id'=>$contents->id,
-          'name'=>$contents->name,
-          'quantity'=>$contents->qty,
-          'price'=>$contents->price,
-          'subtotal'=>$contents->subtotal
+        'id'=>$contents->id,
+        'name'=>$contents->name,
+        'quantity'=>$contents->qty,
+        'price'=>$contents->price,
+        'subtotal'=>$contents->subtotal
         ));
     }
   }

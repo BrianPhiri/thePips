@@ -67,6 +67,17 @@ class AppMailer
 
         $this->deliver();
     }
+    /**
+     * Send an Email to the Users to Show Confirmation of the Orders
+     */
+    public function sendOrdersConfirmationTo(User $user)
+    {
+        $this->to = $user->email;
+        $this->view = 'emails.orders_confirmation';
+        $this->data = compact('user');
+
+        $this->deliver();
+    }
 
     /**
      * Deliver the email.
@@ -76,8 +87,8 @@ class AppMailer
     public function deliver()
     {
         $this->mailer->send($this->view, $this->data, function ($message) {
-            $message->from($this->from, 'Administrator, thePips')
-                    ->to($this->to);
+            $message->from($this->from, 'noreply, thePips')
+            ->to($this->to);
         });
     }
 }

@@ -11,32 +11,37 @@ use App\OrderItems;
 
 class CustomerController extends Controller
 {
-   public function index (){
-    $customers = User::All();
-   	return view('admin.customers.customer', compact('customers'));
-   }
+  public function __construct()
+  {
+    $this->middleware('admin');
+  }
 
-   public function show ($id){
+  public function index (){
+    $customers = User::All();
+    return view('admin.customers.customer', compact('customers'));
+  }
+
+  public function show ($id){
     $user = User::findOrFail($id)->first();
     // count orders
     $orderCount = Orders::where('user_id','=', $id)->count();
     // get order items
 
     $items = OrderItems::with('orders')->whereHas('orders', function($query) use ($id){
-        $query->where('user_id',$id);
+      $query->where('user_id',$id);
     })->get();
     // count order items
     $itemsCount = $items->count();
     $orderItems = Orders::where('user_id', '=', $id)->get();
     $user->delete();
-   	return view('admin.customers.profile', compact('user', 'orderCount','itemsCount', 'orderItems'));
+    return view('admin.customers.profile', compact('user', 'orderCount','itemsCount', 'orderItems'));
 
-   }
+  }
 
-   public function update(){}
-   public function destroy($id){
-     $user = User::find($id);
-     $user->delete();
-     return Redirect::to('/user');
-   }
+  public function update(){}
+  public function destroy($id){
+   $user = User::find($id);
+   $user->delete();
+   return Redirect::to('/user');
+ }
 }

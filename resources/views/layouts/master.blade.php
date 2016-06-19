@@ -32,20 +32,20 @@
   <script src="{{ asset('js/responsiveslides.min.js') }}"></script>
   <script src="{{ asset('js/jquery.etalage.min.js')}}"></script>
   <script>
-  jQuery(document).ready(function($){
+    jQuery(document).ready(function($){
 
-    $('#etalage').etalage({
-      thumb_image_width: 300,
-      thumb_image_height: 400,
-      source_image_width: 900,
-      source_image_height: 1200,
-      show_hint: true,
-      click_callback: function(image_anchor, instance_id){
-        alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
-      }
+      $('#etalage').etalage({
+        thumb_image_width: 300,
+        thumb_image_height: 400,
+        source_image_width: 900,
+        source_image_height: 1200,
+        show_hint: true,
+        click_callback: function(image_anchor, instance_id){
+          alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+        }
+      });
+
     });
-
-  });
   </script>
   <script>
   // You can also use "$(window).load(function() {"
@@ -58,19 +58,19 @@
       namespace: "callbacks",
     });
   });
-  </script>
-  <script type="text/javascript">
-    $.ajaxSetup({
-      headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-      }
-    });
-  </script>
-  <script type="text/javascript">
+</script>
+<script type="text/javascript">
   $.ajaxSetup({
-      headers: {
-          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-      }
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
+</script>
+<script type="text/javascript">
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
   });
 
   var timer;
@@ -92,30 +92,30 @@
   {
     clearTimeout(timer);
   }
-  </script>
-  <script type="text/javascript">
+</script>
+<script type="text/javascript">
     // For fading flash messages
     $(document).ready(function(){
       $('.alert').hide(10000);
     });
   </script>
   <span>
-  <style type="text/css">
-  .mail
-  {
-    width: 70%;
-    padding: 8px;font-size: 1em;
-    font-weight: 400;
-    border: 1px solid #D6D6D6;
-    outline: none;
-    color: #5d5959;margin-bottom:2em;
-  }
-  .fa-15x
-  {
-    font-size: 1.5em;
-  }
-  </style>
-</span>
+    <style type="text/css">
+      .mail
+      {
+        width: 70%;
+        padding: 8px;font-size: 1em;
+        font-weight: 400;
+        border: 1px solid #D6D6D6;
+        outline: none;
+        color: #5d5959;margin-bottom:2em;
+      }
+      .fa-15x
+      {
+        font-size: 1.5em;
+      }
+    </style>
+  </span>
 </head>
 <body>
   <!-- THIS IS THE TOP MOST GREEN NAVBAR!! -->
@@ -124,8 +124,8 @@
       <div class="header_top-sec">
         <div class="top_right">
           <ul>
-            <li><a href="#">help</a></li>|
-            <li><a href="contact">Contact</a></li>|
+            <li><a href="{{url('about')}}">About us</a></li> |
+            <li><a href="{{url('contact')}}">Contact</a></li>|
             <li><a href="{{url('pdfs')}}">Catalogue</a></li>
           </ul>
         </div>
@@ -136,12 +136,12 @@
             <li class="top_link"><a href="{{ URL::asset('login') }}"><i class="fa fa-btn fa-sign-in"></i> Sign In</a></li>|
             <!-- <i class="fa fa-btn fa-sign-out"></i> <li class="top_link"><a href="logout">Sign Out</a></li>| -->
             <li class="top_link"><a href="{{ URL::asset('register') }}">   <i class="fa fa-btn fa-user"></i> New User ?</a></li>
-              @else
-              <!-- Displays the name of the authenticated users. -->
-              <li><a href="{{ url::asset('/register') }}"><i class="fa fa-btn fa-user"></i> {{ Auth::user()->name }}</a></li> |
-              <li><a href="{{ url::asset('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> Sign Out</a></li>
-              @endif
-            </ul>
+            @else
+            <!-- Displays the name of the authenticated users. -->
+            <li><a href="{{ url::asset('/register') }}"><i class="fa fa-btn fa-user"></i> {{ Auth::user()->name }}</a></li> |
+            <li><a href="{{ url::asset('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> Sign Out</a></li>
+            @endif
+          </ul>
             <!-- <div class="social">
             <ul>
             <li><a href="#"><i class="facebook"></i></a></li>

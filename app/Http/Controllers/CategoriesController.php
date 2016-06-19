@@ -11,6 +11,11 @@ use Redirect;
 
 class CategoriesController extends Controller
 {
+    public function __construct()
+    {
+      $this->middleware('admin');
+    }
+    
     public function index(){
       $categories = categories::paginate(15);
       return view('admin.categories.category', compact('categories'));
