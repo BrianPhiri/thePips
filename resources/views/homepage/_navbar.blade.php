@@ -26,7 +26,7 @@
 
 <!---->
 <div class="mega_nav">
-  <div class="container">
+  <div class="container" style="padding-left: 10px; font-size: 90%;">
    <div class="menu_sec">
      <!-- start header menu -->
      <ul class="megamenu skyblue">
@@ -51,7 +51,6 @@
           </div>
           <div class="row">
             <div class="col2"></div>
-            <div class="col1"></div>
             <div class="col1"></div>
             <div class="col1"></div>
             <div class="col1"></div>

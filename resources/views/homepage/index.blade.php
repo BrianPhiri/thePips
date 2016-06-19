@@ -144,7 +144,7 @@
 <!--Top Sellers-->
 <div class="top-sellers">
 	<div class="container">
-		<h3>TOP - SELLERS</h3>
+		<h3>New to the Family</h3>
 		<div class="seller-grids">
 			@foreach($products as $product)
 			<div class="col-md-3 seller-grid">
