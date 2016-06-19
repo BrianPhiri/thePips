@@ -115,37 +115,22 @@
 							});
 						</script>
 						<!-- script -->
-				 </section>
-				 <!-- <section  class="sky-form">
-					 <h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>DISCOUNTS</h4>
-					 <div class="row row1 scroll-pane">
-						 <div class="col col-4">
-								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Upto - 10% (20)</label>
-						 </div>
-						 <div class="col col-4">
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>40% - 50% (5)</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>30% - 20% (7)</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>10% - 5% (2)</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Other(50)</label>
-						 </div>
-					 </div>
-				 </section> -->
-				   <!---->
-					 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-					 <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-					<script type='text/javascript'>//<![CDATA[
-					$(window).load(function(){
-					 $( "#slider-range" ).slider({
-								range: true,
-								min: 0,
-								max: 400000,
-								values: [ 8500, 350000 ],
-								slide: function( event, ui ) {  $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-								}
-					 });
-					$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+ 		</section>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+	$( "#slider-range" ).slider({
+		range: true,
+		min: 0,
+		max: 400000,
+		values: [ 8500, 350000 ],
+		slide: function( event, ui ) {  $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+	}
+});
+$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 
-					});//]]>
-					</script>
-					 <!---->
-			 </div>
+});//]]>
+</script>
+<!---->
+</div>

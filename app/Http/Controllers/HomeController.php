@@ -29,7 +29,7 @@ class HomeController extends Controller
         $prd4 = $product[3];
         $prd5 = $product[4];
         $prd6 = $product[5];
-        // return view('homepage.index', compact('products','top','prd1','prd2', 'prd3', 'prd4', 'prd5', 'prd6'));
+        return view('homepage.index', compact('products','top','prd1','prd2', 'prd3', 'prd4', 'prd5', 'prd6'));
     }
     public function show($id){
       $product = Products::findOrFail($id);
