@@ -42,4 +42,13 @@ class HomeController extends Controller
       $subcategories = Subcategories::find($id)->products()->get();
       return view('homepage.products', compact('subcategories'));
     }
+    
+    public function special($by){
+
+      $subcategories = Subcategories::with('products')->whereHas('products', function($query) use ($by){
+        $query->where('place',$by);
+      })->get();
+
+      return view('homepage.products', compact('subcategories'));
+    }
 }

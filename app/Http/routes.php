@@ -61,17 +61,20 @@ Route::get('/', 'HomeController@index');
 // Route Resource
 Route::get('products/{productId}','HomeController@show');
 Route::get('products/category/{productId}','HomeController@categoryProducts');
+Route::get('special/{by}', 'HomeController@special');
+// Route::post('special/{by}', 'HomeController@special');
 
 // admin
 Route::get('/admin', 'AdminController@index');
 Route::get('/summary', 'AdminController@summary');
 Route::get('/subcategories', 'ProductsController@subcategory');
+Route::get('/orders', 'AdminController@order');
+Route::get('/user/{id}', 'CustomerController@show');
 Route::resource('category', 'CategoriesController');
 Route::resource('product', 'ProductsController');
 Route::resource('subcategory', 'SubcategoryController');
 Route::resource('customers', 'CustomerController');
-Route::get('/orders', 'AdminController@order');
-Route::get('/user/{id}', 'CustomerController@show');
+
 
 Route::get('/error', function(){ return view('admin/brian'); });
 
@@ -86,7 +89,7 @@ Route::get('catalogue','PdfsController@downloadPDF');
 
 Route::get('pdfs','PdfsController@getProducts');
 
-Route::get('test', 'TestsController@index');
+Route::get('/test', 'TestsController@index');
 
 // About Us
 $this->get('about', function(){ return view('homepage.about'); });

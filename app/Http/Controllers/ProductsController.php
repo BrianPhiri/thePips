@@ -53,6 +53,7 @@ class ProductsController extends Controller
           'name' => $post['name'],
           'sub_category_id' => $post['sub_category_id'],
           'price' => $post['price'],
+          'place' => $post['place'],
           'image' => $destinationPath,
           'description' => $post['description']
           ]);

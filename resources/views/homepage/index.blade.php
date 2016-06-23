@@ -24,12 +24,12 @@
 			<div class="col-md-6 sofa-grid">
 				<img src="images/t1.jpg" alt=""/>
 				<h3>IMPORTED DINING SETS</h3>
-				<h4><a href="products">SPECIAL ACCENTS OFFER</a></h4>
+				<h4><a href="special/other">SPECIAL ACCENTS OFFER</a></h4>
 			</div>
 			<div class="col-md-6 sofa-grid sofs">
 				<img src="images/t2.jpg" alt=""/>
-				<h3>SPECIAL DESIGN SOFAS</h3>
-				<h4><a href="products">FABFURNISHING MELA</a></h4>
+				<h3>MADE BY THEPIPS</h3>
+				<h4><a href="special/thepips">FABFURNISHING MELA</a></h4>
 			</div>
 			<div class="clearfix"></div>
 		</div>

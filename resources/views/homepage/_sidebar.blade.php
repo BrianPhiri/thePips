@@ -1,19 +1,19 @@
-<div class="rsidebar span_1_of_left">
+<!-- <div class="rsidebar span_1_of_left"> -->
 				 <section  class="sky-form">
 					 <div class="product_right">
 						 <h4 class="m_2"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Categories</h4>
 						 <div class="tab1">
-							 <ul class="place">
-								 <li class="sort">Furniture</li>
+							 @foreach($cat1 as $c1)
+							 	<ul class="place">
+								 <li class="sort">{{ $c1->name }}</li>
 								 <li class="by"><img src="{{url('images/do.png')}}" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
 							 <div class="single-bottom">
 									<a href="#"><p>Sofas</p></a>
-									<a href="#"><p>Fabric Sofas</p></a>
-									<a href="#"><p>Love Seats</p></a>
-									<a href="#"><p>Dinning Sets</p></a>
+
 						     </div>
+							 @endforeach 
 					      </div>
 						  <div class="tab2">
 							 <ul class="place">
@@ -23,10 +23,7 @@
 							  </ul>
 							 <div class="single-bottom">
 									<a href="#"><p>Shelves</p></a>
-									<a href="#"><p>Wall Racks</p></a>
-									<a href="#"><p>Curios</p></a>
-									<a href="#"><p>Ash Trays</p></a>
-						     </div>
+		
 					      </div>
 						  <div class="tab3">
 							 <ul class="place">
@@ -133,4 +130,4 @@ $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + 
 });//]]>
 </script>
 <!---->
-</div>
+<!-- </div> -->

@@ -31,6 +31,20 @@ class ViewServiceProvider extends ServiceProvider
                 $view->with('cart',Cart::instance('shopping')->count());
             }
         });
+
+        view()->composer(['homepage._sidebar'], function ($view){
+            for ($i=1; $i < 5; $i++) { 
+                $cat[] = Categories::with('category')->latest('created_at')->get();
+            }
+            $cat1 = $cat[0];
+            $cat2 = $cat[1];
+            $cat3 = $cat[2];
+            $cat4 = $cat[3];
+            // $cat5 = $cat[4];
+
+            $view->with('cat1','cat2','cat3','cat4','cat5');
+            // $view->with('cat', Categories::with('category')->latest('created_at')->take(5)->get());    
+        });
     }
 
     /**

@@ -31,11 +31,19 @@
     {!! Form::label('catname', 'Product Name') !!}
     {!! Form::text('name', null, ['placeholder' => 'Product Name','required' => '']) !!}
   </div>
+    <!-- production -->
+  <div class="clearfix"> </div>
+  <div class="col-md-6 form-group1">
+    {!! Form::label('production', 'Production') !!}
+    {!! Form::select('place', array('ThePips' => 'ThePips', 'Other' => 'Other')) !!}
+  </div>
+  <!---->
   <div class="col-md-12 form-group1">
     {!! Form::label('prodprice', 'Product Price') !!}
     {!! Form::text('price', null, ['placeholder' => 'Product Price','required' => '']) !!}
      <p class=" hint-block">Price values from 1-***</p>
   </div>
+
    <div class="clearfix"> </div>
    <div class="clearfix"> </div>
    <div class="col-md-6 form-group1">
