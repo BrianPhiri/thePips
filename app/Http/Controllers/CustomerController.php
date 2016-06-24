@@ -13,7 +13,7 @@ class CustomerController extends Controller
 {
   public function __construct()
   {
-    $this->middleware('admin');
+    // $this->middleware('admin');
   }
 
   public function index (){
@@ -39,9 +39,10 @@ class CustomerController extends Controller
   }
 
   public function update(){}
-  public function destroy($id){
-   $user = User::find($id);
-   $user->delete();
-   return Redirect::to('/user');
- }
+
+ //  public function destroy($id){
+ //   $user = User::find($id);
+ //   $user->delete();
+ //   return Redirect::to('/user');
+ // }
 }

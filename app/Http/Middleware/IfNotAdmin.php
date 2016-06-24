@@ -21,10 +21,10 @@ class IfNotAdmin
         {
             $role = Auth::user()->role;
 
-            if($role != 'Administrator')
+            if($role === 'Administrator')
             {
                 $request->session()->flash('message','Access Denied');
-                return redirect()->back();
+                // return redirect()->back();
             }
             else
             {
@@ -35,7 +35,7 @@ class IfNotAdmin
         {
             return 'Not logged in';
         }
-        
-        
+
+
     }
 }
