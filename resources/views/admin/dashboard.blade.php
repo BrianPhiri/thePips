@@ -15,7 +15,7 @@
 		<div class="content-top">
 
 
-			<div class="col-md-4 ">
+			<div class="col-md-6 ">
 				<div class="content-top-1">
 				<div class="col-md-6 top-content">
 					<h5>Category</h5>
@@ -28,49 +28,57 @@
 				</div>
 				<div class="content-top-1">
 				<div class="col-md-6 top-content">
-					<h5>products</h5>
-					<label id="products"></label>
+					<h5>subcategories</h5>
+					<label id="subcategories"></label>
 				</div>
 				<div class="col-md-6 top-content1">
-					<div id="demo-pie-2" class="pie-title-center" data-percent="{{ $products }}"> <span class="pie-value"></span> </div>
+					<div id="demo-pie-2" class="pie-title-center" data-percent="{{ $subcategories }}"> <span class="pie-value"></span> </div>
 				</div>
 				 <div class="clearfix"> </div>
 				</div>
 				<div class="content-top-1">
 				<div class="col-md-6 top-content">
-					<h5>customers</h5>
+					<h5>Products</h5>
 					<label id="customers"></label>
 				</div>
 				<div class="col-md-6 top-content1">
-					<div id="demo-pie-3" class="pie-title-center" data-percent="{{ $customers }}"> <span class="pie-value"></span> </div>
+					<div id="demo-pie-3" class="pie-title-center" data-percent="{{ $products }}"> <span class="pie-value"></span> </div>
 				</div>
 				 <div class="clearfix"> </div>
 				</div>
 			</div>
 
-			<div class="col-md-8 content-top-2">
-				<!---start-chart---->
-				<!----->
-				<!--graph-->
-				<!-- latest post -->
-				<div >
-						<h3>Latest Products</h3>
-						<!-- start content_slider -->
-						<div style="opacity: 1; display: block;" id="owl-demo" class="owl-carousel text-center owl-theme">
-							<div class="owl-wrapper-outer"><div style="width: 1862px; left: 0px; display: block; transition: all 800ms ease 0s; transform: translate3d(-266px, 0px, 0px);" class="owl-wrapper">
-								@foreach($latestProducts as $image)
-								<div style="width: 133px;" class="owl-item">
-									<div class="item">
-											<img src="image_uploads/{{ $image->image }}" style="display: block;" class="lazyOwl img-responsive" alt="name">
-									</div>
-								</div>
-								@endforeach
-						</div>
-						<div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page active"><span class=""></span></div><div class="owl-page"><span class=""></span></div></div></div>
-					</div>
-						</div>
-				<!-- end latest -->
-		</div>
+			<div class="col-md-6 content-top-2">
+				<div class="content-top-1">
+				<div class="col-md-6 top-content">
+					<h5>Orders</h5>
+					<label id="orders"></label>
+				</div>
+				<div class="col-md-6 top-content1">
+					<div id="demo-pie-4" class="pie-title-center" data-percent="{{ $orders }}"> <span class="pie-value"></span> </div>
+				</div>
+				 <div class="clearfix"> </div>
+				</div>
+				<div class="content-top-1">
+				<div class="col-md-6 top-content">
+					<h5>Items Bought</h5>
+					<label id="orderItems"></label>
+				</div>
+				<div class="col-md-6 top-content1">
+					<div id="demo-pie-5" class="pie-title-center" data-percent="{{ $orderItems }}"> <span class="pie-value"></span> </div>
+				</div>
+				 <div class="clearfix"> </div>
+				</div>
+				<div class="content-top-1">
+				<div class="col-md-6 top-content">
+					<h5>Customers</h5>
+					<label id="customers"></label>
+				</div>
+				<div class="col-md-6 top-content1">
+					<div id="demo-pie-6" class="pie-title-center" data-percent="{{ $customers }}"> <span class="pie-value"></span> </div>
+				</div>
+				 <div class="clearfix"> </div>
+				</div>
 		</div>
 		<div class="clearfix"> </div>
 		</div>
@@ -117,11 +125,17 @@
 						productCount = reportObj.products;
 						categoryCount = reportObj.categories;
 						customerCount = reportObj.customers;
+						orderCount = reportObj.orders;
+						itemCount = reportObj.orderItems;
+						subcategories = reportObj.subcategories;
 					});
 					//  console.log(productCount);
 					 $('#products').html(productCount);
 					 $('#category').html(categoryCount);
+					 $('#subcategories').html(subcategoriesCount);
 					 $('#customers').html(customerCount);
+					 $('#orders').html(orderCount);
+					 $('#orderItems').html(itemCount);
 					},
 				});
 

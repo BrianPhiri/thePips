@@ -16,7 +16,6 @@
       </thead>
       <hr>
       <tbody>
-
             @foreach($subcategory->category as $sub)
               <tr>
                   <td>{{ $sub->name }}</td><td>{{ $sub->description }}</td>

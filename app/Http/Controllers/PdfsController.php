@@ -44,4 +44,6 @@ class PdfsController extends Controller
       $pdf = PDF::loadView('pdfs.subcategories', ['subcategories' => $subcategories]);
       return $pdf->download('subcategories.pdf');
     }
+    // TODO: add pdf for customers
+    // TODO: add pdf for orders
 }

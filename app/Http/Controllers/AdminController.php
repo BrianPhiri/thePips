@@ -8,8 +8,10 @@ use App\Http\Requests;
 use Response;
 use App\Products;
 use App\Categories;
+use App\Subcategories;
 use App\User;
 use App\Orders;
+use App\OrderItems;
 
 class AdminController extends Controller
 {
@@ -21,9 +23,17 @@ class AdminController extends Controller
     public function index(){
       $products = Products::All()->count();
       $categories = categories::All()->count();
+      $subcategories = Subcategories::all()->count();
       $customers = User::All()->count();
-      $latestProducts = Products::latest()->select('image')->take(5)->get();
-      return view('admin/dashboard')->with('products', $products)->with('categories', $categories)->with('customers', $customers)->with('latestProducts', $latestProducts);
+      $orders = Orders::all()->count();
+      $orderItems = OrderItems::all()->count();
+      // $latestProducts = Products::latest()->select('image')->take(5)->get();
+      return view('admin/dashboard')->with('products', $products)
+                                    ->with('categories', $categories)
+                                    ->with('subcategories', $subcategories)
+                                    ->with('customers', $customers)
+                                    ->with('orders', $orders)
+                                    ->with('orderItems', $orderItems);
     }
     public function summary(){
       $products = Products::All()->count();
