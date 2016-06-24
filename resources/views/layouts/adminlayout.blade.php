@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
- 
+
 	<title>ThePipsOnlineShoppingSolution</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -195,18 +195,18 @@
                     </li>
 
                     <li>
-                        <a href="customers" class=" hvr-bounce-to-right"><i class="glyphicon glyphicon-user nav_icon"></i> <span class="nav-label">Customers</span> </a>
+                        <a href="{{URL::asset('customers')}}" class=" hvr-bounce-to-right"><i class="glyphicon glyphicon-user nav_icon"></i> <span class="nav-label">Customers</span> </a>
                     </li>
 
                                         <li>
-                        <a href="orders" class=" hvr-bounce-to-right"><i class="glyphicon glyphicon-list nav_icon"></i> <span class="nav-label">Order List</span> </a>
+                        <a href="{{URL::asset('orders')}}" class=" hvr-bounce-to-right"><i class="glyphicon glyphicon-list nav_icon"></i> <span class="nav-label">Order List</span> </a>
                     </li>
 
                     <li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-cog nav_icon"></i> <span class="nav-label">Settings</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="signin" class=" hvr-bounce-to-right"><i class="fa fa-sign-in nav_icon"></i>Signin</a></li>
-                            <li><a href="signup" class=" hvr-bounce-to-right"><i class="fa fa-sign-in nav_icon"></i>Singup</a></li>
+                            <li><a href="{{URL::asset('logout')}}" class=" hvr-bounce-to-right"><i class="fa fa-sign-in nav_icon"></i>Signout</a></li>
+                          <!--  <li><a href="signup" class=" hvr-bounce-to-right"><i class="fa fa-sign-in nav_icon"></i>Singup</a></li>-->
                         </ul>
                     </li>
                 </ul>
