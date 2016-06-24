@@ -70,6 +70,7 @@ Route::get('/summary', 'AdminController@summary');
 Route::get('/subcategories', 'ProductsController@subcategory');
 Route::get('/orders', 'AdminController@order');
 Route::get('/user/{id}', 'CustomerController@show');
+Route::get('/user/order/{id}', 'CustomerController@displayOrders');
 Route::resource('category', 'CategoriesController');
 Route::resource('product', 'ProductsController');
 Route::resource('subcategory', 'SubcategoryController');

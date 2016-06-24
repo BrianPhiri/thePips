@@ -33,13 +33,14 @@ class CustomerController extends Controller
     // count order items
     $itemsCount = $items->count();
     $orderItems = Orders::where('user_id', '=', $id)->get();
-    $user->delete();
     return view('admin.customers.profile', compact('user', 'orderCount','itemsCount', 'orderItems'));
 
   }
+  public function displayOrders($id){
+    $orderItems = Orders::where('user_id', '=', $id)->get();
+  }
 
   public function update(){}
-
  //  public function destroy($id){
  //   $user = User::find($id);
  //   $user->delete();

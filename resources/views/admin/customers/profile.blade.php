@@ -1,7 +1,7 @@
 @extends('layouts.adminlayout')
 @section('content')
 
- 	<!--banner-->	
+ 	<!--banner-->
 		    <div class="banner">
 		    	<h2>
 				<a href="index.html">Home</a>
@@ -22,10 +22,10 @@
 			<div class="col-md-8 profile-text">
 				<h6>The Pips E-Commerce</h6>
 				<table>
-				<tr><td>Name</td>  
-				<td>:</td>  
+				<tr><td>Name</td>
+				<td>:</td>
 				<td>{{ $user->name }}</td></tr>
-				
+
 				<tr>
 				<td>Email</td>
 				<td> :</td>
@@ -49,7 +49,7 @@
 			<div class="col-md-6 profile-fo">
 				<h4>{{ $orderCount }}</h4>
 				<p>Orders</p>
-				<a href="#" class="pro" data-toggle="modal" data-target=".bs-example-modal-lg"> <i class="fa fa-plus-circle"> </i>List Of orders</a>
+				<a href="{{URL::asset('user/orders')}}/{{$user->id}}" class="pro"> <i class="fa fa-plus-circle"> </i>List Of orders</a>
 			</div>
 			<div class="col-md-6 profile-fo">
 				<h4>{{$itemsCount}}</h4>
@@ -62,28 +62,8 @@
 			<div class="profile-btn">
            <div class="clearfix"></div>
 			</div>
-			 
-			<!-- Model for list of orders made by customer -->
-			<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-				<div class="modal-dialog modal-lg">
-					<div class="modal-content">
-						<table id="myTable" class="table table-striped">
-							<thead><tr> <td>Order Id</td> <td>Order date</td> <td>Total Price</td> </tr></thead>
-							<tbody>
-								@foreach($orderItems as $item)
-									<tr> <td>{{ $item->id }}</td> <td>{{ $item->created_at }}</td> <td>{{ $item->total }}</td> </tr>
-								@endforeach
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-			<!-- End of orders Model-->
 		</div>
 	</div>
 	<!--//gallery-->
 		<!---->
 @endsection
-
-
-
