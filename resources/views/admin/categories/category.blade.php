@@ -14,6 +14,29 @@
 <!---->
 	<div class="clearfix"> </div>
 	<div class="content-top">
+		<!-- Small modal -->
+		<!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#mypdfmodel">Download pdf report</button> -->
+		<a href="{{URL::asset('category-pdf')}}" class="btn btn-success">Download pdf report</a>
+
+		<div class="modal fade" id="mypdfmodel" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="" style="padding: 10px;">
+						{{Form::open(array('action' => 'PdfsController@downloadCategoryPdf'))}}
+							<div class="form-group">
+								<label>Form: </label>
+								<input type="datetime" class="form-control" name="date_from" value="">
+							</div>
+							<div class="form-group">
+								<label>To: </label>
+								<input type="datetime" class="form-control" name="date_to" value="">
+							</div>
+							{{ Form::submit('Generate PDF',['class' => 'btn btn-warning'])}}
+						{{ Form::close()}}
+		      </div>
+		    </div>
+		  </div>
+		</div>
     <table class="table table-hover" id="myTable">
         <thead>
             <tr>

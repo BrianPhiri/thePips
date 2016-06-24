@@ -88,10 +88,14 @@ Route::post('executeSearch','SearchController@executeSearch');
 
 //PDFs Route
 Route::get('catalogue','PdfsController@downloadPDF');
-
 Route::get('pdfs','PdfsController@getProducts');
+Route::get('category-pdf', 'PdfsController@downloadCategoryPdf');
+Route::get('subcategory-pdf', 'PdfsController@downloadSubcategoryPdf');
 
+//testing route and controller
+//this is only for testing please
 Route::get('/test', 'TestsController@index');
+
 
 // About Us
 $this->get('about', function(){ return view('homepage.about'); });

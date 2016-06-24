@@ -14,6 +14,7 @@
 <!---->
 	<div class="clearfix"> </div>
 	<div class="content-top">
+		<a href="{{URL::asset('subcategory-pdf')}}" class="btn btn-success">Download pdf report</a>
     <table class="table table-hover" id="myTable">
         <thead>
             <tr>
