@@ -54,7 +54,7 @@
 			<div class="col-md-6 profile-fo">
 				<h4>{{$itemsCount}}</h4>
 				<p>Items Bought</p>
-				<a href="#" class="pro1"><i class="fa fa-user"></i>List of Items</a>
+				<a href="{{ URL::asset('user/orders')}}/{{$user->id}}/items" class="pro1"><i class="fa fa-user"></i>List of Items</a>
 			</div>
 
 			<div class="clearfix"></div>

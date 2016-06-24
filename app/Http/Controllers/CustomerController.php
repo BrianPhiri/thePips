@@ -22,7 +22,7 @@ class CustomerController extends Controller
   }
 
   public function show ($id){
-    $user = User::findOrFail($id)->first();
+    $user = User::findOrFail($id);
     // count orders
     $orderCount = Orders::where('user_id','=', $id)->count();
     // get order items
@@ -37,7 +37,16 @@ class CustomerController extends Controller
 
   }
   public function displayOrders($id){
-    $orderItems = Orders::where('user_id', '=', $id)->get();
+    $orders = Orders::where('user_id', '=', $id)->get();
+    return view('admin.customers.customerOders', compact('orders'));
+  }
+  
+  public function displayOrderItems($id){
+    $items = OrderItems::with('orders')->whereHas('orders', function($query) use ($id){
+      $query->where('user_id',$id);
+    })->get();
+    // return $items;
+    return view('admin.customers.customerOderItems', compact('items'));
   }
 
   public function update(){}

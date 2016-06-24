@@ -3,9 +3,9 @@
 					 <div class="product_right">
 						 <h4 class="m_2"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Categories</h4>
 						 <div class="tab1">
-							 @foreach($cat1 as $c1)
+
 							 	<ul class="place">
-								 <li class="sort">{{ $c1->name }}</li>
+								 <li class="sort">Chairs</li>
 								 <li class="by"><img src="{{url('images/do.png')}}" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
@@ -13,7 +13,7 @@
 									<a href="#"><p>Sofas</p></a>
 
 						     </div>
-							 @endforeach 
+
 					      </div>
 						  <div class="tab2">
 							 <ul class="place">
@@ -23,7 +23,7 @@
 							  </ul>
 							 <div class="single-bottom">
 									<a href="#"><p>Shelves</p></a>
-		
+
 					      </div>
 						  <div class="tab3">
 							 <ul class="place">
