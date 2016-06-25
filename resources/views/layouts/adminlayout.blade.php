@@ -229,7 +229,7 @@
 			$('#myTable').DataTable({
 				searching: true,
 				select: true,
-				ordering: false
+				ordering: true
 			});
 		});
         // For fading flash messages

@@ -162,16 +162,18 @@
 <div class="recommendation">
 	<div class="container">
 		<div class="recmnd-head">
-			<h3>RECOMMENDATIONS FOR YOU</h3>
+			<h3>MOST POPULAR</h3>
 		</div>
 		<div class="bikes-grids">
 			<ul id="flexiselDemo1">
-				@foreach($products as $product)
-				<li>
-					<a href="products/{{ $product->id}}"><img src="image_uploads/{{$product->image}}" style="width:176.23px; height:100px; " alt=""/></a>
-					<h4><a href="products/{{ $product->id}}">{{$product->name}}</a></h4>
-					<p>Kshs {{number_format($product->price)}}</p>
-				</li>
+				@foreach($top as $tp)
+					@foreach($tp->products()->get() as $product)
+					<li>
+						<a href="products/{{ $product->id}}"><img src="image_uploads/{{$product->image}}" style="width:176.23px; height:100px; " alt=""/></a>
+						<h4><a href="products/{{ $product->id}}">{{$product->name}}</a></h4>
+						<p>Kshs {{number_format($product->price)}}</p>
+					</li>
+					@endforeach
 				@endforeach
 			</ul>
 			<script type="text/javascript">

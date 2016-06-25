@@ -19,9 +19,11 @@ class HomeController extends Controller
     {
         $products = Products::All();
         $newProducts = Products::latest()->take(5)->get();
-        // return $top = OrderItems::with('products')->count('products_id')->orderBy('count', 'desc')->get(); exit;
+        $top = OrderItems::with('products')->select('products_id', DB::raw('COUNT(products_id) as count'))
+        ->groupBy('products_id')->orderBy('count', 'desc')->take(5)->get();
+
         $product= array();
-        for ($i=1; $i < 7; $i++) { 
+        for ($i=1; $i < 7; $i++) {
           $product[] = Products::all()->random(1);
         }
         $prd1 = $product[0];
@@ -42,7 +44,7 @@ class HomeController extends Controller
       $subcategories = Subcategories::find($id)->products()->get();
       return view('homepage.products', compact('subcategories'));
     }
-    
+
     public function special($by){
 
       $subcategories = Subcategories::with('products')->whereHas('products', function($query) use ($by){

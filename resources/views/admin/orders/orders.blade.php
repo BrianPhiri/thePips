@@ -15,13 +15,13 @@
 			<table id="myTable" class="table table-hover table-stripped">
 				<thead>
 					<tr>
-						<td>Order ID</td> <td>Customer ID</td><td>Total Price</td><td>Ordered On</td><td></td><td></td>
+						<td>Order ID</td> <td>Customer ID</td><td>Total Price</td><td>Ordered On</td><td></td>
 					</tr>
 				</thead>
 				<tbody>
 					@foreach($orders as $order)
 						<tr>
-							<td>{{ $order->id }}</td><td>{{$order->user_id}}</td><td>{{ $order->total }}</td><td>{{ $order->created_at }}</td>
+							<td>{{ $order->id }}</td><td>{{$order->user_id}}</td><td>{{ $order->total }}</td><td>{{ $order->created_at }}</td><td><a href="{{URL::asset('orders')}}/{{$order->id}}/items" class="btn btn-primary">View order details</a></td>
 						</tr>
 					@endforeach
 				</tbody>

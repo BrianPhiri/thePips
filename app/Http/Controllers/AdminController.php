@@ -49,4 +49,10 @@ class AdminController extends Controller
       $orders = Orders::with('orderItems')->get();
       return view('admin.orders.orders', compact('orders'));
     }
+    public function orderItems($id){
+      $items = Products::with('orderItems')->whereHas('orderItems', function($query) use($id){
+        $query->where('orders_id', $id);
+      })->get();
+      return view('admin.orders.orderItems', compact('items'));
+    }
 }

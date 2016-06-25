@@ -69,6 +69,7 @@ Route::get('/admin', 'AdminController@index');
 Route::get('/summary', 'AdminController@summary');
 Route::get('/subcategories', 'ProductsController@subcategory');
 Route::get('/orders', 'AdminController@order');
+Route::get('/orders/{id}/items', 'AdminController@orderItems');
 Route::get('/user/{id}', 'CustomerController@show');
 Route::get('/user/orders/{id}', 'CustomerController@displayOrders');
 Route::get('/user/orders/{id}/items', 'CustomerController@displayOrderItems');
