@@ -46,7 +46,7 @@ class AdminController extends Controller
 
     // orders information
     public function order(){
-      $orders = Orders::All();
-    return view('admin.orders.orders', compact('orders'));
+      $orders = Orders::with('orderItems')->get();
+      return view('admin.orders.orders', compact('orders'));
     }
 }

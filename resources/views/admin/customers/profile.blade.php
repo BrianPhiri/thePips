@@ -49,12 +49,12 @@
 			<div class="col-md-6 profile-fo">
 				<h4>{{ $orderCount }}</h4>
 				<p>Orders</p>
-				<a href="{{URL::asset('user/orders')}}/{{$user->id}}" class="pro"> <i class="fa fa-plus-circle"> </i>List Of orders</a>
+				<a href="{{URL::asset('user/orders')}}/{{$user->id}}" class="pro"> <i class=" glyphicon glyphicon-star"> </i>List Of orders</a>
 			</div>
 			<div class="col-md-6 profile-fo">
 				<h4>{{$itemsCount}}</h4>
 				<p>Items Bought</p>
-				<a href="{{ URL::asset('user/orders')}}/{{$user->id}}/items" class="pro1"><i class="fa fa-user"></i>List of Items</a>
+				<a href="{{ URL::asset('user/orders')}}/{{$user->id}}/items" class="pro1"><i class=" glyphicon glyphicon-star-empty"></i>List of Items</a>
 			</div>
 
 			<div class="clearfix"></div>

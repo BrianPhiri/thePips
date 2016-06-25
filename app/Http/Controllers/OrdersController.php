@@ -21,13 +21,6 @@ class OrdersController extends Controller
 
   }
 
-  public function index(){
-    $orders = Orders::with('orderItems')->get();
-    return $orders;
-    // return view('admin.orders', compact('orders'));
-  }
-
-
   public function checkout(Request $request){
     $token = $request->input('stripeToken');
     //  $cart = ShopCart::where('user_id', '=', Auth::user()->id)->first();

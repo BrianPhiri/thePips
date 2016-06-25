@@ -31,47 +31,9 @@
 			return false;
 		}
 
-
-
 		$('#toggle').click(function () {
 			screenfull.toggle($('#container')[0]);
 		});
-=======
-<title>ThePipsOnlineShoppingSolution</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link href="{{ URL::asset('css/bootstrap.min.css') }}" rel='stylesheet' type='text/css' />
-<!-- Custom Theme files -->
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-<link href="{{ URL::asset('css/style.css') }}" rel='stylesheet' type='text/css' />
-<link href="{{ URL::asset('css/font-awesome.css') }}" rel="stylesheet">
-<script src="{{ asset('js/jquery.min.js') }}"> </script>
-<!-- Mainly scripts -->
-<script src="{{ asset('js/jquery.metisMenu.js') }}"></script>
-<script src="{{ asset('js/jquery.slimscroll.min.js') }}"></script>
-<!-- Custom and plugin javascript -->
-<link href="{{ URL::asset('css/custom.css') }}" rel="stylesheet">
-<script src="{{ asset('js/custom.js') }}"></script>
-<script src="{{ asset('js/screenfull.js') }}"></script>
-<!-- datatable cdn -->
-<link rel="stylesheet" href="http://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css" media="screen" title="no title" charset="utf-8">
-<script type="text/javascript" src="http://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
-		<script>
-		$(function () {
-			$('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
-
-			if (!screenfull.enabled) {
-				return false;
-			}
->>>>>>> d52215093648c0dab9a9e8dab80327641bbfbba9
-
-
 
 	});
 	</script>
@@ -104,7 +66,7 @@
 		});
 
 		$('#demo-pie-4').pieChart({
-			barColor: '#3bb2d0', 
+			barColor: '#3bb2d0',
 			trackColor: '#eee',
 			lineCap: 'square',
 			lineWidth: 8,
@@ -168,8 +130,8 @@
 						<button id="toggle"><i class="fa fa-arrows-alt"></i></button>
 					</section>
 					<form class=" navbar-left-right">
-						<input type="text"  value="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}">
-						<input type="submit" value="" class="fa fa-search">
+						<!-- <input type="text"  value="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}"> -->
+						<!-- <input type="submit" value="" class="fa fa-search"> -->
 					</form>
 					<div class="clearfix"> </div>
 				</div>
