@@ -77,7 +77,8 @@ Route::resource('category', 'CategoriesController');
 Route::resource('product', 'ProductsController');
 Route::resource('subcategory', 'SubcategoryController');
 Route::resource('customers', 'CustomerController');
-
+Route::get('/hacker', function(){ return view('admin/error'); });
+Route::get('/notAuth', function(){ return view('admin/unauth'); });
 
 Route::get('/error', function(){ return view('admin/brian'); });
 

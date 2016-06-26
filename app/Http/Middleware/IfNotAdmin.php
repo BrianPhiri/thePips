@@ -21,19 +21,21 @@ class IfNotAdmin
         {
             $role = Auth::user()->role;
 
-            if($role === 'Administrator')
+            // If not admin return back to the current page
+            if($role != 'Administrator')
             {
-                $request->session()->flash('message','Access Denied');
-                // return redirect()->back();
+                return redirect('hacker');
             }
+            // If admin accept the request and redirect to the intended page
             else
             {
                 return $next($request);
             }
         }
+        // You are not logged in therefore you can't view page.
         else
         {
-            return 'Not logged in';
+            return redirect('notAuth');
         }
 
 

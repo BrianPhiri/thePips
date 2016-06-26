@@ -20,10 +20,9 @@ class UsersTableSeeder extends Seeder
             'verified' => 1,
         ]);
         DB::table('users')->insert([
-            'name' => 'pips',
-            'title' => 'SheHe',
-            'role' => 'customers',
-            'email' => 'test@thePips.com',
+            'name' => 'user',
+            'title' => 'Mr',
+            'email' => 'user@thePips.com',
             'password' => bcrypt('123456'),
             'verified' => 1,
         ]);
