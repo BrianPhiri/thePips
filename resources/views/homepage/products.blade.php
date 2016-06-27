@@ -46,8 +46,10 @@
 	 				</div>
 			 @endforeach
 			</div>
-			@include('homepage._sidebar')
-	      </div>
+				<div class="rsidebar span_1_of_left">
+						@include('homepage._sidebar')
+				</div>
+	    </div>
 		</div>
 </div>
 @include('homepage._footer')
