@@ -21,7 +21,7 @@ class OrdersController extends Controller
 
   }
 
-  public function checkout(Request $request, AppMailer $mailer){
+  public function checkout(Request $request){
     $token = $request->input('stripeToken');
     //  $cart = ShopCart::where('user_id', '=', Auth::user()->id)->first();
     $items = ShopCart::with('products')->where('user_id', '=', Auth::user()->id)->get();
@@ -56,7 +56,7 @@ class OrdersController extends Controller
 
         // Sends Orders Confirmation Mail to the Customer.
     $user = Auth::user();
-    $mailer->sendOrdersConfirmationTo($user);
+    // $mailer->sendOrdersConfirmationTo($user);
 
     $request->session()->flash('message','Thank You '.Auth::user()->title.' '.Auth::user()->name.' for Shopping with us.');
 
