@@ -2,8 +2,8 @@
 				 <section  class="sky-form">
 					 <div class="product_right">
 						 <h4 class="m_2"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Categories</h4>
-						 @foreach($cat as $cat)
 						 <?php $i= 1; ?>
+						 @foreach($cat as $cat)
 						 <div class="tab{!! $i !!}">
 							 	<ul class="place">
 								 <li class="sort">{{ $cat->name }}</li>
