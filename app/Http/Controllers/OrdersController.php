@@ -21,7 +21,7 @@ class OrdersController extends Controller
 
   }
 
-  public function checkout(Request $request){
+  public function checkout(Request $request, AppMailer $mailer){
     $token = $request->input('stripeToken');
     //  $cart = ShopCart::where('user_id', '=', Auth::user()->id)->first();
     $items = ShopCart::with('products')->where('user_id', '=', Auth::user()->id)->get();
