@@ -7,7 +7,7 @@
 <!---->
 <div class="container">
 	  <ol class="breadcrumb">
-		  <li><a href="/">Home</a></li>
+		  <li><a href="{{URL::asset('/')}}">Home</a></li>
 		  <li class="active">Account</li>
 		 </ol>
 	 <div class="registration">
