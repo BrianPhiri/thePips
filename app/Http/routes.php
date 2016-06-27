@@ -96,9 +96,7 @@ Route::get('subcategory-pdf', 'PdfsController@downloadSubcategoryPdf');
 
 //testing route and controller
 //this is only for testing please
-Route::get('/test', function(){
-  return view('admin.brian');
-});
+Route::get('/test', 'TestsController@index');
 
 
 // About Us

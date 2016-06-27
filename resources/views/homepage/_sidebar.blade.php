@@ -2,20 +2,24 @@
 				 <section  class="sky-form">
 					 <div class="product_right">
 						 <h4 class="m_2"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Categories</h4>
-						 <div class="tab1">
-
+						 <?php $i= 1; ?>
+						 @foreach($cat as $cat)
+						 <div class="tab{!! $i !!}">
 							 	<ul class="place">
-								 <li class="sort">Chairs</li>
+								 <li class="sort">{{ $cat->name }}</li>
 								 <li class="by"><img src="{{url('images/do.png')}}" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
 							 <div class="single-bottom">
-									<a href="#"><p>Sofas</p></a>
-
+								 @foreach($cat->category as $sub)
+									<a href="{{URL::asset('products/category')}}/{{ $sub->id }}"><p>{{ $sub->name}}</p></a>
+								 @endforeach
 						     </div>
+					    </div>
+							<?php $i++; ?>
+							@endforeach
 
-					      </div>
-						  <div class="tab2">
+						  <!-- <div class="tab2">
 							 <ul class="place">
 								 <li class="sort">Decor</li>
 								 <li class="by"><img src="{{url('images/do.png')}}" alt=""></li>
@@ -63,7 +67,7 @@
 									<a href="#"><p>Beds</p></a>
 									<a href="#"><p>Relax Chairs</p></a>
 						     </div>
-					      </div>
+					      </div> -->
 
 						  <!--script-->
 						<script>
