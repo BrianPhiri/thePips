@@ -74,6 +74,7 @@
 			</div>
 			<div class="new-items new_middle">
 				<div class="item2">
+					<a href="products/{{$prd3->id}}"><img src="image_uploads/{{$prd3->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
 					<div class="item-info2">
 						<h4><a href="products/{{$prd3->id}}">{{ $prd3->name }}</a></h4>
 						<span>ID: {{ $prd3->id }}</span>
@@ -86,7 +87,7 @@
 								</button>
 							</form>
 					</div>
-					<a href="products/{{$prd3->id}}"><img src="image_uploads/{{$prd3->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>
+
 				</div>
 				<div class="item5">
 					<a href="products/{{$prd4->id}}"><img src="image_uploads/{{$prd4->image}}" alt="" style=" width="346.8px"; height="227.17px" " /></a>

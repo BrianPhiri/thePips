@@ -6,7 +6,7 @@
 <div class="login_sec">
 	 <div class="container">
 		 <ol class="breadcrumb">
-		  <li><a href="/">Home</a></li>
+		  <li><a href="{{URL::asset('/')}}">Home</a></li>
 		  <li class="active">Login</li>
 		 </ol>
 		 <h2>Login</h2>

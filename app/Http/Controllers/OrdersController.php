@@ -8,7 +8,7 @@ use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use App\Orders;
 use App\OrderItems;
-use App\Mailers\AppMailer;
+use App\Mailers\AppMailer as mailer;
 use App\ShopCart;
 use Cart;
 

@@ -47,7 +47,7 @@ class HomeController extends Controller
 
     public function special($by){
 
-    return  $subcategories = Subcategories::with('products')->whereHas('products', function($query) use ($by){
+    $subcategories = Subcategories::with('products')->whereHas('products', function($query) use ($by){
         $query->where('place',$by);
       })->get();
 

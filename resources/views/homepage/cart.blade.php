@@ -7,7 +7,7 @@
 <div class="cart_main">
 	<div class="container">
 		<ol class="breadcrumb">
-			<li><a href="/">Home</a></li>
+			<li><a href="{{URL::asset('/')}}">Home</a></li>
 			<li class="active">Cart</li>
 		</ol>
 		<!-- START -->

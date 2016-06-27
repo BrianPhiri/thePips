@@ -33,7 +33,7 @@ class ViewServiceProvider extends ServiceProvider
         });
 
         view()->composer(['homepage._sidebar'], function ($view){
-            for ($i=1; $i < 5; $i++) { 
+            for ($i=1; $i < 5; $i++) {
                 $cat[] = Categories::with('category')->latest('created_at')->get();
             }
             $cat1 = $cat[0];
@@ -42,8 +42,8 @@ class ViewServiceProvider extends ServiceProvider
             $cat4 = $cat[3];
             // $cat5 = $cat[4];
 
-            $view->with('cat1','cat2','cat3','cat4','cat5');
-            // $view->with('cat', Categories::with('category')->latest('created_at')->take(5)->get());    
+            // $view->with('cat1','cat2','cat3','cat4','cat5');
+            $view->with('cat', Categories::with('category')->latest('created_at')->take(5)->get());    
         });
     }
 
