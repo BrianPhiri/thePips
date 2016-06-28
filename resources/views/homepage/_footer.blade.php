@@ -16,7 +16,9 @@
 				 <h4>Categories</h4>
 				 @foreach($subsub as $cat)
 				 <ul>
-					 <li><a href="{{url('products/category')}}/{{$cat->id}}">> {{ $cat->name}}</a></li>
+				 @foreach($cat->category as $sub)
+					 <li><a href="{{url('products/category')}}/{{$sub->id}}">> {{$sub->name}}</a></li>
+					 @endforeach
 				 </ul>
 				 @endforeach
 			 </div>
